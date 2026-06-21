@@ -4,7 +4,7 @@ manifest:
       url-base: https://github.com/zmkfirmware  
     - name: na-ka-no
       url-base: https://github.com/na-ka-no
-     - name: ultimateblanks-collab
+    - name: ultimateblanks-collab
       url-base: https://github.com/ultimateblanks-collab
   
   projects:  
