@@ -139,10 +139,10 @@
 
         default_layer {
             bindings = <
-&kp Q               &kp W       &kp E         &kp R         &kp T                                                    &kp Y      &kp U  &kp I       &lt 5 O  &kp P
-&mt LEFT_WIN A      &kp S       &kp D         &lt 4 F       &kp G        &kp LC(Y)              &kp PRINTSCREEN      &kp H      &kp J  &SL_SP 1 K  &kp L    &kp SEMICOLON
-&mt LEFT_CONTROL Z  &kp X       &kp C         &kp V         &kp B        &kp LC(Z)              &kp ESC              &kp N      &kp M  &kp COMMA   &kp DOT  &kp SLASH
-&kp LCTRL           &kp C_MUTE  &kp LEFT_GUI  &kp LEFT_ALT  &lt 2 SPACE  &mt LSHIFT DELETE      &mt RSHFT BACKSPACE  &lt 2 END                              &kp TILDE
+&L_HRM LWIN Q       &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R  &kp T                                                    &kp Y      &R_HRM U RSHFT  &R_HRM I RCTRL  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
+&mt LEFT_WIN A      &kp S              &kp D           &lt 4 F         &kp G        &kp LC(Y)              &kp PRINTSCREEN      &kp H      &kp J           &SL_SP 1 K      &kp L               &kp SEMICOLON
+&mt LEFT_CONTROL Z  &kp X              &kp C           &kp V           &kp B        &kp LC(Z)              &kp ESC              &kp N      &kp M           &kp COMMA       &kp DOT             &kp SLASH
+&kp LCTRL           &kp C_MUTE         &kp LEFT_GUI    &kp LEFT_ALT    &lt 2 SPACE  &mt LSHIFT DELETE      &mt RSHFT BACKSPACE  &lt 2 END                                                      &kp TILDE
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
