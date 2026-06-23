@@ -350,7 +350,7 @@
 
         default_layer {
             bindings = <
-&L_HRM LWIN Q       &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R   &kp T                                                    &kp Y           &R_HRM U RSHFT  &R_HRM I RCTRL  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
+&L_HRM LWIN Q       &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R   &kp T                                                    &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
 &kp A               &kp S              &kp D           &kp F            &kp G        &kp LC(Y)              &kp PRINTSCREEN      &kp H           &kp J           &SL_SP 1 K      &kp L               &kp SEMICOLON
 &mt LEFT_CONTROL Z  &kp X              &kp C           &kp V            &kp B        &kp LC(Z)              &kp ESC              &kp N           &kp M           &kp COMMA       &kp DOT             &kp SLASH
 &kp LCTRL           &kp C_MUTE         &kp LEFT_GUI    &R_THUMB 3 HOME  &lt 2 SPACE  &mt LSHIFT DELETE      &mt RSHFT BACKSPACE  &R_THUMB 2 END                                                      &kp TILDE
