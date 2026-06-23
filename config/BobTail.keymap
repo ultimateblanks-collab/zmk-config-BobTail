@@ -42,7 +42,7 @@
             tap-ms = <20>;
         }; */
 
-       ctpgdn_ctpgup: ctpgdn_ctpgup {
+        ctpgdn_ctpgup: ctpgdn_ctpgup {
             compatible = "zmk,behavior-sensor-rotate";
             label = "CTPGUP_CTPGDN";
             #sensor-binding-cells = <0>;
@@ -50,7 +50,6 @@
 
             tap-ms = <20>;
         };
-
 
         L_HRM: L_HRM {
             compatible = "zmk,behavior-hold-tap";
@@ -149,6 +148,26 @@
             #binding-cells = <0>;
             continue-list = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 INT_RO BACKSPACE KP_MINUS>;
             mods = <(MOD_LSFT)>;
+        };
+
+        SHIFTCTPGDN: SHIFTCTPGDN {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFTCTPGDN";
+            bindings = <&kp>, <&ctpgdn>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            flavor = "balanced";
+        };
+
+        LALTCTPGUP: LALTCTPGUP {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LALTCTPGUP";
+            bindings = <&kp>, <&ctpgup>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            flavor = "balanced";
         };
     };
 
@@ -467,10 +486,10 @@
 
         default_layer {
             bindings = <
-&L_HRM LWIN Q       &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R   &kp T                                                    &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
-&kp A               &kp S              &kp D           &kp F            &kp G        &kp LC(Y)              &CW                  &kp H           &kp J           &SL_SP1 1 K     &kp L               &kp MINUS
-&mt LEFT_CONTROL Z  &kp X              &kp C           &kp V            &kp B        &kp LC(Z)              &sk LSHFT            &kp N           &kp M           &kp COMMA       &kp DOT             &kp SLASH
-&kp LCTRL           &kp C_MUTE         &kp LEFT_GUI    &R_THUMB 3 HOME  &lt 2 SPACE  &mt LSHIFT DELETE      &mt RSHFT BACKSPACE  &R_THUMB 2 END                                                      &kp GRAVE
+&L_HRM LWIN Q       &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R   &kp T                                                                &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
+&kp A               &kp S              &kp D           &kp F            &kp G                &kp LC(Y)                      &CW              &kp H           &kp J           &SL_SP1 1 K     &kp L               &kp MINUS
+&mt LEFT_CONTROL Z  &kp X              &kp C           &kp V            &kp B                &kp LC(Z)                      &sk LSHFT        &kp N           &kp M           &kp COMMA       &kp DOT             &kp SLASH
+&kp LCTRL           &kp C_MUTE         &kp LCTRL       &R_THUMB 3 HOME  &R_THUMB 4 LEFT_ALT  &mt LSHIFT K_CONTEXT_MENU      &mt RSHFT GRAVE  &R_THUMB 2 END                                                      &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&ctpgdn_ctpgup>;
@@ -487,10 +506,10 @@
 
         BASIC {
             bindings = <
-&none  &none  &none  &none  &none                    &kp LEFT       &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT  &wintab
-&none  &none  &none  &none  &none  &none      &none  &kp BACKSPACE  &kp SPACE     &kp ENTER       &kp TAB    &kp GRAVE
-&none  &none  &none  &none  &none  &none      &none  &none          &altesc       &kp DELETE      &saltesc   &none
-&none  &none  &none  &none  &none  &none      &none  &none                                                   &none
+&kp LWIN  &LALTCTPGUP LEFT_ALT 0  &L_HRM LCTRL UP_ARROW  &SHIFTCTPGDN LSHFT 0  &none                    &kp LEFT       &R_HRM RSHFT UP_ARROW  &R_HRM RCTRL DOWN_ARROW  &R_HRM RIGHT_ALT RIGHT  &wintab
+&none     &kp LEFT_ARROW          &kt DOWN_ARROW         &kp RIGHT             &none  &none      &none  &kp BACKSPACE  &kp SPACE              &kp ENTER                &kp TAB                 &kp DELETE
+&none     &altesc                 &none                  &saltesc              &none  &none      &none  &none          &altesc                &kp DELETE               &saltesc                &none
+&none     &none                   &none                  &none                 &none  &none      &none  &none                                                                                  &none
             >;
         };
 
