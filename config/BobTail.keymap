@@ -30,6 +30,11 @@
             bindings = <&plus>;
             key-positions = <2 3>;
         };
+
+        endApp {
+            bindings = <&altF4>;
+            key-positions = <18 41>;
+        };
     };
 
     behaviors {
@@ -479,6 +484,48 @@
 
             label = "WINTAB";
         };
+
+        ctrlW: ctrlW {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_wait_time 15>,
+                <&kp W>,
+                <&macro_release>,
+                <&kp W &kp LCTRL>;
+
+            label = "CTRLW";
+        };
+
+        altF4: altF4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_wait_time 15>,
+                <&kp F4>,
+                <&macro_release>,
+                <&kp F4 &kp LEFT_ALT>;
+
+            label = "ALTF4";
+        };
+
+        ctrlT: ctrlT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_wait_time 15>,
+                <&kp T>,
+                <&macro_release>,
+                <&kp T &kp LCTRL>;
+
+            label = "CTRLT";
+        };
     };
 
     keymap {
@@ -486,10 +533,10 @@
 
         default_layer {
             bindings = <
-&L_HRM LWIN Q       &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R   &kp T                                                                &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
-&kp A               &kp S              &kp D           &kp F            &kp G                &kp LC(Y)                      &CW              &kp H           &kp J           &SL_SP1 1 K     &kp L               &kp MINUS
-&mt LEFT_CONTROL Z  &kp X              &kp C           &kp V            &kp B                &kp LC(Z)                      &sk LSHFT        &kp N           &kp M           &kp COMMA       &kp DOT             &kp SLASH
-&kp LCTRL           &kp C_MUTE         &kp LCTRL       &R_THUMB 3 HOME  &R_THUMB 4 LEFT_ALT  &mt LSHIFT K_CONTEXT_MENU      &mt RSHFT GRAVE  &R_THUMB 2 END                                                      &kp PRINTSCREEN
+&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R   &kp T                                                                &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
+&kp A          &kp S              &kp D           &kp F            &kp G                &ctrlW                         &CW              &kp H           &kp J           &SL_SP1 1 K     &kp L               &kp MINUS
+&kp Z          &kp X              &kp C           &kp V            &kp B                &ctrlT                         &sk LSHFT        &kp N           &kp M           &kp COMMA       &kp DOT             &kp SLASH
+&kp LCTRL      &kp C_MUTE         &kp LCTRL       &R_THUMB 3 HOME  &R_THUMB 4 LEFT_ALT  &mt LSHIFT K_CONTEXT_MENU      &mt RSHFT GRAVE  &R_THUMB 2 END                                                      &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&ctpgdn_ctpgup>;
