@@ -141,6 +141,14 @@
             tapping-term-ms = <180>;
             flavor = "balanced";
         };
+
+        CW: CW {
+            compatible = "zmk,behavior-caps-word";
+            label = "CW";
+            #binding-cells = <0>;
+            continue-list = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 INT_RO BACKSPACE KP_MINUS>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -353,6 +361,104 @@
 
             label = "ASTER";
         };
+
+        altesc: altesc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_wait_time 15>,
+                <&kp ESCAPE>,
+                <&macro_release>,
+                <&kp ESCAPE &kp LEFT_ALT>;
+
+            label = "ALTESC";
+        };
+
+        saltesc: saltesc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT &kp LEFT_ALT>,
+                <&macro_wait_time 15>,
+                <&kp ESCAPE>,
+                <&macro_release>,
+                <&kp ESCAPE &kp LEFT_ALT &kp LSHFT>;
+
+            label = "SALTESC";
+        };
+
+        ctpgup: ctpgup {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_wait_time 15>,
+                <&kp PG_UP>,
+                <&macro_release>,
+                <&kp PG_UP &kp LCTRL>;
+
+            label = "CTPGUP";
+        };
+
+        ctpgdn: pgdn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_wait_time 15>,
+                <&kp PAGE_DOWN>,
+                <&macro_release>,
+                <&kp PAGE_DOWN &kp LCTRL>;
+
+            label = "PGDN";
+        };
+
+        Lmid: Lmid {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_wait_time 15>,
+                <&kp RBKT>,
+                <&macro_release>,
+                <&kp RBKT &kp LSHFT>;
+
+            label = "LMID";
+        };
+
+        Rmid: Rmid {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_wait_time 15>,
+                <&kp NUHS>,
+                <&macro_release>,
+                <&kp NUHS &kp LSHFT>;
+
+            label = "RMID";
+        };
+
+        wintab: wintab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LWIN>,
+                <&macro_wait_time 15>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp TAB &kp LWIN>;
+
+            label = "WINTAB";
+        };
     };
 
     keymap {
@@ -361,9 +467,9 @@
         default_layer {
             bindings = <
 &L_HRM LWIN Q       &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R   &kp T                                                    &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
-&kp A               &kp S              &kp D           &kp F            &kp G        &kp LC(Y)              &kp PRINTSCREEN      &kp H           &kp J           &SL_SP1 1 K     &kp L               &kp SEMICOLON
-&mt LEFT_CONTROL Z  &kp X              &kp C           &kp V            &kp B        &kp LC(Z)              &kp ESC              &kp N           &kp M           &kp COMMA       &kp DOT             &kp SLASH
-&kp LCTRL           &kp C_MUTE         &kp LEFT_GUI    &R_THUMB 3 HOME  &lt 2 SPACE  &mt LSHIFT DELETE      &mt RSHFT BACKSPACE  &R_THUMB 2 END                                                      &kp TILDE
+&kp A               &kp S              &kp D           &kp F            &kp G        &kp LC(Y)              &CW                  &kp H           &kp J           &SL_SP1 1 K     &kp L               &kp MINUS
+&mt LEFT_CONTROL Z  &kp X              &kp C           &kp V            &kp B        &kp LC(Z)              &sk LSHFT            &kp N           &kp M           &kp COMMA       &kp DOT             &kp SLASH
+&kp LCTRL           &kp C_MUTE         &kp LEFT_GUI    &R_THUMB 3 HOME  &lt 2 SPACE  &mt LSHIFT DELETE      &mt RSHFT BACKSPACE  &R_THUMB 2 END                                                      &kp GRAVE
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -380,19 +486,19 @@
 
         BASIC {
             bindings = <
-&none  &none  &none  &none  &none                    &kp LEFT       &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp DELETE
+&none  &none  &none  &none  &none                    &kp LEFT       &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT  &wintab
 &none  &none  &none  &none  &none  &none      &none  &kp BACKSPACE  &kp SPACE     &kp ENTER       &kp TAB    &kp GRAVE
-&none  &none  &none  &none  &none  &none      &none  &none          &none         &none           &none      &none
+&none  &none  &none  &none  &none  &none      &none  &none          &altesc       &kp DELETE      &saltesc   &none
 &none  &none  &none  &none  &none  &none      &none  &none                                                   &none
             >;
         };
 
         NUMFUN {
             bindings = <
-&kp F1        &kp F2        &kp F3        &kp F4        &kp F5                        &kp F6        &kp F7  &kp F8  &kp F9  &kp F10
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &kp F11      &kp F12  &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0
-&plus         &kp MINUS     &aster        &kp SLASH     &eql    &none        &none    &none         &none   &none   &none   &none
-&none         &none         &none         &none         &none   &none        &none    &none                                 &none
+&kp F1        &kp F2        &kp F3        &kp F4        &kp F5                        &kp F6        &kp F7  &kp F8  &kp F9      &kp F10
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &kp F11      &kp F12  &kp NUMBER_6  &kp N7  &kp N8  &kp N9      &kp N0
+&plus         &kp MINUS     &aster        &kp SLASH     &eql    &none        &none    &none         &none   &none   &kp PERIOD  &percent
+&none         &none         &none         &none         &none   &none        &none    &none                                     &none
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -400,10 +506,10 @@
 
         SYMBOL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans    &trans     &trans  &trans  &trans                      &kp INTERNATIONAL_3  &kp RBKT  &kp NUHS  &kp APOSTROPHE  &kp SEMI
+&kp LBKT  &kp EQUAL  &hush   &exc    &trans  &trans      &trans  &dollar              &l_kakko  &r_kakko  &sq             &dq
+&trans    &trans     &trans  &trans  &trans  &trans      &trans  &anp                 &Lmid     &Rmid     &pl             &us
+&trans    &trans     &trans  &trans  &trans  &trans      &trans  &trans                                                   &trans
             >;
         };
 
