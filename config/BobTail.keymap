@@ -33,14 +33,24 @@
     };
 
     behaviors {
-        encoder_msc_down_up: encoder_msc_down_up {
+        /* encoder_msc_down_up: encoder_msc_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
             tap-ms = <20>;
+        }; */
+
+       ctpgdn_ctpgup: ctpgdn_ctpgup {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "CTPGUP_CTPGDN";
+            #sensor-binding-cells = <0>;
+            bindings = <&ctpgup>, <&ctpgdn>;
+
+            tap-ms = <20>;
         };
+
 
         L_HRM: L_HRM {
             compatible = "zmk,behavior-hold-tap";
