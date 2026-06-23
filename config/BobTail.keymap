@@ -30,16 +30,6 @@
             bindings = <&plus>;
             key-positions = <2 3>;
         };
-
-        end {
-            bindings = <&kp END>;
-            key-positions = <19 20>;
-        };
-
-        home {
-            bindings = <&kp HOME>;
-            key-positions = <18 19>;
-        };
     };
 
     behaviors {
@@ -130,6 +120,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "balanced";
+            hold-trigger-key-positions = <18 20 41 40>;
         };
 
         SL_SP2: SL_SP2 {
