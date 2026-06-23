@@ -16,29 +16,29 @@
     combos {
         compatible = "zmk,combos";
 
-        shift_tab {
-            bindings = <&kp LANG2>;
-            key-positions = <12 11>;
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <7 8>;
         };
 
-        lang {
-            bindings = <&kp LANG1>;
+        minus {
+            bindings = <&kp MINUS>;
             key-positions = <13 12>;
         };
 
-        lclick {
-            bindings = <&mkp MB1>;
-            key-positions = <18 19>;
+        plus {
+            bindings = <&plus>;
+            key-positions = <2 3>;
         };
 
-        rclick {
-            bindings = <&mkp MB2>;
+        end {
+            bindings = <&kp END>;
             key-positions = <19 20>;
         };
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <10 11>;
+        home {
+            bindings = <&kp HOME>;
+            key-positions = <18 19>;
         };
     };
 
@@ -350,10 +350,10 @@
 
         default_layer {
             bindings = <
-&L_HRM LWIN Q       &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R  &kp T                                                    &kp Y           &R_HRM U RSHFT  &R_HRM I RCTRL  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
-&mt LEFT_WIN A      &kp S              &kp D           &lt 4 F         &kp G        &kp LC(Y)              &kp PRINTSCREEN      &kp H           &kp J           &SL_SP 1 K      &kp L               &kp SEMICOLON
-&mt LEFT_CONTROL Z  &kp X              &kp C           &kp V           &kp B        &kp LC(Z)              &kp ESC              &kp N           &kp M           &kp COMMA       &kp DOT             &kp SLASH
-&kp LCTRL           &kp C_MUTE         &kp LEFT_GUI    &kp LEFT_ALT    &lt 2 SPACE  &mt LSHIFT DELETE      &mt RSHFT BACKSPACE  &R_THUMB 2 END                                                      &kp TILDE
+&L_HRM LWIN Q       &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R   &kp T                                                    &kp Y           &R_HRM U RSHFT  &R_HRM I RCTRL  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
+&kp A               &kp S              &kp D           &kp F            &kp G        &kp LC(Y)              &kp PRINTSCREEN      &kp H           &kp J           &SL_SP 1 K      &kp L               &kp SEMICOLON
+&mt LEFT_CONTROL Z  &kp X              &kp C           &kp V            &kp B        &kp LC(Z)              &kp ESC              &kp N           &kp M           &kp COMMA       &kp DOT             &kp SLASH
+&kp LCTRL           &kp C_MUTE         &kp LEFT_GUI    &R_THUMB 3 HOME  &lt 2 SPACE  &mt LSHIFT DELETE      &mt RSHFT BACKSPACE  &R_THUMB 2 END                                                      &kp TILDE
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -370,7 +370,7 @@
 
         BASIC {
             bindings = <
-&none  &none  &none  &none  &none                    &kp LEFT       &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none
+&none  &none  &none  &none  &none                    &kp LEFT       &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp DELETE
 &none  &none  &none  &none  &none  &none      &none  &kp BACKSPACE  &kp SPACE     &kp ENTER       &kp TAB    &kp GRAVE
 &none  &none  &none  &none  &none  &none      &none  &none          &none         &none           &none      &none
 &none  &none  &none  &none  &none  &none      &none  &none                                                   &none
@@ -381,7 +381,7 @@
             bindings = <
 &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                        &kp F6        &kp F7  &kp F8  &kp F9  &kp F10
 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &kp F11      &kp F12  &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0
-&none         &none         &none         &none         &none   &none        &none    &none         &none   &none   &none   &none
+&plus         &kp MINUS     &aster        &kp SLASH     &eql    &none        &none    &none         &none   &none   &none   &none
 &none         &none         &none         &none         &none   &none        &none    &none                                 &none
             >;
 
