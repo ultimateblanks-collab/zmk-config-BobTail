@@ -515,10 +515,10 @@
 
         NUMFUN {
             bindings = <
-&kp F1        &kp F2        &kp F3        &kp F4        &kp F5                        &kp F6        &kp F7  &kp F8  &kp F9      &kp F10
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &kp F11      &kp F12  &kp NUMBER_6  &kp N7  &kp N8  &kp N9      &kp N0
-&plus         &kp MINUS     &aster        &kp SLASH     &eql    &none        &none    &none         &none   &none   &kp PERIOD  &percent
-&none         &none         &none         &none         &none   &none        &none    &none                                     &none
+&kp F1        &kp F2        &kp F3        &kp F4        &kp F5                          &kp F6         &kp F7     &kp F8  &kp F9     &kp F10
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &kp F11      &kp F12    &kp NUMBER_6   &kp N7     &kp N8  &kp N9     &kp N0
+&kp PERIOD    &eql          &kp LBKT      &none         &none   &none        &kp EQUAL  &plus          &kp MINUS  &aster  &kp SLASH  &kp ENTER
+&none         &none         &none         &none         &none   &none        &kp TAB    &kp BACKSPACE                                &none
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -526,10 +526,10 @@
 
         SYMBOL {
             bindings = <
-&trans    &trans     &trans  &trans  &trans                      &kp INTERNATIONAL_3  &kp RBKT  &kp NUHS  &kp APOSTROPHE  &kp SEMI
-&kp LBKT  &kp EQUAL  &hush   &exc    &trans  &trans      &trans  &dollar              &l_kakko  &r_kakko  &sq             &dq
-&trans    &trans     &trans  &trans  &trans  &trans      &trans  &anp                 &Lmid     &Rmid     &pl             &us
-&trans    &trans     &trans  &trans  &trans  &trans      &trans  &trans                                                   &trans
+&none     &none      &none  &none  &none                    &kp INTERNATIONAL_3  &kp RBKT  &kp NUHS  &kp APOSTROPHE  &kp SEMI
+&kp LBKT  &kp EQUAL  &hush  &exc   &none  &none      &none  &dollar              &l_kakko  &r_kakko  &sq             &dq
+&none     &none      &none  &none  &none  &none      &none  &anp                 &Lmid     &Rmid     &pl             &us
+&none     &none      &none  &none  &none  &none      &none  &none                                                    &none
             >;
         };
 
