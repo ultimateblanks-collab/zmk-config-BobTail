@@ -473,7 +473,7 @@
 &kp LCTRL           &kp C_MUTE         &kp LEFT_GUI    &R_THUMB 3 HOME  &lt 2 SPACE  &mt LSHIFT DELETE      &mt RSHFT BACKSPACE  &R_THUMB 2 END                                                      &kp GRAVE
             >;
 
-            sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&ctpgdn_ctpgup>;
         };
 
         MB {
