@@ -526,6 +526,28 @@
 
             label = "CTRLT";
         };
+
+        carte: carte {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp N3 &kp N7 &kp N0 &kp N8 &kp TAB>,
+                <&macro_wait_time 10>,
+                <&kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp N1 &kp N2 &kp N3 &kp ENTER>;
+
+            label = "CARTE";
+        };
+
+        evalue: evalue {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp N3 &kp N7 &kp N0 &kp N8 &kp TAB>,
+                <&macro_wait_time 10>,
+                <&kp N0 &kp N8 &kp N6 &kp N2 &kp ENTER>;
+
+            label = "EVALUE";
+        };
     };
 
     keymap {
@@ -553,10 +575,10 @@
 
         BASIC {
             bindings = <
-&kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &none                    &wintab     &kp LEFT       &kp UP_ARROW  &kp DOWN   &kp RIGHT
-&none     &none         &none      &none      &none  &none      &none  &kp DELETE  &kp BACKSPACE  &kp SPACE     &kp ENTER  &kp TAB
-&none     &altesc       &none      &saltesc   &none  &none      &none  &none       &ctpgup        &altesc       &ctpgdn    &none
-&none     &none         &none      &none      &none  &none      &none  &none                                               &none
+&kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &none                    &wintab     &kp UP_ARROW   &kp LEFT   &kp RIGHT  &kp DOWN_ARROW
+&none     &none         &none      &none      &none  &none      &none  &kp DELETE  &kp BACKSPACE  &kp SPACE  &kp ENTER  &kp TAB
+&none     &altesc       &none      &saltesc   &none  &none      &none  &none       &ctpgup        &altesc    &ctpgdn    &none
+&none     &none         &none      &none      &none  &none      &none  &none                                            &none
             >;
         };
 
@@ -573,10 +595,10 @@
 
         SYMBOL {
             bindings = <
-&none     &none      &none  &none  &none                    &kp INTERNATIONAL_3  &kp RBKT  &kp NUHS  &kp APOSTROPHE  &kp SEMI
-&kp LBKT  &kp EQUAL  &hush  &exc   &none  &none      &none  &dollar              &l_kakko  &r_kakko  &sq             &dq
-&none     &none      &none  &none  &none  &none      &none  &anp                 &Lmid     &Rmid     &pl             &us
-&none     &none      &none  &none  &none  &none      &none  &none                                                    &none
+&none     &none      &none  &none  &none                      &kp INTERNATIONAL_3  &kp RBKT  &kp NUHS  &kp APOSTROPHE  &kp SEMI
+&kp LBKT  &kp EQUAL  &hush  &exc   &none  &none      &none    &dollar              &l_kakko  &r_kakko  &sq             &dq
+&none     &none      &none  &none  &none  &none      &none    &anp                 &Lmid     &Rmid     &pl             &us
+&none     &none      &none  &none  &none  &none      &evalue  &carte                                                   &none
             >;
         };
 
