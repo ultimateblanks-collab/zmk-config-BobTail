@@ -561,7 +561,7 @@
 &kp LCTRL      &kp C_MUTE         &kp LCTRL       &R_THUMB 3 GRAVE  &R_THUMB 4 LEFT_ALT  &mt LSHIFT K_CONTEXT_MENU      &mt RSHFT HOME  &R_THUMB 2 END                                                      &kp PRINTSCREEN
             >;
 
-            sensor-bindings = <&ctpgdn_ctpgup>;
+            sensor-bindings = <&idpass>;
         };
 
         MB {
