@@ -47,11 +47,11 @@
             tap-ms = <20>;
         }; */
 
-        ctpgdn_ctpgup: ctpgdn_ctpgup {
+        idpass: idpass {
             compatible = "zmk,behavior-sensor-rotate";
-            label = "CTPGUP_CTPGDN";
+            label = "IDPASS";
             #sensor-binding-cells = <0>;
-            bindings = <&ctpgup>, <&ctpgdn>;
+            bindings = <&carte>, <&evalue>;
 
             tap-ms = <20>;
         };
