@@ -555,10 +555,10 @@
 
         default_layer {
             bindings = <
-&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R    &kp T                                                               &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
-&kp A          &kp S              &kp D           &kp F             &kp G                &ctrlW                         &CW             &kp H           &kp J           &SL_SP1 1 K     &kp L               &kp MINUS
-&kp Z          &kp X              &kp C           &kp V             &kp B                &ctrlT                         &sk LSHFT       &kp N           &kp M           &kp COMMA       &kp DOT             &kp SLASH
-&kp LCTRL      &kp C_MUTE         &kp LCTRL       &R_THUMB 3 GRAVE  &R_THUMB 4 LEFT_ALT  &mt LSHIFT K_CONTEXT_MENU      &mt RSHFT HOME  &R_THUMB 2 END                                                      &kp PRINTSCREEN
+&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R    &kp T                                                                   &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
+&kp A          &kp S              &kp D           &kp F             &kp G                &ctrlW                         &kp K_CONTEXT_MENU  &kp H           &kp J           &SL_SP1 1 K     &kp L               &kp MINUS
+&kp Z          &kp X              &kp C           &kp V             &kp B                &ctrlT                         &kp PRINTSCREEN     &kp N           &kp M           &kp COMMA       &kp DOT             &kp SLASH
+&CW            &kp C_MUTE         &kp LCTRL       &R_THUMB 3 GRAVE  &R_THUMB 4 LEFT_ALT  &mt LSHIFT K_CONTEXT_MENU      &mt RSHFT HOME      &R_THUMB 2 END                                                      &sk LSHFT
             >;
 
             sensor-bindings = <&idpass>;
@@ -577,8 +577,8 @@
             bindings = <
 &kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &none                    &wintab     &kp UP_ARROW   &kp LEFT   &kp RIGHT  &kp DOWN_ARROW
 &none     &none         &none      &none      &none  &none      &none  &kp DELETE  &kp BACKSPACE  &kp SPACE  &kp ENTER  &kp TAB
-&none     &altesc       &none      &saltesc   &none  &none      &none  &none       &ctpgup        &altesc    &ctpgdn    &none
-&none     &none         &none      &none      &none  &none      &none  &none                                            &none
+&none     &altesc       &none      &saltesc   &none  &none      &none  &sk LSHFT   &ctpgup        &altesc    &ctpgdn    &CW
+&none     &none         &none      &sk LSHFT  &CW    &none      &none  &none                                            &none
             >;
         };
 
