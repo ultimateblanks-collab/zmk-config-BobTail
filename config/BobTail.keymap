@@ -21,16 +21,6 @@
             key-positions = <7 8>;
         };
 
-        minus {
-            bindings = <&kp MINUS>;
-            key-positions = <13 12>;
-        };
-
-        plus {
-            bindings = <&plus>;
-            key-positions = <2 3>;
-        };
-
         endApp {
             bindings = <&altF4>;
             key-positions = <18 41>;
