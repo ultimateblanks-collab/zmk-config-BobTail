@@ -561,6 +561,20 @@
 
             label = "ALTF3";
         };
+
+        altf11: altf11 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_wait_time 15>,
+                <&kp F11>,
+                <&macro_release>,
+                <&kp F11 &kp LEFT_ALT>;
+
+            label = "ALTF11";
+        };
     };
 
     keymap {
@@ -600,7 +614,7 @@
         NUMFUN {
             bindings = <
 &kp F1        &kp F2        &altF3        &kp F4        &kp F5                          &kp F6         &kp F7     &kp F8  &kp F9     &kp F10
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &kp F11      &kp F12    &kp NUMBER_6   &kp N7     &kp N8  &kp N9     &kp N0
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &altf11      &kp F12    &kp NUMBER_6   &kp N7     &kp N8  &kp N9     &kp N0
 &kp PERIOD    &eql          &kp LBKT      &none         &none   &none        &kp EQUAL  &plus          &kp MINUS  &aster  &kp SLASH  &kp ENTER
 &none         &none         &none         &none         &none   &none        &kp TAB    &kp BACKSPACE                                &none
             >;
