@@ -605,10 +605,10 @@
 
         MB {
             bindings = <
-&none  &ctrlW  &kp LCTRL  &kp LSHFT  &ctrlT                    &none     &none     &none      &none     &none
-&none  &none   &none      &none      &none   &none      &none  &mkp MB4  &mkp MB1  &SPL5 5 0  &mkp MB2  &mkp MB5
-&none  &none   &none      &none      &none   &none      &none  &none     &none     &none      &none     &none
-&none  &none   &none      &none      &none   &none      &none  &none                                    &none
+&none  &none  &none  &none  &none                    &none     &none     &none      &none     &none
+&none  &none  &none  &none  &none  &none      &none  &mkp MB4  &mkp MB1  &SPL5 5 0  &mkp MB2  &mkp MB5
+&none  &none  &none  &none  &none  &none      &none  &none     &none     &none      &none     &none
+&none  &none  &none  &none  &none  &none      &none  &none                                    &none
             >;
         };
 
