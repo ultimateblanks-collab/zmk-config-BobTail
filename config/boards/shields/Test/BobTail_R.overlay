@@ -71,11 +71,11 @@
     excluded-positions = <
         2
         3
+        17
         18 // J
         19 // K
         20
-        40 // ;
-        41 // Ctrl
+        21
     >;
 };
 
