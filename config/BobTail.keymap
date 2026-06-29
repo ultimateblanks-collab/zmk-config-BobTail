@@ -185,6 +185,34 @@
             #binding-cells = <2>;
             tapping-term-ms = <5>;
         };
+
+        cosemi: cosemi {
+            compatible = "zmk,behavior-tap-dance";
+            label = "COSEMI";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
+        };
+
+        pericor: pericor {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PERICOR";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD>, <&kp APOSTROPHE>;
+        };
+
+        hius: hius {
+            compatible = "zmk,behavior-tap-dance";
+            label = "HIUS";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&us>;
+        };
+
+        slpl: slpl {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SLPL";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&none>;
+        };
     };
 
     macros {
@@ -595,8 +623,8 @@
         default_layer {
             bindings = <
 &L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R    &kp T                                                                   &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
-&kp A          &kp S              &kp D           &kp F             &kp G                &ctrlW                         &kp K_CONTEXT_MENU  &kp H           &kp J           &kp K           &kp L               &kp MINUS
-&kp Z          &kp X              &kp C           &kp V             &kp B                &ctrlT                         &kp PRINTSCREEN     &kp N           &kp M           &kp COMMA       &kp DOT             &kp SLASH
+&kp A          &kp S              &kp D           &kp F             &kp G                &ctrlW                         &kp K_CONTEXT_MENU  &kp H           &kp J           &kp K           &kp L               &hius
+&kp Z          &kp X              &kp C           &kp V             &kp B                &ctrlT                         &kp PRINTSCREEN     &kp N           &kp M           &cosemi         &pericor            &slpl
 &CW            &kp C_MUTE         &kp LCTRL       &R_THUMB 3 GRAVE  &R_THUMB 4 LEFT_ALT  &mt LSHIFT K_CONTEXT_MENU      &mt RSHFT HOME      &R_THUMB 2 END                                                      &sk LSHFT
             >;
 
