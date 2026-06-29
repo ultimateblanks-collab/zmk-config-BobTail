@@ -211,7 +211,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SLPL";
             #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&none>;
+            bindings = <&kp SLASH>, <&pl>;
         };
     };
 
