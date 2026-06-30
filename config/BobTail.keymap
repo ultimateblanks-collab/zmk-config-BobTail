@@ -28,6 +28,56 @@
             bindings = <&altF4>;
             key-positions = <18 41>;
         };
+
+        one_1 {
+            bindings = <&kp NUMBER_1>;
+            key-positions = <10 22>;
+        };
+
+        two_2 {
+            bindings = <&kp NUMBER_2>;
+            key-positions = <11 23>;
+        };
+
+        three_3 {
+            bindings = <&kp NUMBER_3>;
+            key-positions = <12 24>;
+        };
+
+        four_4 {
+            bindings = <&kp NUMBER_4>;
+            key-positions = <13 25>;
+        };
+
+        five_5 {
+            bindings = <&kp NUMBER_5>;
+            key-positions = <14 26>;
+        };
+
+        six_6 {
+            bindings = <&kp NUMBER_6>;
+            key-positions = <17 29>;
+        };
+
+        seven_7 {
+            bindings = <&kp NUMBER_7>;
+            key-positions = <18 30>;
+        };
+
+        eight_8 {
+            bindings = <&kp N8>;
+            key-positions = <19 31>;
+        };
+
+        nine_9 {
+            bindings = <&kp NUMBER_9>;
+            key-positions = <20 32>;
+        };
+
+        zero_0 {
+            bindings = <&kp NUMBER_0>;
+            key-positions = <21 33>;
+        };
     };
 
     behaviors {
