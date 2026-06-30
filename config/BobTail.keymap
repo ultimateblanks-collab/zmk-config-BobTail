@@ -56,27 +56,27 @@
 
         six_6 {
             bindings = <&kp NUMBER_6>;
-            key-positions = <17 37>;
+            key-positions = <17 38>;
         };
 
         seven_7 {
             bindings = <&kp NUMBER_7>;
-            key-positions = <18 37>;
+            key-positions = <18 38>;
         };
 
         eight_8 {
             bindings = <&kp N8>;
-            key-positions = <19 37>;
+            key-positions = <19 38>;
         };
 
         nine_9 {
             bindings = <&kp NUMBER_9>;
-            key-positions = <20 37>;
+            key-positions = <20 38>;
         };
 
         zero_0 {
             bindings = <&kp NUMBER_0>;
-            key-positions = <37 37 37 21>;
+            key-positions = <21 38>;
         };
     };
 
