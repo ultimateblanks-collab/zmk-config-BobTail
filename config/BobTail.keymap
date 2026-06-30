@@ -213,6 +213,20 @@
             #binding-cells = <0>;
             bindings = <&kp SLASH>, <&pl>;
         };
+
+        menuTD: menuTD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MENUTD";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU>, <&shiftapp>;
+        };
+
+        prscTD: prscTD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PRSCTD";
+            #binding-cells = <0>;
+            bindings = <&kp PRINTSCREEN>, <&altprsc>;
+        };
     };
 
     macros {
@@ -615,6 +629,34 @@
 
             label = "ALTF11";
         };
+
+        shiftapp: shiftapp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_wait_time 15>,
+                <&kp K_CONTEXT_MENU>,
+                <&macro_release>,
+                <&kp K_CONTEXT_MENU &kp LSHFT>;
+
+            label = "SHIFTAPP";
+        };
+
+        altprsc: altprsc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_wait_time 15>,
+                <&kp PRINTSCREEN>,
+                <&macro_release>,
+                <&kp PRINTSCREEN &kp LEFT_ALT>;
+
+            label = "ALTPRSC";
+        };
     };
 
     keymap {
@@ -622,10 +664,10 @@
 
         default_layer {
             bindings = <
-&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R    &kp T                                                                   &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
-&kp A          &kp S              &kp D           &kp F             &kp G                &ctrlW                         &kp K_CONTEXT_MENU  &kp H           &kp J           &kp K           &kp L               &hius
-&kp Z          &kp X              &kp C           &kp V             &kp B                &ctrlT                         &kp PRINTSCREEN     &kp N           &kp M           &cosdq          &perisq             &slpl
-&CW            &kp C_MUTE         &kp LCTRL       &R_THUMB 3 GRAVE  &R_THUMB 4 LEFT_ALT  &mt LSHIFT K_CONTEXT_MENU      &mt RSHFT HOME      &R_THUMB 2 END                                                      &sk LSHFT
+&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R    &kp T                                                               &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
+&kp A          &kp S              &kp D           &kp F             &kp G                &ctrlW                         &shiftapp       &kp H           &kp J           &kp K           &kp L               &hius
+&kp Z          &kp X              &kp C           &kp V             &kp B                &ctrlT                         &prscTD         &kp N           &kp M           &cosdq          &perisq             &slpl
+&CW            &kp C_MUTE         &kp LCTRL       &R_THUMB 3 GRAVE  &R_THUMB 4 LEFT_ALT  &mt LSHIFT K_CONTEXT_MENU      &mt RSHFT HOME  &R_THUMB 2 END                                                      &sk LSHFT
             >;
 
             sensor-bindings = <&idpass>;
@@ -644,7 +686,7 @@
             bindings = <
 &kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &none                    &wintab     &kp UP_ARROW   &kp LEFT   &kp RIGHT  &kp DOWN_ARROW
 &none     &none         &none      &none      &none  &none      &none  &kp DELETE  &kp BACKSPACE  &kp SPACE  &kp ENTER  &kp TAB
-&none     &altesc       &none      &saltesc   &none  &none      &none  &none       &ctpgup        &altesc    &ctpgdn    &none
+&none     &altesc       &none      &saltesc   &none  &none      &none  &none       &ctpgup        &altesc    &ctpgdn    &saltesc
 &none     &none         &none      &sk LSHFT  &CW    &none      &none  &none                                            &none
             >;
 
