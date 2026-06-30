@@ -31,52 +31,52 @@
 
         one_1 {
             bindings = <&kp NUMBER_1>;
-            key-positions = <10 22>;
+            key-positions = <10 41>;
         };
 
         two_2 {
             bindings = <&kp NUMBER_2>;
-            key-positions = <11 23>;
+            key-positions = <11 41>;
         };
 
         three_3 {
             bindings = <&kp NUMBER_3>;
-            key-positions = <12 24>;
+            key-positions = <12 41>;
         };
 
         four_4 {
             bindings = <&kp NUMBER_4>;
-            key-positions = <13 25>;
+            key-positions = <13 41>;
         };
 
         five_5 {
             bindings = <&kp NUMBER_5>;
-            key-positions = <14 26>;
+            key-positions = <14 41>;
         };
 
         six_6 {
             bindings = <&kp NUMBER_6>;
-            key-positions = <17 29>;
+            key-positions = <17 37>;
         };
 
         seven_7 {
             bindings = <&kp NUMBER_7>;
-            key-positions = <18 30>;
+            key-positions = <18 37>;
         };
 
         eight_8 {
             bindings = <&kp N8>;
-            key-positions = <19 31>;
+            key-positions = <19 37>;
         };
 
         nine_9 {
             bindings = <&kp NUMBER_9>;
-            key-positions = <20 32>;
+            key-positions = <20 37>;
         };
 
         zero_0 {
             bindings = <&kp NUMBER_0>;
-            key-positions = <21 33>;
+            key-positions = <37 37 37 21>;
         };
     };
 
