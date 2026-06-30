@@ -28,56 +28,6 @@
             bindings = <&altF4>;
             key-positions = <18 41>;
         };
-
-        one_1 {
-            bindings = <&kp NUMBER_1>;
-            key-positions = <10 41>;
-        };
-
-        two_2 {
-            bindings = <&kp NUMBER_2>;
-            key-positions = <11 41>;
-        };
-
-        three_3 {
-            bindings = <&kp NUMBER_3>;
-            key-positions = <12 41>;
-        };
-
-        four_4 {
-            bindings = <&kp NUMBER_4>;
-            key-positions = <13 41>;
-        };
-
-        five_5 {
-            bindings = <&kp NUMBER_5>;
-            key-positions = <14 41>;
-        };
-
-        six_6 {
-            bindings = <&kp NUMBER_6>;
-            key-positions = <17 38>;
-        };
-
-        seven_7 {
-            bindings = <&kp NUMBER_7>;
-            key-positions = <18 38>;
-        };
-
-        eight_8 {
-            bindings = <&kp N8>;
-            key-positions = <19 38>;
-        };
-
-        nine_9 {
-            bindings = <&kp NUMBER_9>;
-            key-positions = <20 38>;
-        };
-
-        zero_0 {
-            bindings = <&kp NUMBER_0>;
-            key-positions = <21 38>;
-        };
     };
 
     behaviors {
@@ -236,18 +186,18 @@
             tapping-term-ms = <5>;
         };
 
-        cosemi: cosemi {
+        cosdq: cosdq {
             compatible = "zmk,behavior-tap-dance";
-            label = "COSEMI";
+            label = "COSDQ";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
+            bindings = <&kp COMMA>, <&dq>;
         };
 
-        pericor: pericor {
+        perisq: perisq {
             compatible = "zmk,behavior-tap-dance";
-            label = "PERICOR";
+            label = "PERISQ";
             #binding-cells = <0>;
-            bindings = <&kp PERIOD>, <&kp APOSTROPHE>;
+            bindings = <&kp PERIOD>, <&sq>;
         };
 
         hius: hius {
@@ -674,7 +624,7 @@
             bindings = <
 &L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R    &kp T                                                                   &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
 &kp A          &kp S              &kp D           &kp F             &kp G                &ctrlW                         &kp K_CONTEXT_MENU  &kp H           &kp J           &kp K           &kp L               &hius
-&kp Z          &kp X              &kp C           &kp V             &kp B                &ctrlT                         &kp PRINTSCREEN     &kp N           &kp M           &cosemi         &pericor            &slpl
+&kp Z          &kp X              &kp C           &kp V             &kp B                &ctrlT                         &kp PRINTSCREEN     &kp N           &kp M           &cosdq          &perisq             &slpl
 &CW            &kp C_MUTE         &kp LCTRL       &R_THUMB 3 GRAVE  &R_THUMB 4 LEFT_ALT  &mt LSHIFT K_CONTEXT_MENU      &mt RSHFT HOME      &R_THUMB 2 END                                                      &sk LSHFT
             >;
 
@@ -714,9 +664,9 @@
 
         SYMBOL {
             bindings = <
-&none     &none      &none  &none  &none                      &kp INTERNATIONAL_3  &kp RBKT  &kp NUHS  &kp APOSTROPHE  &kp SEMI
-&kp LBKT  &kp EQUAL  &hush  &exc   &none  &none      &none    &dollar              &l_kakko  &r_kakko  &sq             &dq
-&none     &none      &none  &none  &none  &none      &none    &anp                 &Lmid     &Rmid     &pl             &us
+&none     &none      &none  &none  &none                      &kp INTERNATIONAL_3  &kp RBKT  &kp NUHS  &kp LBKT        &kp EQUAL
+&kp LBKT  &kp EQUAL  &hush  &exc   &none  &none      &none    &dollar              &l_kakko  &r_kakko  &kp APOSTROPHE  &kp SEMI
+&none     &none      &none  &none  &none  &none      &none    &anp                 &Lmid     &Rmid     &hush           &exc
 &none     &none      &none  &none  &none  &none      &evalue  &kp BACKSPACE                                            &none
             >;
         };
