@@ -107,8 +107,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <100>;
-            require-prior-idle-ms = <100>;
             flavor = "tap-unless-interrupted";
         };
 
@@ -119,8 +117,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <100>;
-            require-prior-idle-ms = <100>;
             flavor = "tap-unless-interrupted";
         };
 
