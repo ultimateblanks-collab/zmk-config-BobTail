@@ -659,6 +659,34 @@
 
             label = "ALTPRSC";
         };
+
+        shiftHOME: shiftHOME {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_wait_time 15>,
+                <&kp HOME>,
+                <&macro_release>,
+                <&kp HOME &kp LSHFT>;
+
+            label = "SHIFTHOME";
+        };
+
+        shiftEND: shiftEND {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_wait_time 15>,
+                <&kp END>,
+                <&macro_release>,
+                <&kp END &kp LSHFT>;
+
+            label = "SHIFTEND";
+        };
     };
 
     keymap {
@@ -686,10 +714,10 @@
 
         BASIC {
             bindings = <
-&kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &none                    &wintab         &kp BACKSPACE  &kp SPACE       &kp TAB    &kp DELETE
-&none     &ctpgup       &wintab    &altesc    &none  &none      &none  &kp LEFT_ARROW  &kp UP_ARROW   &kp DOWN_ARROW  &kp RIGHT  &kp ENTER
-&none     &ctpgdn       &kp RIGHT  &saltesc   &none  &none      &none  &none           &ctpgup        &altesc         &ctpgdn    &saltesc
-&none     &none         &none      &sk LSHFT  &CW    &none      &none  &none                                                     &none
+&kp LWIN  &kp LEFT_ALT  &kp LCTRL   &kp LSHFT  &none                    &wintab         &kp BACKSPACE  &kp SPACE       &kp TAB    &kp DELETE
+&none     &ctpgup       &shiftHOME  &altesc    &none  &none      &none  &kp LEFT_ARROW  &kp UP_ARROW   &kp DOWN_ARROW  &kp RIGHT  &kp ENTER
+&none     &ctpgdn       &shiftEND   &saltesc   &none  &none      &none  &none           &ctpgup        &altesc         &ctpgdn    &saltesc
+&none     &none         &none       &sk LSHFT  &CW    &none      &none  &none                                                     &none
             >;
 
             sensor-bindings = <&appch>;
