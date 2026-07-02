@@ -28,6 +28,16 @@
             bindings = <&altF4>;
             key-positions = <18 41>;
         };
+
+        skey {
+            bindings = <&sk LSHFT>;
+            key-positions = <18 19>;
+        };
+
+        cw {
+            bindings = <&CW>;
+            key-positions = <20 19>;
+        };
     };
 
     behaviors {
