@@ -239,6 +239,39 @@
             tapping-term-ms = <190>;
             flavor = "tap-unless-interrupted";
         };
+
+        SP_CTPGUP: SP_CTPGUP {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SP_CTPGUP";
+            bindings = <&kp>, <&ctpgup>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <17 18 19 20 21>;
+        };
+
+        SP_SHIFTHOME: SP_SHIFTHOME {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SP_SHIFTHOME";
+            bindings = <&kp>, <&shiftHOME>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <17 18 19 20 21>;
+        };
+
+        SP_ALTESC: SP_ALTESC {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SP_ALTESC";
+            bindings = <&kp>, <&altesc>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <17 18 19 20 21>;
+        };
     };
 
     macros {
@@ -724,10 +757,10 @@
 
         BASIC {
             bindings = <
-&kp LWIN  &kp LEFT_ALT  &kp LCTRL   &kp LSHFT  &none                    &wintab         &kp BACKSPACE  &kp SPACE       &kp TAB    &kp DELETE
-&none     &ctpgup       &shiftHOME  &altesc    &none  &none      &none  &kp LEFT_ARROW  &kp UP_ARROW   &kp DOWN_ARROW  &kp RIGHT  &kp ENTER
-&none     &ctpgdn       &shiftEND   &saltesc   &none  &none      &none  &none           &ctpgup        &altesc         &ctpgdn    &saltesc
-&none     &none         &none       &sk LSHFT  &CW    &none      &none  &none                                                     &none
+&kp LWIN  &SP_CTPGUP LEFT_ALT 0  &SP_SHIFTHOME LCTRL 0  &SP_ALTESC LSHIFT 0  &none                    &wintab         &kp BACKSPACE  &kp SPACE       &kp TAB    &kp DELETE
+&none     &ctpgdn                &shiftEND              &saltesc             &none  &none      &none  &kp LEFT_ARROW  &kp UP_ARROW   &kp DOWN_ARROW  &kp RIGHT  &kp ENTER
+&none     &none                  &none                  &none                &none  &none      &none  &none           &ctpgup        &altesc         &ctpgdn    &saltesc
+&none     &none                  &none                  &sk LSHFT            &CW    &none      &none  &none                                                     &none
             >;
 
             sensor-bindings = <&appch>;
