@@ -229,6 +229,16 @@
             #binding-cells = <0>;
             bindings = <&kp PRINTSCREEN>, <&altprsc>;
         };
+
+        SL_SP: SL_SP {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SL_SP";
+            bindings = <&mo>, <&mkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <190>;
+            flavor = "balanced";
+        };
     };
 
     macros {
@@ -705,10 +715,10 @@
 
         MB {
             bindings = <
-&none  &none  &none  &none  &none                    &none  &none  &none      &none     &none
-&none  &none  &none  &none  &none  &none      &none  &none  &none  &none      &mkp MB1  &mkp MB2
-&none  &none  &none  &none  &none  &none      &none  &none  &none  &SPL5 5 0  &mkp MB4  &mkp MB5
-&none  &none  &none  &none  &none  &none      &none  &none                              &none
+&none  &none  &none  &none  &none                    &none  &none  &none  &none     &none
+&none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &mkp MB1  &SL_SP 5 MB2
+&none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &mkp MB4  &mkp MB5
+&none  &none  &none  &none  &none  &none      &none  &none                          &none
             >;
         };
 
