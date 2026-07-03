@@ -757,9 +757,9 @@
 
         BASIC {
             bindings = <
-&kp LWIN  &SP_CTPGUP LEFT_ALT 0  &SP_SHIFTHOME LCTRL 0  &SP_ALTESC LSHIFT 0  &none                    &wintab  &kp BACKSPACE   &kp UP_ARROW    &kp SPACE  &kp DELETE
-&none     &ctpgdn                &shiftEND              &saltesc             &none  &none      &none  &kp TAB  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp ENTER
-&none     &none                  &none                  &none                &none  &none      &none  &none    &kp HOME        &none           &kp END    &none
+&kp LWIN  &SP_CTPGUP LEFT_ALT 0  &SP_SHIFTHOME LCTRL 0  &SP_ALTESC LSHIFT 0  &none                    &wintab  &kp BACKSPACE   &kp UP_ARROW    &kp TAB    &kp DELETE
+&none     &ctpgdn                &shiftEND              &saltesc             &none  &none      &none  &none    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp ENTER
+&none     &none                  &none                  &none                &none  &none      &none  &none    &kp HOME        &kp SPACE       &kp END    &none
 &none     &none                  &none                  &sk LSHFT            &CW    &none      &none  &none                                               &none
             >;
 
