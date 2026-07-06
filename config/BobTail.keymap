@@ -273,6 +273,13 @@
             flavor = "balanced";
             hold-trigger-key-positions = <17 18 19 20 21>;
         };
+
+        TD_MB4: TD_MB4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_MB4";
+            #binding-cells = <0>;
+            bindings = <&slpl>, <&mkp MB4>, <&mkp MB5>;
+        };
     };
 
     macros {
@@ -768,7 +775,7 @@
             bindings = <
 &L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R        &kp T                                                             &kp Y              &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
 &kp A          &kp S              &kp D           &kp F                 &kp G              &ctrlW                   &menuTD               &kp H              &kp J           &kp K           &kp L               &hius
-&kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT                   &prscTD               &kp N              &kp M           &mkp MB1        &SL_SP 5 MB2        &slpl
+&kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT                   &prscTD               &kp N              &kp M           &mkp MB1        &SL_SP 5 MB2        &TD_MB4
 &CW            &kp C_MUTE         &kp LCTRL       &THUMB_MO 3 LEFT_ALT  &THUMB_MO 4 LCTRL  &mt LSHFT SEMICOLON      &mt RSHFT APOSTROPHE  &THUMB_MO 2 GRAVE                                                      &sk LSHFT
             >;
 
