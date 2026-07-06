@@ -63,7 +63,7 @@
     };
 };
 
-&zip_temp_layer {
+/*&zip_temp_layer {
     require-prior-idle-ms = <200>;
 };
 
@@ -75,7 +75,7 @@
         32
         33
     >;
-};
+};*/
 
 / {
     trackball_listener: trackball_listener {
