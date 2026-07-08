@@ -278,7 +278,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_MB4";
             #binding-cells = <0>;
-            bindings = <&SL_SP 5 MB2>, <&mkp MB4>, <&mkp MB5>;
+            bindings = <&SL_SP 5 MB2>, <&mkp MB2>, <&mkp MB4>, <&mkp MB5>;
         };
     };
 
