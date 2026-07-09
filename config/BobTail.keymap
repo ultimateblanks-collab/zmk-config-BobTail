@@ -776,10 +776,10 @@
 
         MB {
             bindings = <
-&none  &none  &none  &none  &none                    &none  &none  &none  &none     &none
-&none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &mkp MB1  &SL_SP 5 MB2
-&none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &mkp MB4  &mkp MB5
-&none  &none  &none  &none  &none  &none      &none  &none                          &none
+&none  &none  &none  &none  &none                    &none  &none  &none  &none         &none
+&none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &mkp MB1      &mkp MB2
+&none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &SL_SP 5 MB4  &mkp MB5
+&none  &none  &none  &none  &none  &none      &none  &none                              &none
             >;
         };
 
