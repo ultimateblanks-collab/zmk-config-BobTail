@@ -293,6 +293,16 @@
             #binding-cells = <0>;
             bindings = <&SL_SP 5 MB2>, <&mkp MB2>, <&mkp MB4>, <&mkp MB5>;
         };
+
+        R_THUMB: R_THUMB {
+            compatible = "zmk,behavior-hold-tap";
+            label = "R_THUMB";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <400>;
+            flavor = "tap-unless-interrupted";
+        };
     };
 
     macros {
@@ -807,6 +817,62 @@
 
             label = "CTRLMINUS";
         };
+
+        ctrlUP: ctrlUP {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_wait_time 15>,
+                <&kp UP_ARROW>,
+                <&macro_release>,
+                <&kp UP_ARROW &kp LCTRL>;
+
+            label = "CTRLUP";
+        };
+
+        ctrlDOWN: ctrlDOWN {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_wait_time 15>,
+                <&kp DOWN>,
+                <&macro_release>,
+                <&kp DOWN_ARROW &kp LCTRL>;
+
+            label = "CTRLDOWN";
+        };
+
+        ctrlLEFT: ctrlLEFT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_wait_time 15>,
+                <&kp LEFT_ARROW>,
+                <&macro_release>,
+                <&kp LEFT_ARROW &kp LCTRL>;
+
+            label = "CTRLLEFT";
+        };
+
+        ctrlRIGHT: ctrlRIGHT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_wait_time 15>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp RIGHT &kp LCTRL>;
+
+            label = "CTRLRIGHT";
+        };
     };
 
     keymap {
@@ -814,10 +880,10 @@
 
         default_layer {
             bindings = <
-&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R        &kp T                                                             &kp Y              &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
-&kp A          &kp S              &kp D           &kp F                 &kp G              &ctrlW                   &menuTD               &kp H              &kp J           &SL_SP1 1 K     &kp L               &hius
-&kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT                   &prscTD               &kp N              &kp M           &cosdq          &perisq             &slpl
-&kp J          &kp C_MUTE         &kp LCTRL       &THUMB_MO 3 LEFT_ALT  &THUMB_MO 4 LCTRL  &mt LSHFT SEMICOLON      &mt RSHFT APOSTROPHE  &THUMB_MO 2 GRAVE                                                      &kp L
+&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R        &kp T                                                             &kp Y             &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
+&kp A          &kp S              &kp D           &kp F                 &kp G              &ctrlW                   &menuTD               &kp H             &kp J           &SL_SP1 1 K     &kp L               &hius
+&kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT                   &prscTD               &kp N             &kp M           &cosdq          &perisq             &slpl
+&kp J          &kp C_MUTE         &kp LCTRL       &THUMB_MO 3 LEFT_ALT  &THUMB_MO 4 LCTRL  &mt LSHFT SEMICOLON      &mt RSHFT APOSTROPHE  &R_THUMB 2 GRAVE                                                      &kp L
             >;
 
             sensor-bindings = <&ctPLMI>;
@@ -856,10 +922,10 @@
 
         SYMBOL {
             bindings = <
-&none       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none                      &kp INTERNATIONAL_3  &kp RBKT  &kp NUHS  &kp LBKT  &kp EQUAL
-&kp N0      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none  &none      &none    &dollar              &l_kakko  &r_kakko  &anp      &eql
-&kp PERIOD  &kp N7        &kp N8        &kp N9        &none  &none      &none    &none                &Lmid     &Rmid     &hush     &exc
-&none       &none         &none         &none         &none  &none      &evalue  &kp BACKSPACE                                      &none
+&none    &ctrlUP    &ctrlUP    &ctpgdn     &none                       &kp INTERNATIONAL_3  &kp LBKT  &kp RBKT  &kp NUHS  &kp EQUAL
+&ctHOME  &ctrlLEFT  &ctrlDOWN  &ctrlRIGHT  &ctEND  &none      &none    &dollar              &anp      &l_kakko  &r_kakko  &eql
+&none    &none      &none      &none       &none   &none      &none    &none                &hush     &Lmid     &Rmid     &exc
+&none    &none      &none      &none       &none   &none      &evalue  &kp BACKSPACE                                      &none
             >;
         };
 
