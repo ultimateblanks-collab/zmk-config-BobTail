@@ -50,6 +50,15 @@
             tap-ms = <20>;
         }; */
 
+        ctPLMI: ctPLMI {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "CTPLMI";
+            #sensor-binding-cells = <0>;
+            bindings = <&ctrlPLUS>, <&ctrlMINUS>;
+
+            tap-ms = <20>;
+        }; 
+
         idpass: idpass {
             compatible = "zmk,behavior-sensor-rotate";
             label = "IDPASS";
@@ -806,7 +815,7 @@
 &kp J          &kp C_MUTE         &kp LCTRL       &THUMB_MO 3 LEFT_ALT  &THUMB_MO 4 LCTRL  &mt LSHFT SEMICOLON      &mt RSHFT APOSTROPHE  &THUMB_MO 2 GRAVE                                                      &kp L
             >;
 
-            sensor-bindings = <&idpass>;
+            sensor-bindings = <&ctPLMI>;
         };
 
         MB {
@@ -837,7 +846,7 @@
 &none         &none         &none         &none         &none   &none          &kp TAB  &kp BACKSPACE                           &none
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&idpass>;
         };
 
         SYMBOL {
