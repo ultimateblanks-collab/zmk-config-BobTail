@@ -300,13 +300,13 @@
             bindings = <&SL_SP 5 MB2>, <&mkp MB2>, <&mkp MB4>, <&mkp MB5>;
         };
 
-        R_THUMB_SP: R_THUMB_SP {
+        RT_SP: RT_SP {
             compatible = "zmk,behavior-hold-tap";
-            label = "R_THUMB_SP";
+            label = "RT_SP";
             bindings = <&mo>, <&none>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <5>;
+            tapping-term-ms = <1>;
             flavor = "balanced";
         };
     };
@@ -886,10 +886,10 @@
 
         default_layer {
             bindings = <
-&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R        &kp T                                                             &kp Y                &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
-&kp A          &kp S              &kp D           &kp F                 &kp G              &ctrlW                   &menuTD               &kp H                &kp J           &SL_SP1 1 K     &kp L               &hius
-&kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT                   &prscTD               &kp N                &kp M           &cosdq          &perisq             &slpl
-&kp J          &kp C_MUTE         &kp LCTRL       &THUMB_MO 3 LEFT_ALT  &THUMB_MO 4 LCTRL  &mt LSHFT SEMICOLON      &mt RSHFT APOSTROPHE  &R_THUMB_SP 2 GRAVE                                                      &kp L
+&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R        &kp T                                                             &kp Y       &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
+&kp A          &kp S              &kp D           &kp F                 &kp G              &ctrlW                   &menuTD               &kp H       &kp J           &SL_SP1 1 K     &kp L               &hius
+&kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT                   &prscTD               &kp N       &kp M           &cosdq          &perisq             &slpl
+&kp J          &kp C_MUTE         &kp LCTRL       &THUMB_MO 3 LEFT_ALT  &THUMB_MO 4 LCTRL  &mt LSHFT SEMICOLON      &mt RSHFT APOSTROPHE  &RT_SP 5 0                                                      &kp L
             >;
 
             sensor-bindings = <&ctPLMI>;
