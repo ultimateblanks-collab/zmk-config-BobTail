@@ -43,6 +43,11 @@
             bindings = <&SL_SP 5 0>;
             key-positions = <19 20>;
         };
+
+        inputMODE {
+            bindings = <&kp GRAVE>;
+            key-positions = <13 18>;
+        };
     };
 
     behaviors {
@@ -297,11 +302,10 @@
         R_THUMB: R_THUMB {
             compatible = "zmk,behavior-hold-tap";
             label = "R_THUMB";
-            bindings = <&mo>, <&kp>;
-
+            bindings = <&mo>;
             #binding-cells = <2>;
-            tapping-term-ms = <700>;
-            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <1>;
+            flavor = "balanced";
         };
     };
 
