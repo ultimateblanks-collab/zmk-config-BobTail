@@ -302,7 +302,8 @@
         R_THUMB: R_THUMB {
             compatible = "zmk,behavior-hold-tap";
             label = "R_THUMB";
-            bindings = <&mo>;
+            bindings = <&mo>, <&none>;
+
             #binding-cells = <2>;
             tapping-term-ms = <1>;
             flavor = "balanced";
