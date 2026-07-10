@@ -765,6 +765,34 @@
 
             label = "CTEND";
         };
+
+        ctrlPLUS: ctrlPLUS {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_wait_time 15>,
+                <&plus>,
+                <&macro_release>,
+                <&kp LCTRL>;
+
+            label = "CTRLPLUS";
+        };
+
+        ctrlMINUS: ctrlMINUS {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_wait_time 15>,
+                <&kp MINUS>,
+                <&macro_release>,
+                <&kp MINUS &kp LCTRL>;
+
+            label = "CTRLMINUS";
+        };
     };
 
     keymap {
