@@ -300,7 +300,7 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <700>;
             flavor = "tap-unless-interrupted";
         };
     };
@@ -922,7 +922,7 @@
 
         SYMBOL {
             bindings = <
-&none    &ctrlUP    &ctrlUP    &ctpgdn     &none                       &kp INTERNATIONAL_3  &kp LBKT  &kp RBKT  &kp NUHS  &kp EQUAL
+&none    &ctpgup    &ctrlUP    &ctpgdn     &none                       &kp INTERNATIONAL_3  &kp LBKT  &kp RBKT  &kp NUHS  &kp EQUAL
 &ctHOME  &ctrlLEFT  &ctrlDOWN  &ctrlRIGHT  &ctEND  &none      &none    &dollar              &anp      &l_kakko  &r_kakko  &eql
 &none    &none      &none      &none       &none   &none      &none    &none                &hush     &Lmid     &Rmid     &exc
 &none    &none      &none      &none       &none   &none      &evalue  &kp BACKSPACE                                      &none
