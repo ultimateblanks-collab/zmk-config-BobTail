@@ -36,7 +36,12 @@
 
         cw {
             bindings = <&CW>;
-            key-positions = <20 19>;
+            key-positions = <6 7>;
+        };
+
+        to_SL {
+            bindings = <&SL_SP 5 0>;
+            key-positions = <19 20>;
         };
     };
 
@@ -810,7 +815,7 @@
         default_layer {
             bindings = <
 &L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R        &kp T                                                             &kp Y              &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
-&kp A          &kp S              &kp D           &kp F                 &kp G              &ctrlW                   &menuTD               &kp H              &mkp MB1        &SL_SP1 5 K     &mkp MB2            &hius
+&kp A          &kp S              &kp D           &kp F                 &kp G              &ctrlW                   &menuTD               &kp H              &kp J           &SL_SP1 1 K     &kp L               &hius
 &kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT                   &prscTD               &kp N              &kp M           &cosdq          &perisq             &slpl
 &kp J          &kp C_MUTE         &kp LCTRL       &THUMB_MO 3 LEFT_ALT  &THUMB_MO 4 LCTRL  &mt LSHFT SEMICOLON      &mt RSHFT APOSTROPHE  &THUMB_MO 2 GRAVE                                                      &kp L
             >;
@@ -820,10 +825,10 @@
 
         MB {
             bindings = <
-&none  &none  &none  &none  &none                    &none  &none  &none  &none     &none
-&none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &mkp MB1  &SL_SP 5 MB2
-&none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &mkp MB4  &mkp MB5
-&none  &none  &none  &none  &none  &none      &none  &none                          &none
+&none  &none  &none  &none  &none                    &none     &none     &none  &none     &none
+&none  &none  &none  &none  &none  &none      &none  &mkp MB4  &mkp MB1  &none  &mkp MB2  &mkp MB5
+&none  &none  &none  &none  &none  &none      &none  &none     &none     &none  &none     &none
+&none  &none  &none  &none  &none  &none      &none  &none                                &none
             >;
         };
 
@@ -842,7 +847,7 @@
             bindings = <
 &kp F1        &kp F2        &altF3        &kp F4        &kp F5                          &kp F6         &kp F7     &kp F8     &kp F9  &kp F10
 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &altf11        &kp F12  &kp NUMBER_6   &kp N7     &kp N8     &kp N9  &kp N0
-&carte        &evalue       &aster        &kp SLASH     &eql    &kp EQUAL      &eql     &plus          &kp MINUS  &kp SLASH  &aster  &kp ENTER
+&kp PERIOD    &carte        &evalue       &none         &none   &kp EQUAL      &eql     &plus          &kp MINUS  &kp SLASH  &aster  &kp ENTER
 &altf11       &none         &none         &none         &none   &none          &kp TAB  &kp BACKSPACE                                &kp F12
             >;
 
