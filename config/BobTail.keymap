@@ -57,7 +57,7 @@
             bindings = <&ctrlPLUS>, <&ctrlMINUS>;
 
             tap-ms = <20>;
-        }; 
+        };
 
         idpass: idpass {
             compatible = "zmk,behavior-sensor-rotate";
@@ -780,11 +780,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL>,
+                <&kp LCTRL &kp LSHFT>,
                 <&macro_wait_time 15>,
-                <&plus>,
+                <&kp SEMI>,
                 <&macro_release>,
-                <&kp LCTRL>;
+                <&kp LCTRL &kp LSHFT>;
 
             label = "CTRLPLUS";
         };
