@@ -19,11 +19,6 @@
     combos {
         compatible = "zmk,combos";
 
-        esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <7 8>;
-        };
-
         endApp {
             bindings = <&altF4>;
             key-positions = <18 41>;
@@ -910,7 +905,7 @@
             bindings = <
 &kp LWIN    &SP_CTPGUP LEFT_ALT 0  &SP_CTUP LCTRL 0  &SP_CTPGDN LSHIFT 0  &none                        &saltesc  &kp BACKSPACE   &kp UP_ARROW    &kp TAB    &kp DELETE
 &shiftHOME  &ctrlLEFT              &ctrlDOWN         &ctrlRIGHT           &shiftEND  &none      &none  &altesc   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &wintab
-&none       &ctHOME                &none             &ctEND               &none      &none      &none  &none     &kp HOME        &kp SPACE       &kp END    &none
+&none       &ctHOME                &none             &ctEND               &none      &none      &none  &kp RWIN  &kp HOME        &kp SPACE       &kp END    &kp ESCAPE
 &none       &none                  &none             &sk LSHFT            &CW        &none      &none  &none                                                &none
             >;
 
