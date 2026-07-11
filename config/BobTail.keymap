@@ -906,9 +906,9 @@
 
         BASIC {
             bindings = <
-&kp LWIN    &SP_CTPGUP LEFT_ALT 0  &SP_CTUP LCTRL 0  &SP_CTPGDN LSHIFT 0  &none                        &saltesc  &kp BACKSPACE   &kp UP_ARROW    &kp SPACE  &kp DELETE
-&shiftHOME  &ctrlLEFT              &ctrlDOWN         &ctrlRIGHT           &shiftEND  &none      &none  &altesc   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp ENTER
-&none       &ctHOME                &none             &ctEND               &none      &none      &none  &none     &kp HOME        &kp TAB         &kp END    &wintab
+&kp LWIN    &SP_CTPGUP LEFT_ALT 0  &SP_CTUP LCTRL 0  &SP_CTPGDN LSHIFT 0  &none                        &saltesc  &kp BACKSPACE   &kp UP_ARROW    &kp ENTER  &kp DELETE
+&shiftHOME  &ctrlLEFT              &ctrlDOWN         &ctrlRIGHT           &shiftEND  &none      &none  &altesc   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp TAB
+&none       &ctHOME                &none             &ctEND               &none      &none      &none  &none     &kp HOME        &kp SPACE       &kp END    &wintab
 &none       &none                  &none             &sk LSHFT            &CW        &none      &none  &none                                                &none
             >;
 
