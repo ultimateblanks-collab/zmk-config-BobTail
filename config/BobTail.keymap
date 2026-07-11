@@ -271,15 +271,15 @@
             hold-trigger-key-positions = <17 18 19 20 21>;
         };
 
-        SP_SHIFTHOME: SP_SHIFTHOME {
+        SP_CTUP: SP_CTUP {
             compatible = "zmk,behavior-hold-tap";
-            label = "SP_SHIFTHOME";
-            bindings = <&kp>, <&shiftHOME>;
+            label = "SP_CTUP";
+            bindings = <&kp>, <&ctrlUP>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "balanced";
-            hold-trigger-key-positions = <17 18 19 20 21>;
+            hold-trigger-key-positions = <18 19 20 7>;
         };
 
         SP_ALTESC: SP_ALTESC {
@@ -906,10 +906,10 @@
 
         BASIC {
             bindings = <
-&kp LWIN  &SP_CTPGUP LEFT_ALT 0  &SP_SHIFTHOME LCTRL 0  &SP_ALTESC LSHIFT 0  &none                    &ctpgup  &kp BACKSPACE   &kp UP_ARROW    &kp SPACE  &kp DELETE
-&none     &ctpgdn                &shiftEND              &saltesc             &none  &none      &none  &ctpgdn  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp ENTER
-&none     &ctHOME                &none                  &ctEND               &none  &none      &none  &none    &kp HOME        &kp TAB         &kp END    &wintab
-&none     &none                  &none                  &sk LSHFT            &CW    &none      &none  &none                                               &none
+&kp LWIN    &SP_CTPGUP LEFT_ALT 0  &SP_CTUP LCTRL 0  &SP_ALTESC LSHIFT 0  &none                        &saltesc  &kp BACKSPACE   &kp UP_ARROW    &kp SPACE  &kp DELETE
+&shiftHOME  &ctrlLEFT              &ctrlDOWN         &ctrlRIGHT           &shiftEND  &none      &none  &altesc   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp ENTER
+&none       &ctHOME                &none             &ctEND               &none      &none      &none  &none     &kp HOME        &kp TAB         &kp END    &wintab
+&none       &none                  &none             &sk LSHFT            &CW        &none      &none  &none                                                &none
             >;
 
             sensor-bindings = <&appch>;
