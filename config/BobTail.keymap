@@ -145,7 +145,7 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <170>;
             flavor = "balanced";
             hold-trigger-key-positions = <5 6 7 8 9 17 18 19 20 21 29 30 31 32 33 41 42 16 28 40>;
         };
@@ -282,15 +282,15 @@
             hold-trigger-key-positions = <18 19 20 7>;
         };
 
-        SP_ALTESC: SP_ALTESC {
+        SP_CTPGDN: SP_CTPGDN {
             compatible = "zmk,behavior-hold-tap";
-            label = "SP_ALTESC";
-            bindings = <&kp>, <&altesc>;
+            label = "SP_CTPGDN";
+            bindings = <&kp>, <&ctpgdn>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "balanced";
-            hold-trigger-key-positions = <17 18 19 20 21>;
+            hold-trigger-key-positions = <18 19 20 7>;
         };
 
         TD_MB4: TD_MB4 {
@@ -906,7 +906,7 @@
 
         BASIC {
             bindings = <
-&kp LWIN    &SP_CTPGUP LEFT_ALT 0  &SP_CTUP LCTRL 0  &SP_ALTESC LSHIFT 0  &none                        &saltesc  &kp BACKSPACE   &kp UP_ARROW    &kp SPACE  &kp DELETE
+&kp LWIN    &SP_CTPGUP LEFT_ALT 0  &SP_CTUP LCTRL 0  &SP_CTPGDN LSHIFT 0  &none                        &saltesc  &kp BACKSPACE   &kp UP_ARROW    &kp SPACE  &kp DELETE
 &shiftHOME  &ctrlLEFT              &ctrlDOWN         &ctrlRIGHT           &shiftEND  &none      &none  &altesc   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp ENTER
 &none       &ctHOME                &none             &ctEND               &none      &none      &none  &none     &kp HOME        &kp TAB         &kp END    &wintab
 &none       &none                  &none             &sk LSHFT            &CW        &none      &none  &none                                                &none
