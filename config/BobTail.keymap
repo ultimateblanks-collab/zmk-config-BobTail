@@ -141,8 +141,9 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             hold-trigger-key-positions = <5 6 7 8 9 17 18 19 20 21 29 30 31 32 33 41 42 16 28 40>;
+            hold-trigger-on-release;
         };
 
         SL_SP1: SL_SP1 {
@@ -802,7 +803,7 @@
                 <&macro_wait_time 15>,
                 <&kp SEMI>,
                 <&macro_release>,
-                <&kp LCTRL &kp LSHFT>;
+                <&kp SEMI &kp LSHFT>;
 
             label = "CTRLPLUS";
         };
