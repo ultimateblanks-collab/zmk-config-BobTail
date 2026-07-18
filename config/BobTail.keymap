@@ -887,7 +887,7 @@
 &L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R        &kp T                                                             &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
 &kp A          &kp S              &kp D           &kp F                 &kp G              &ctrlW                   &menuTD               &kp H           &kp J           &kp K           &kp L               &hius
 &kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT                   &prscTD               &kp N           &kp M           &mkp MB1        &SPL5 5 MB2         &slpl
-&cosdq         &kp C_MUTE         &kp LWIN        &THUMB_MO 3 LEFT_ALT  &THUMB_MO 4 LCTRL  &mt LSHFT SEMICOLON      &mt RSHFT APOSTROPHE  &RT_SP 2 SPACE                                                      &perisq
+&cosdq         &kp C_MUTE         &kp LWIN        &THUMB_MO 4 LEFT_ALT  &THUMB_MO 3 LCTRL  &mt LSHFT SEMICOLON      &mt RSHFT APOSTROPHE  &RT_SP 2 SPACE                                                      &perisq
             >;
 
             sensor-bindings = <&ctPLMI>;
