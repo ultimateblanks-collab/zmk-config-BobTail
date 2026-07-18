@@ -886,8 +886,8 @@
             bindings = <
 &L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R        &kp T                                                             &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
 &kp A          &kp S              &kp D           &kp F                 &kp G              &ctrlW                   &menuTD               &kp H           &kp J           &SL_SP1 1 K     &kp L               &hius
-&kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT                   &prscTD               &kp N           &kp M           &cosdq          &perisq             &slpl
-&kp TAB        &kp C_MUTE         &kp LCTRL       &THUMB_MO 3 LEFT_ALT  &THUMB_MO 4 LCTRL  &mt LSHFT SEMICOLON      &mt RSHFT APOSTROPHE  &RT_SP 2 SPACE                                                      &kp ENTER
+&kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT                   &prscTD               &kp N           &kp M           &mkp MB1        &SPL5 5 MB2         &slpl
+&cosdq         &kp C_MUTE         &kp LWIN        &THUMB_MO 3 LEFT_ALT  &THUMB_MO 4 LCTRL  &mt LSHFT SEMICOLON      &mt RSHFT APOSTROPHE  &RT_SP 2 SPACE                                                      &perisq
             >;
 
             sensor-bindings = <&ctPLMI>;
@@ -904,10 +904,10 @@
 
         BASIC {
             bindings = <
-&kp LWIN    &SP_CTPGUP LEFT_ALT 0  &SP_CTUP LCTRL 0  &SP_CTPGDN LSHIFT 0  &none                        &saltesc    &kp BACKSPACE   &kp UP_ARROW    &kp ESCAPE  &saltesc
-&shiftHOME  &ctrlLEFT              &ctrlDOWN         &ctrlRIGHT           &shiftEND  &none      &none  &shiftHOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &shiftEND
-&none       &ctHOME                &none             &ctEND               &none      &none      &none  &kp RWIN    &kp HOME        &kp DELETE      &kp END     &wintab
-&sk LSHFT   &none                  &none             &none                &none      &none      &none  &none                                                   &CW
+&kp LWIN    &SP_CTPGUP LEFT_ALT 0  &SP_CTUP LCTRL 0  &SP_CTPGDN LSHIFT 0  &none                        &saltesc  &kp BACKSPACE   &kp UP_ARROW    &kp ESCAPE  &saltesc
+&shiftHOME  &ctrlLEFT              &ctrlDOWN         &ctrlRIGHT           &shiftEND  &none      &none  &kp TAB   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &kp ENTER
+&none       &ctHOME                &none             &ctEND               &none      &none      &none  &kp RWIN  &kp HOME        &kp DELETE      &kp END     &wintab
+&sk LSHFT   &none                  &none             &none                &none      &none      &none  &none                                                 &CW
             >;
 
             sensor-bindings = <&appch>;
