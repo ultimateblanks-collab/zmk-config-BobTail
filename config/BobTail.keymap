@@ -331,6 +331,20 @@
             hold-trigger-key-positions = <5 6 7 8 9 17 18 19 20 21 29 30 31 32 33 41 42 16 28 40>;
             hold-trigger-on-release;
         };
+
+        SQDQ: SQDQ {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SQDQ";
+            #binding-cells = <0>;
+            bindings = <&dq>, <&sq>;
+        };
+
+        ALTCTR: ALTCTR {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ALTCTR";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT>, <&kp LCTRL>;
+        };
     };
 
     macros {
@@ -908,10 +922,10 @@
 
         default_layer {
             bindings = <
-&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R  &kp T                                      &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
-&kp A          &kp S              &kp D           &kp F           &kp G         &ctrlW            &menuTD    &kp H           &kp J           &kp K           &kp L               &hius
-&kp Z          &kp X              &kp C           &kp V           &kp B         &ctrlT            &prscTD    &kp N           &kp M           &mkp MB1        &SPL5 5 MB2         &slpl
-&kp TAB        &sq                &dq             &RT_COM 4 0     &RT_PERI 3 0  &kp LEFT_ALT      &kp LCTRL  &RT_SP 2 SPACE                                                      &kp ENTER
+&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R  &kp T                               &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
+&kp A          &kp S              &kp D           &kp F           &kp G         &ctrlW       &menuTD  &kp H           &kp J           &kp K           &kp L               &hius
+&kp Z          &kp X              &kp C           &kp V           &kp B         &ctrlT       &prscTD  &kp N           &kp M           &mkp MB1        &SPL5 5 MB2         &slpl
+&kp TAB        &sq                &dq             &RT_COM 4 0     &RT_PERI 3 0  &ALTCTR      &SQDQ    &RT_SP 2 SPACE                                                      &kp ENTER
             >;
 
             sensor-bindings = <&ctPLMI>;
