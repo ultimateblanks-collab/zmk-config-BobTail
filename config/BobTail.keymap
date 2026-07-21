@@ -922,10 +922,10 @@
 
         default_layer {
             bindings = <
-&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R        &kp T                                   &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
-&kp A          &kp S              &kp D           &kp F                 &kp G              &ctrlW      &menuTD  &kp H           &kp J           &kp K           &kp L               &mkp MB1
-&kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT      &prscTD  &kp N           &kp M           &comdq          &perisq             &mkp MB2
-&kp TAB        &kp SEMI           &kp APOSTROPHE  &THUMB_MO 4 LEFT_ALT  &THUMB_MO 3 LCTRL  &slpl       &hius    &RT_SP 2 SPACE                                                      &THUMB_MO 5 ENTER
+&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R        &kp T                                            &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
+&kp A          &kp S              &kp D           &kp F                 &kp G              &ctrlW        &menuTD         &kp H           &kp J           &kp K           &kp L               &mkp MB1
+&kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT        &prscTD         &kp N           &kp M           &comdq          &perisq             &mkp MB2
+&kp TAB        &evalue            &carte          &THUMB_MO 4 LEFT_ALT  &THUMB_MO 3 LCTRL  &kp SEMI      &kp APOSTROPHE  &RT_SP 2 SPACE                                                      &THUMB_MO 5 ENTER
             >;
 
             sensor-bindings = <&ctPLMI>;
