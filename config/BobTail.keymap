@@ -204,18 +204,18 @@
             flavor = "balanced";
         };
 
-        cosemi: cosemi {
+        comdq: comdq {
             compatible = "zmk,behavior-tap-dance";
-            label = "COSEMI";
+            label = "COMDQ";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
+            bindings = <&kp COMMA>, <&dq>;
         };
 
-        pericor: pericor {
+        perisq: perisq {
             compatible = "zmk,behavior-tap-dance";
-            label = "PERICOR";
+            label = "PERISQ";
             #binding-cells = <0>;
-            bindings = <&kp PERIOD>, <&kp APOSTROPHE>;
+            bindings = <&kp PERIOD>, <&sq>;
         };
 
         hius: hius {
@@ -311,7 +311,7 @@
         RT_COM: RT_COM {
             compatible = "zmk,behavior-hold-tap";
             label = "RT_COM";
-            bindings = <&mo>, <&cosemi>;
+            bindings = <&mo>, <&comdq>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
@@ -323,7 +323,7 @@
         RT_PERI: RT_PERI {
             compatible = "zmk,behavior-hold-tap";
             label = "RT_PERI";
-            bindings = <&mo>, <&pericor>;
+            bindings = <&mo>, <&perisq>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
@@ -922,10 +922,10 @@
 
         default_layer {
             bindings = <
-&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R     &kp T                                     &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
-&kp A          &kp S              &kp D           &kp F              &kp G               &ctrlW       &menuTD  &kp H           &kp J           &kp K           &kp L               &hius
-&kp Z          &kp X              &kp C           &kp V              &kp B               &ctrlT       &prscTD  &kp N           &kp M           &mkp MB1        &SPL5 5 MB2         &slpl
-&kp TAB        &kp SEMI           &kp APOSTROPHE  &THUMB_MO 4 COMMA  &THUMB_MO 3 PERIOD  &ALTCTR      &SQDQ    &RT_SP 2 SPACE                                                      &kp ENTER
+&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R        &kp T                                   &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
+&kp A          &kp S              &kp D           &kp F                 &kp G              &ctrlW      &menuTD  &kp H           &kp J           &kp K           &kp L               &mkp MB1
+&kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT      &prscTD  &kp N           &kp M           &comdq          &perisq             &SPL5 5 MB2
+&kp TAB        &kp SEMI           &kp APOSTROPHE  &THUMB_MO 4 LEFT_ALT  &THUMB_MO 3 LCTRL  &slpl       &hius    &RT_SP 2 SPACE                                                      &kp ENTER
             >;
 
             sensor-bindings = <&ctPLMI>;
@@ -973,10 +973,10 @@
 
         SCROLL {
             bindings = <
-&none  &none  &none  &none  &none                    &none  &none     &none  &none  &none
-&none  &none  &none  &none  &none  &none      &none  &none  &none     &none  &none  &none
-&none  &none  &none  &none  &none  &none      &none  &none  &mkp MB4  &none  &none  &mkp MB5
-&none  &none  &none  &none  &none  &none      &none  &none                          &none
+&none  &none  &none  &none  &none                    &none  &none  &none     &none     &none
+&none  &none  &none  &none  &none  &none      &none  &none  &none  &none     &none     &none
+&none  &none  &none  &none  &none  &none      &none  &none  &none  &mkp MB4  &mkp MB5  &none
+&none  &none  &none  &none  &none  &none      &none  &none                             &none
             >;
         };
 
