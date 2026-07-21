@@ -204,18 +204,18 @@
             flavor = "balanced";
         };
 
-        comdq: comdq {
+        comSEMI: comSEMI {
             compatible = "zmk,behavior-tap-dance";
-            label = "COMDQ";
+            label = "COMSEMI";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&dq>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
         };
 
-        perisq: perisq {
+        periCOL: periCOL {
             compatible = "zmk,behavior-tap-dance";
-            label = "PERISQ";
+            label = "PERICOL";
             #binding-cells = <0>;
-            bindings = <&kp PERIOD>, <&sq>;
+            bindings = <&kp PERIOD>, <&kp APOSTROPHE>;
         };
 
         hius: hius {
@@ -311,7 +311,7 @@
         RT_COM: RT_COM {
             compatible = "zmk,behavior-hold-tap";
             label = "RT_COM";
-            bindings = <&mo>, <&comdq>;
+            bindings = <&mo>, <&comSEMI>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
@@ -323,7 +323,7 @@
         RT_PERI: RT_PERI {
             compatible = "zmk,behavior-hold-tap";
             label = "RT_PERI";
-            bindings = <&mo>, <&perisq>;
+            bindings = <&mo>, <&periCOL>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
@@ -922,10 +922,10 @@
 
         default_layer {
             bindings = <
-&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R        &kp T                                            &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
-&kp A          &kp S              &kp D           &kp F                 &kp G              &ctrlW        &menuTD         &kp H           &kp J           &kp K           &kp L               &mkp MB1
-&kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT        &prscTD         &kp N           &kp M           &comdq          &perisq             &mkp MB2
-&kp TAB        &evalue            &carte          &THUMB_MO 4 LEFT_ALT  &THUMB_MO 3 LCTRL  &kp SEMI      &kp APOSTROPHE  &RT_SP 2 SPACE                                                      &THUMB_MO 5 ENTER
+&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R        &kp T                                   &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
+&kp A          &kp S              &kp D           &kp F                 &kp G              &ctrlW      &menuTD  &kp H           &kp J           &kp K           &kp L               &mkp MB1
+&kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT      &prscTD  &kp N           &kp M           &comSEMI        &periCOL            &mkp MB2
+&kp TAB        &evalue            &carte          &THUMB_MO 4 LEFT_ALT  &THUMB_MO 3 LCTRL  &sq         &dq      &RT_SP 2 SPACE                                                      &THUMB_MO 5 ENTER
             >;
 
             sensor-bindings = <&ctPLMI>;
