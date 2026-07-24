@@ -919,8 +919,8 @@
             bindings = <
 &L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R        &kp T                                   &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
 &kp A          &kp S              &kp D           &kp F                 &kp G              &ctrlW      &menuTD  &kp H           &kp J           &kp K           &kp L               &mkp MB1
-&kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT      &prscTD  &kp N           &kp M           &comSEMI        &periCOL            &mkp MB2
-&kp TAB        &kp PG_UP          &kp PAGE_DOWN   &THUMB_MO 4 LEFT_ALT  &THUMB_MO 6 LCTRL  &sq         &dq      &RT_SP 2 SPACE                                                      &THUMB_MO 5 ENTER
+&kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT      &prscTD  &kp N           &kp M           &comSEMI        &periCOL            &THUMB_MO 5 ENTER
+&kp TAB        &kp PG_UP          &kp PAGE_DOWN   &THUMB_MO 4 LEFT_ALT  &THUMB_MO 6 LCTRL  &sq         &dq      &RT_SP 2 SPACE                                                      &mkp MB2
             >;
 
             sensor-bindings = <&ctPLMI>;
