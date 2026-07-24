@@ -199,18 +199,18 @@
             flavor = "balanced";
         };
 
-        comSEMI: comSEMI {
+        comHI: comHI {
             compatible = "zmk,behavior-tap-dance";
-            label = "COMSEMI";
+            label = "COMHI";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
+            bindings = <&kp COMMA>, <&kp MINUS>;
         };
 
-        periCOL: periCOL {
+        periUS: periUS {
             compatible = "zmk,behavior-tap-dance";
-            label = "PERICOL";
+            label = "PERIUS";
             #binding-cells = <0>;
-            bindings = <&kp PERIOD>, <&kp APOSTROPHE>;
+            bindings = <&kp PERIOD>, <&us>;
         };
 
         hius: hius {
@@ -306,7 +306,7 @@
         RT_COM: RT_COM {
             compatible = "zmk,behavior-hold-tap";
             label = "RT_COM";
-            bindings = <&mo>, <&comSEMI>;
+            bindings = <&mo>, <&comHI>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
@@ -318,7 +318,7 @@
         RT_PERI: RT_PERI {
             compatible = "zmk,behavior-hold-tap";
             label = "RT_PERI";
-            bindings = <&mo>, <&periCOL>;
+            bindings = <&mo>, <&periUS>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
@@ -919,7 +919,7 @@
             bindings = <
 &L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R        &kp T                                   &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
 &kp A          &kp S              &kp D           &kp F                 &kp G              &ctrlW      &menuTD  &kp H           &kp J           &kp K           &kp L               &mkp MB1
-&kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT      &prscTD  &kp N           &kp M           &comSEMI        &periCOL            &THUMB_MO 5 ENTER
+&kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT      &prscTD  &kp N           &kp M           &comHI          &periUS             &THUMB_MO 5 ENTER
 &kp TAB        &kp PG_UP          &kp PAGE_DOWN   &THUMB_MO 4 LEFT_ALT  &THUMB_MO 6 LCTRL  &sq         &dq      &RT_SP 2 SPACE                                                      &mkp MB2
             >;
 
