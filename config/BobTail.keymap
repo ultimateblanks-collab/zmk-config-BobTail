@@ -41,7 +41,7 @@
     };
 
     behaviors {
-         encoder_msc_down_up: encoder_msc_down_up {
+        encoder_msc_down_up: encoder_msc_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
@@ -362,13 +362,6 @@
             bindings = <&kp L>, <&kp MINUS>, <&us>;
 
             tapping-term-ms = <200>;
-        };
-
-        MB45: MB45 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MB45";
-            #binding-cells = <0>;
-            bindings = <&mkp MB4>, <&mkp MB5>;
         };
     };
 
@@ -947,10 +940,10 @@
 
         default_layer {
             bindings = <
-&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R        &kp T                                   &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
-&kp A          &kp S              &kp D           &kp F                 &kp G              &ctrlW      &menuTD  &kp H           &kp J           &kp K           &kp L               &hius
-&kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT      &prscTD  &kp N           &kp M           &comSEMI        &periCOR            &slpl
-&kp TAB        &mkp MB2           &mkp MB1        &THUMB_MO 4 LEFT_ALT  &THUMB_MO 6 LCTRL  &sq         &dq      &RT_SP 2 SPACE                                                      &THUMB_MO 5 ENTER
+&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E     &L_HRM LSHFT R        &kp T                            &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
+&kp A          &kp S              &kp D              &kp F                 &kp G     &ctrlW        &menuTD  &kp H           &kp J           &kp K           &kp L               &hius
+&kp Z          &kp X              &kp C              &kp V                 &kp B     &ctrlT        &prscTD  &kp N           &kp M           &comSEMI        &periCOR            &slpl
+&kp TAB        &mkp MB4           &THUMB_MO 6 LCTRL  &THUMB_MO 4 LEFT_ALT  &mkp MB1  &mkp MB2      &SQDQ    &RT_SP 2 SPACE                                                      &THUMB_MO 5 ENTER
             >;
 
             sensor-bindings = <&ctPLMI>;
