@@ -340,6 +340,20 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_ALT>, <&kp LCTRL>;
         };
+
+        dqSEMI: dqSEMI {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DQSEMI";
+            #binding-cells = <0>;
+            bindings = <&dq>, <&kp SEMI>;
+        };
+
+        sqCOR: sqCOR {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SQCOR";
+            #binding-cells = <0>;
+            bindings = <&sq>, <&kp APOSTROPHE>;
+        };
     };
 
     macros {
@@ -920,7 +934,7 @@
 &L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R        &kp T                                   &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
 &kp A          &kp S              &kp D           &kp F                 &kp G              &ctrlW      &menuTD  &kp H           &kp J           &kp K           &kp L               &mkp MB1
 &kp Z          &kp X              &kp C           &kp V                 &kp B              &ctrlT      &prscTD  &kp N           &kp M           &comHI          &periUS             &THUMB_MO 5 ENTER
-&kp TAB        &kp PG_UP          &kp PAGE_DOWN   &THUMB_MO 4 LEFT_ALT  &THUMB_MO 6 LCTRL  &sq         &dq      &RT_SP 2 SPACE                                                      &mkp MB2
+&kp TAB        &kp PG_UP          &kp PAGE_DOWN   &THUMB_MO 4 LEFT_ALT  &THUMB_MO 6 LCTRL  &sqCOR      &dqSEMI  &RT_SP 2 SPACE                                                      &mkp MB2
             >;
 
             sensor-bindings = <&ctPLMI>;
@@ -938,8 +952,8 @@
         BASIC {
             bindings = <
 &kp LWIN    &SP_CTPGUP LEFT_ALT 0  &SP_CTUP LCTRL 0  &SP_CTPGDN LSHIFT 0  &none                        &saltesc  &kp BACKSPACE   &kp UP_ARROW    &kp ESCAPE  &saltesc
-&shiftHOME  &ctrlLEFT              &ctrlDOWN         &ctrlRIGHT           &shiftEND  &none      &none  &wintab   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &hius
-&none       &ctHOME                &carte            &ctEND               &none      &none      &none  &kp RWIN  &ctpgup         &kp DELETE      &ctpgdn     &slpl
+&shiftHOME  &ctrlLEFT              &ctrlDOWN         &ctrlRIGHT           &shiftEND  &none      &none  &wintab   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &pl
+&none       &ctHOME                &carte            &ctEND               &none      &none      &none  &kp RWIN  &ctpgup         &kp DELETE      &ctpgdn     &kp SLASH
 &none       &none                  &evalue           &kp HOME             &kp END    &none      &none  &none                                                 &none
             >;
 
