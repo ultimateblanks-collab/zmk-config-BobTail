@@ -361,7 +361,7 @@
             #binding-cells = <0>;
             bindings = <&kp L>, <&kp MINUS>, <&us>;
 
-            tapping-term-ms = <170>;
+            tapping-term-ms = <200>;
         };
     };
 
