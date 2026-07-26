@@ -77,6 +77,15 @@
             tap-ms = <20>;
         };
 
+        ctpgupdn: ctpgupdn {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "CTPGUPDN";
+            #sensor-binding-cells = <0>;
+            bindings = <&ctpgup>, <&ctpgdn>;
+
+            tap-ms = <20>;
+        };
+
         L_HRM: L_HRM {
             compatible = "zmk,behavior-hold-tap";
             label = "L_HRM";
