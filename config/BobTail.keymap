@@ -941,7 +941,7 @@
         default_layer {
             bindings = <
 &L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R        &kp T                                       &kp Y               &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
-&kp A          &kp S              &kp D           &kp F                 &kp G              &ctrlW        &menuTD    &kp H               &kp J           &kp K           &kp L               &hius
+&kp A          &kp S              &kp D           &kp F                 &kp G              &mkp MB4      &menuTD    &kp H               &kp J           &kp K           &kp L               &hius
 &kp Z          &kp X              &kp C           &kp V                 &kp B              &mkp MB1      &prscTD    &kp N               &kp M           &comSEMI        &periCOR            &slpl
 &kp TAB        &mkp MB4           &mkp MB2        &THUMB_MO 5 LEFT_ALT  &THUMB_MO 6 LCTRL  &mkp MB2      &kp ENTER  &RT_SP 2 BACKSPACE                                                      &SQDQ
             >;
