@@ -59,11 +59,11 @@
             tap-ms = <20>;
         };
 
-        idpass: idpass {
+        mkp45: mkp45 {
             compatible = "zmk,behavior-sensor-rotate";
-            label = "IDPASS";
+            label = "MKP45";
             #sensor-binding-cells = <0>;
-            bindings = <&carte>, <&evalue>;
+            bindings = <&mkp MB4>, <&mkp MB5>;
 
             tap-ms = <20>;
         };
