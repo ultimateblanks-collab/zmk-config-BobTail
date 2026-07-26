@@ -363,15 +363,6 @@
             #binding-cells = <0>;
             bindings = <&sq>, <&kp APOSTROPHE>;
         };
-
-        l_HI_US: l_HI_US {
-            compatible = "zmk,behavior-tap-dance";
-            label = "L_HI_US";
-            #binding-cells = <0>;
-            bindings = <&kp L>, <&kp MINUS>, <&us>;
-
-            tapping-term-ms = <200>;
-        };
     };
 
     macros {
@@ -950,12 +941,12 @@
         default_layer {
             bindings = <
 &L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E      &L_HRM LSHFT R        &kp T                                       &kp Y               &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
-&kp A          &kp S              &kp D               &kp F                 &kp G              &mkp MB4      &menuTD    &kp H               &kp J           &kp K           &kp L               &hius
+&kp A          &kp S              &kp D               &kp F                 &kp G              &ctrlW        &menuTD    &kp H               &kp J           &kp K           &kp L               &hius
 &kp Z          &kp X              &kp C               &kp V                 &THUMB_MO 5 B      &mkp MB1      &prscTD    &kp N               &kp M           &comSEMI        &periCOR            &slpl
 &kp TAB        &kp PRINTSCREEN    &kp K_CONTEXT_MENU  &THUMB_MO 5 LEFT_ALT  &THUMB_MO 6 LCTRL  &mkp MB2      &kp ENTER  &RT_SP 2 BACKSPACE                                                      &SQDQ
             >;
 
-            sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&mkp45>;
         };
 
         MB {
