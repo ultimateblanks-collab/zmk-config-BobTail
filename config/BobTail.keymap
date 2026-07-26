@@ -977,7 +977,7 @@
 &altf11       &none         &none         &none         &none   &none        &kp TAB  &kp BACKSPACE                             &kp F12
             >;
 
-            sensor-bindings = <&idpass>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         SCROLL {
