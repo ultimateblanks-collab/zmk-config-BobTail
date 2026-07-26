@@ -940,10 +940,10 @@
 
         default_layer {
             bindings = <
-&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R  &kp T                                                 &kp Y           &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
-&kp A          &kp S              &kp D           &kp F           &kp G                 &ctrlW                 &menuTD  &kp H           &kp J           &kp K           &kp L               &hius
-&kp Z          &kp X              &kp C           &kp V           &kp B                 &ctrlT                 &prscTD  &kp N           &kp M           &comSEMI        &periCOR            &slpl
-&kp TAB        &mkp MB4           &mkp MB2        &mkp MB1        &THUMB_MO 5 LEFT_ALT  &THUMB_MO 6 LCTRL      &SQDQ    &RT_SP 2 SPACE                                                      &kp ENTER
+&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R  &kp T                                                   &kp Y               &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
+&kp A          &kp S              &kp D           &kp F           &kp G                 &ctrlW                 &menuTD    &kp H               &kp J           &kp K           &kp L               &hius
+&kp Z          &kp X              &kp C           &kp V           &kp B                 &ctrlT                 &prscTD    &kp N               &kp M           &comSEMI        &periCOR            &slpl
+&kp TAB        &mkp MB4           &mkp MB2        &mkp MB1        &THUMB_MO 5 LEFT_ALT  &THUMB_MO 6 LCTRL      &kp ENTER  &RT_SP 2 BACKSPACE                                                      &SQDQ
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -960,7 +960,7 @@
 
         BASIC {
             bindings = <
-&kp LWIN    &SP_CTPGUP LEFT_ALT 0  &SP_CTUP LCTRL 0  &SP_CTPGDN LSHIFT 0  &none                        &saltesc  &kp BACKSPACE   &kp UP_ARROW    &kp ESCAPE  &saltesc
+&kp LWIN    &SP_CTPGUP LEFT_ALT 0  &SP_CTUP LCTRL 0  &SP_CTPGDN LSHIFT 0  &none                        &saltesc  &kp SPACE       &kp UP_ARROW    &kp ESCAPE  &saltesc
 &shiftHOME  &ctrlLEFT              &ctrlDOWN         &ctrlRIGHT           &shiftEND  &none      &none  &wintab   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &pl
 &none       &ctHOME                &carte            &ctEND               &none      &none      &none  &kp RWIN  &ctpgup         &kp DELETE      &ctpgdn     &kp SLASH
 &none       &none                  &evalue           &kp HOME             &kp END    &none      &none  &none                                                 &none
