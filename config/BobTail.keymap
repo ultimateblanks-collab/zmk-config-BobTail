@@ -966,7 +966,7 @@
 &none       &none                  &evalue           &kp HOME             &kp END    &none      &none  &none                                                 &none
             >;
 
-            sensor-bindings = <&appch>;
+            sensor-bindings = <&ctpgupdn>;
         };
 
         NUMFUN {
