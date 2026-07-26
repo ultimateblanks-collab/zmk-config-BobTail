@@ -1,6 +1,8 @@
 #include <input/processors.dtsi>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
 // &mkp_input_listener { input-processors = <&zip_temp_layer 1 250>; };
@@ -991,10 +993,10 @@
 
         SYMBOL {
             bindings = <
-&none  &none  &none     &none     &none                      &kp INTERNATIONAL_3  &kp LBKT  &kp RBKT  &kp NUHS  &kp EQUAL
-&none  &none  &mkp MB4  &mkp MB5  &none  &none      &none    &dollar              &anp      &l_kakko  &r_kakko  &eql
-&none  &none  &none     &none     &none  &none      &none    &none                &hush     &Lmid     &Rmid     &exc
-&none  &none  &none     &none     &none  &none      &evalue  &kp BACKSPACE                                      &none
+&none         &none         &out OUT_BLE  &out OUT_USB  &none                             &kp INTERNATIONAL_3  &kp LBKT  &kp RBKT  &kp NUHS  &kp EQUAL
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none      &none    &dollar              &anp      &l_kakko  &r_kakko  &eql
+&none         &none         &none         &none         &none         &none      &none    &none                &hush     &Lmid     &Rmid     &exc
+&none         &none         &none         &none         &none         &none      &evalue  &kp BACKSPACE                                      &none
             >;
         };
 
