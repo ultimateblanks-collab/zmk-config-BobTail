@@ -299,7 +299,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_MB4";
             #binding-cells = <0>;
-            bindings = <&SL_SP 6 MB2>, <&mkp MB2>, <&mkp MB4>, <&mkp MB5>;
+            bindings = <&SL_SP 5 MB2>, <&mkp MB2>, <&mkp MB4>, <&mkp MB5>;
         };
 
         RT_SP: RT_SP {
@@ -942,10 +942,10 @@
 
         default_layer {
             bindings = <
-&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E     &L_HRM LSHFT R        &kp T                              &kp Y               &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
-&kp A          &kp S              &kp D              &kp F                 &kp G     &ctrlW        &menuTD    &kp H               &kp J           &kp K           &kp L               &hius
-&kp Z          &kp X              &kp C              &kp V                 &kp B     &mkp MB5      &prscTD    &kp N               &kp M           &comSEMI        &periCOR            &slpl
-&kp TAB        &mkp MB4           &THUMB_MO 5 LCTRL  &THUMB_MO 6 LEFT_ALT  &mkp MB1  &mkp MB2      &kp ENTER  &RT_SP 2 BACKSPACE                                                      &SQDQ
+&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R  &kp T                                               &kp Y               &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
+&kp A          &kp S              &kp D           &kp F           &kp G             &ctrlW                 &menuTD    &kp H               &kp J           &kp K           &kp L               &hius
+&kp Z          &kp X              &kp C           &kp V           &kp B             &mkp MB5               &prscTD    &kp N               &kp M           &comSEMI        &periCOR            &slpl
+&kp TAB        &mkp MB4           &mkp MB2        &mkp MB1        &THUMB_MO 5 LALT  &THUMB_MO 6 LCTRL      &kp ENTER  &RT_SP 2 BACKSPACE                                                      &SQDQ
             >;
 
             sensor-bindings = <&mkp45>;
@@ -954,7 +954,7 @@
         MB {
             bindings = <
 &none  &none  &none  &none  &none                       &none     &kp HOME  &none  &kp END      &none
-&none  &none  &none  &none  &none  &none      &none     &none     &mkp MB1  &none  &SPL5 6 MB2  &none
+&none  &none  &none  &none  &none  &none      &none     &none     &mkp MB1  &none  &SPL5 5 MB2  &none
 &none  &none  &none  &none  &none  &none      &none     &none     &none     &none  &none        &none
 &none  &none  &none  &none  &none  &none      &mkp MB5  &mkp MB4                                &none
             >;
@@ -991,21 +991,21 @@
             >;
         };
 
-        SYMBOL {
-            bindings = <
-&none         &none         &out OUT_BLE  &out OUT_USB  &none                             &kp INTERNATIONAL_3  &kp LBKT  &kp RBKT  &kp NUHS  &kp EQUAL
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none      &none    &dollar              &anp      &l_kakko  &r_kakko  &eql
-&none         &none         &none         &none         &none         &none      &none    &none                &hush     &Lmid     &Rmid     &exc
-&none         &none         &none         &none         &none         &none      &evalue  &kp BACKSPACE                                      &none
-            >;
-        };
-
         NUM_FUN_2 {
             bindings = <
 &none     &kp F1  &kp F2  &kp F3  &none                      &plus          &kp N1  &kp N2  &kp N3  &kp MINUS
 &kp F10   &kp F4  &kp F5  &kp F6  &kp F11  &none      &none  &kp PERIOD     &kp N4  &kp N5  &kp N6  &kp N0
 &kp F12   &kp F7  &kp F8  &kp F9  &none    &none      &none  &aster         &kp N7  &kp N8  &kp N9  &kp SLASH
 &mkp MB4  &none   &none   &none   &none    &none      &none  &kp BACKSPACE                          &mkp MB5
+            >;
+        };
+
+        SYMBOL {
+            bindings = <
+&none         &none         &out OUT_BLE  &out OUT_USB  &none                             &kp INTERNATIONAL_3  &kp LBKT  &kp RBKT  &kp NUHS  &kp EQUAL
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none      &none    &dollar              &anp      &l_kakko  &r_kakko  &eql
+&none         &none         &none         &none         &none         &none      &none    &none                &hush     &Lmid     &Rmid     &exc
+&none         &none         &none         &none         &none         &none      &evalue  &kp BACKSPACE                                      &none
             >;
         };
     };
