@@ -942,8 +942,8 @@
 
         default_layer {
             bindings = <
-&L_HRM LWIN Q  &L_HRM LEFT_ALT W  &L_HRM LCTRL E  &L_HRM LSHFT R  &kp T                                               &kp Y               &R_HRM RSHFT U  &R_HRM RCTRL I  &R_HRM RIGHT_ALT O  &R_HRM RWIN P
-&kp A          &kp S              &kp D           &kp F           &kp G             &ctrlW                 &menuTD    &kp H               &kp J           &kp K           &kp L               &hius
+&kp Q          &kp W              &kp E           &kp R           &kp T                                               &kp Y               &kp U           &kp I           &kp O               &kp P
+&L_HRM LWIN A  &L_HRM LEFT_ALT S  &L_HRM LCTRL D  &L_HRM LSHFT F  &kp G             &ctrlW                 &menuTD    &kp H               &R_HRM RSHFT J  &R_HRM RCTRL K  &R_HRM RIGHT_ALT L  &R_HRM RWIN MINUS
 &kp Z          &kp X              &kp C           &kp V           &kp B             &mkp MB5               &prscTD    &kp N               &kp M           &comSEMI        &periCOR            &kp ENTER
 &kp TAB        &mkp MB4           &mkp MB2        &mkp MB1        &THUMB_MO 5 LALT  &THUMB_MO 6 LCTRL      &kp SPACE  &RT_SP 2 BACKSPACE                                                      &SQDQ
             >;
@@ -963,8 +963,8 @@
         BASIC {
             bindings = <
 &kp LWIN    &SP_CTPGUP LEFT_ALT 0  &SP_CTUP LCTRL 0  &SP_CTPGDN LSHIFT 0  &none                        &saltesc  &kp SPACE       &kp UP_ARROW    &kp ESCAPE  &saltesc
-&shiftHOME  &ctrlLEFT              &ctrlDOWN         &ctrlRIGHT           &shiftEND  &none      &none  &wintab   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &pl
-&none       &ctHOME                &carte            &ctEND               &none      &none      &none  &kp RWIN  &ctpgup         &kp DELETE      &ctpgdn     &kp SLASH
+&shiftHOME  &ctrlLEFT              &ctrlDOWN         &ctrlRIGHT           &shiftEND  &none      &none  &wintab   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &us
+&none       &ctHOME                &carte            &ctEND               &none      &none      &none  &kp RWIN  &ctpgup         &kp DELETE      &ctpgdn     &pl
 &none       &none                  &evalue           &kp HOME             &kp END    &none      &none  &none                                                 &none
             >;
 
