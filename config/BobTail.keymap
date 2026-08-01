@@ -262,21 +262,10 @@
             flavor = "balanced";
         };
 
-        SP_CTPGUP: SP_CTPGUP {
+        SP_CTleft: SP_CTleft {
             compatible = "zmk,behavior-hold-tap";
-            label = "SP_CTPGUP";
-            bindings = <&kp>, <&ctpgup>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <17 18 19 20 21>;
-        };
-
-        SP_CTUP: SP_CTUP {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SP_CTUP";
-            bindings = <&kp>, <&ctrlUP>;
+            label = "SP_CTLEFT";
+            bindings = <&kp>, <&ctrlLEFT>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
@@ -284,10 +273,21 @@
             hold-trigger-key-positions = <18 19 20 7>;
         };
 
-        SP_CTPGDN: SP_CTPGDN {
+        SP_CTdown: SP_CTdown {
             compatible = "zmk,behavior-hold-tap";
-            label = "SP_CTPGDN";
-            bindings = <&kp>, <&ctpgdn>;
+            label = "SP_CTDOWN";
+            bindings = <&kp>, <&ctrlDOWN>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <18 19 20 7>;
+        };
+
+        SP_CTright: SP_CTright {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SP_CTRIGHT";
+            bindings = <&kp>, <&ctrlRIGHT>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
@@ -364,6 +364,17 @@
             label = "SQCOR";
             #binding-cells = <0>;
             bindings = <&sq>, <&kp APOSTROPHE>;
+        };
+
+        SP_SHIFTHOME: SP_SHIFTHOME {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SP_SHIFTHOME";
+            bindings = <&kp>, <&shiftHOME>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <18 19 20 7>;
         };
     };
 
@@ -962,10 +973,10 @@
 
         BASIC {
             bindings = <
-&kp LWIN    &SP_CTPGUP LEFT_ALT 0  &SP_CTUP LCTRL 0  &SP_CTPGDN LSHIFT 0  &none                        &saltesc  &kp SPACE       &kp UP_ARROW    &kp ESCAPE  &saltesc
-&shiftHOME  &ctrlLEFT              &ctrlDOWN         &ctrlRIGHT           &shiftEND  &none      &none  &wintab   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &us
-&none       &ctHOME                &carte            &ctEND               &none      &none      &none  &kp RWIN  &ctpgup         &kp DELETE      &ctpgdn     &pl
-&none       &none                  &evalue           &kp HOME             &kp END    &none      &none  &none                                                 &none
+&none                 &ctpgup                &ctrlUP             &ctpgdn              &none                        &saltesc  &kp SPACE       &kp UP_ARROW    &kp ESCAPE  &saltesc
+&SP_SHIFTHOME LWIN 0  &SP_CTleft LEFT_ALT 0  &SP_CTdown LCTRL 0  &SP_CTright LSHFT 0  &shiftEND  &none      &none  &wintab   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &us
+&none                 &ctHOME                &carte              &ctEND               &none      &none      &none  &kp RWIN  &ctpgup         &kp DELETE      &ctpgdn     &pl
+&none                 &none                  &evalue             &kp HOME             &kp END    &none      &none  &none                                                 &none
             >;
 
             sensor-bindings = <&ctpgupdn>;
