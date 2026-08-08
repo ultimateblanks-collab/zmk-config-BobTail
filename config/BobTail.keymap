@@ -376,6 +376,13 @@
             flavor = "balanced";
             hold-trigger-key-positions = <18 19 20 7>;
         };
+
+        MB24: MB24 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MB24";
+            #binding-cells = <0>;
+            bindings = <&mkp MB2>, <&mkp MB4>;
+        };
     };
 
     macros {
@@ -956,7 +963,7 @@
 &kp Q          &kp W              &kp E           &kp R           &kp T                                               &kp Y               &kp U           &kp I           &kp O               &kp P
 &L_HRM LWIN A  &L_HRM LEFT_ALT S  &L_HRM LCTRL D  &L_HRM LSHFT F  &kp G             &ctrlW                 &menuTD    &kp H               &R_HRM RSHFT J  &R_HRM RCTRL K  &R_HRM RIGHT_ALT L  &R_HRM RWIN MINUS
 &kp Z          &kp X              &kp C           &kp V           &kp B             &mkp MB5               &prscTD    &kp N               &kp M           &comSEMI        &periCOR            &kp ENTER
-&kp TAB        &mkp MB4           &mkp MB2        &mkp MB1        &THUMB_MO 5 LALT  &THUMB_MO 6 LCTRL      &kp SPACE  &RT_SP 2 BACKSPACE                                                      &SQDQ
+&kp TAB        &mkp MB4           &MB24           &mkp MB1        &THUMB_MO 5 LALT  &THUMB_MO 6 LCTRL      &kp SPACE  &RT_SP 2 BACKSPACE                                                      &SQDQ
             >;
 
             sensor-bindings = <&mkp45>;
