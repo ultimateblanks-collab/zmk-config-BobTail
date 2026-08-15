@@ -299,7 +299,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_MB4";
             #binding-cells = <0>;
-            bindings = <&SL_SP 5 MB2>, <&mkp MB2>, <&mkp MB4>, <&mkp MB5>;
+            bindings = <&SL_SP 2 MB2>, <&mkp MB2>, <&mkp MB4>, <&mkp MB5>;
         };
 
         RT_SP: RT_SP {
@@ -382,6 +382,20 @@
             label = "MB24";
             #binding-cells = <0>;
             bindings = <&mkp MB2>, <&mkp MB4>;
+        };
+
+        USPL: USPL {
+            compatible = "zmk,behavior-tap-dance";
+            label = "USPL";
+            #binding-cells = <0>;
+            bindings = <&us>, <&pl>;
+        };
+
+        APPPRSC: APPPRSC {
+            compatible = "zmk,behavior-tap-dance";
+            label = "APPPRSC";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU>, <&kp PRINTSCREEN>;
         };
     };
 
@@ -960,10 +974,10 @@
 
         default_layer {
             bindings = <
-&kp Q          &kp W              &kp E           &kp R           &kp T                                               &kp Y               &kp U           &kp I           &kp O               &kp P
-&L_HRM LWIN A  &L_HRM LEFT_ALT S  &L_HRM LCTRL D  &L_HRM LSHFT F  &kp G             &ctrlW                 &menuTD    &kp H               &R_HRM RSHFT J  &R_HRM RCTRL K  &R_HRM RIGHT_ALT L  &R_HRM RWIN MINUS
-&kp Z          &kp X              &kp C           &kp V           &kp B             &mkp MB5               &prscTD    &kp N               &kp M           &comSEMI        &periCOR            &kp ENTER
-&kp TAB        &mkp MB4           &MB24           &mkp MB1        &THUMB_MO 5 LALT  &THUMB_MO 6 LCTRL      &kp SPACE  &RT_SP 2 BACKSPACE                                                      &SQDQ
+&kp Q          &kp W              &kp E           &kp R           &kp T                            &kp Y  &kp U           &kp I           &kp O               &kp P
+&L_HRM LWIN A  &L_HRM LEFT_ALT S  &L_HRM LCTRL D  &L_HRM LSHFT F  &kp G     &ctrlW        &menuTD  &kp H  &R_HRM RSHFT J  &R_HRM RCTRL K  &R_HRM RIGHT_ALT L  &R_HRM RWIN MINUS
+&kp Z          &kp X              &kp C           &kp V           &kp B     &mkp MB5      &prscTD  &kp N  &kp M           &comSEMI        &periCOR            &kp ENTER
+&kp TAB        &mkp MB4           &MB24           &mo 5           &mkp MB1  &mkp MB5      &mo 6    &mo 2                                                      &SQDQ
             >;
 
             sensor-bindings = <&mkp45>;
@@ -972,21 +986,19 @@
         MB {
             bindings = <
 &none  &none  &none  &none  &none                       &none     &kp HOME  &none  &kp END      &none
-&none  &none  &none  &none  &none  &none      &none     &none     &mkp MB1  &none  &SPL5 5 MB2  &none
+&none  &none  &none  &none  &none  &none      &none     &none     &mkp MB1  &none  &SPL5 2 MB2  &none
 &none  &none  &none  &none  &none  &none      &none     &none     &none     &none  &none        &none
 &none  &none  &none  &none  &none  &none      &mkp MB5  &mkp MB4                                &none
             >;
         };
 
-        BASIC {
+        NUM_FUN_2 {
             bindings = <
-&none                 &ctpgup                &ctrlUP             &ctpgdn              &none                        &saltesc  &kp SPACE       &kp UP_ARROW    &kp ESCAPE  &saltesc
-&SP_SHIFTHOME LWIN 0  &SP_CTleft LEFT_ALT 0  &SP_CTdown LCTRL 0  &SP_CTright LSHFT 0  &shiftEND  &none      &none  &wintab   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &us
-&none                 &ctHOME                &carte              &ctEND               &none      &none      &none  &kp RWIN  &ctpgup         &kp DELETE      &ctpgdn     &pl
-&none                 &none                  &evalue             &kp HOME             &kp END    &none      &none  &none                                                 &none
+&kp F1   &kp F2   &kp F3  &kp F4  &kp F5                    &kp F6         &kp F7     &kp F8  &kp F9   &kp F10
+&kp N1   &kp N2   &kp N3  &kp N4  &kp N5  &none      &none  &kp N6         &kp N7     &kp N8  &kp N9   &kp N0
+&kp F11  &kp F12  &none   &none   &none   &none      &none  &plus          &kp MINUS  &aster  &kp DOT  &kp SLASH
+&kp F11  &none    &none   &mo 5   &none   &none      &none  &kp BACKSPACE                              &kp F12
             >;
-
-            sensor-bindings = <&ctpgupdn>;
         };
 
         NUMFUN {
@@ -1009,13 +1021,15 @@
             >;
         };
 
-        NUM_FUN_2 {
+        BASIC {
             bindings = <
-&kp F1   &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6         &kp F7     &kp F8  &kp F9   &kp F10
-&kp N1   &kp N2  &kp N3  &kp N4  &kp N5  &none      &none  &kp N6         &kp N7     &kp N8  &kp N9   &kp N0
-&none    &none   &none   &none   &none   &none      &none  &plus          &kp MINUS  &aster  &kp DOT  &kp SLASH
-&kp F11  &none   &none   &none   &none   &none      &none  &kp BACKSPACE                              &kp F12
+&kp ESCAPE            &ctpgup                &ctrlUP             &ctpgdn              &none                           &saltesc       &kp TAB         &kp UP_ARROW    &kp ENTER  &kp DELETE
+&SP_SHIFTHOME LWIN 0  &SP_CTleft LEFT_ALT 0  &SP_CTdown LCTRL 0  &SP_CTright LSHFT 0  &shiftEND  &none      &none     &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &USPL
+&none                 &ctHOME                &carte              &ctEND               &none      &none      &none     &APPPRSC       &ctpgup         &kp SPACE       &ctpgdn    &wintab
+&none                 &none                  &evalue             &none                &none      &none      &kp HOME  &kp END                                                   &none
             >;
+
+            sensor-bindings = <&ctpgupdn>;
         };
 
         SYMBOL {
