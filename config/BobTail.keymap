@@ -976,7 +976,7 @@
             bindings = <
 &kp Q          &kp W              &kp E           &kp R           &kp T                            &kp Y  &kp U           &kp I           &kp O               &kp P
 &L_HRM LWIN A  &L_HRM LEFT_ALT S  &L_HRM LCTRL D  &L_HRM LSHFT F  &kp G     &ctrlW        &menuTD  &kp H  &R_HRM RSHFT J  &R_HRM RCTRL K  &R_HRM RIGHT_ALT L  &R_HRM RWIN MINUS
-&kp Z          &kp X              &kp C           &kp V           &kp B     &mkp MB5      &prscTD  &kp N  &kp M           &comSEMI        &periCOR            &kp ENTER
+&kp Z          &kp X              &kp C           &kp V           &kp B     &mkp MB5      &prscTD  &kp N  &kp M           &comSEMI        &periCOR            &kp SLASH
 &kp TAB        &mkp MB4           &MB24           &mo 5           &mkp MB1  &mkp MB5      &mo 6    &mo 2                                                      &SQDQ
             >;
 
@@ -1035,7 +1035,7 @@
         SYMBOL {
             bindings = <
 &none         &none         &out OUT_BLE  &out OUT_USB  &none                             &kp INTERNATIONAL_3  &kp LBKT  &kp RBKT  &kp NUHS  &kp EQUAL
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none      &none    &dollar              &anp      &l_kakko  &r_kakko  &eql
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none      &none    &dollar              &anp      &l_kakko  &r_kakko  &SQDQ
 &none         &none         &none         &none         &none         &none      &none    &none                &hush     &Lmid     &Rmid     &exc
 &none         &none         &none         &none         &none         &none      &evalue  &kp BACKSPACE                                      &none
             >;
