@@ -38,6 +38,11 @@
             bindings = <&kp GRAVE>;
             key-positions = <13 18>;
         };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <7 8>;
+        };
     };
 
     behaviors {
