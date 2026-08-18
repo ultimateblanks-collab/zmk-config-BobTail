@@ -41,7 +41,7 @@
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <7 8>;
+            key-positions = <1 2>;
         };
     };
 
@@ -977,10 +977,10 @@
 
         default_layer {
             bindings = <
-&kp Q          &kp W              &kp E           &kp R           &kp T                            &kp Y  &kp U           &kp I           &kp O               &kp P
-&L_HRM LWIN A  &L_HRM LEFT_ALT S  &L_HRM LCTRL D  &L_HRM LSHFT F  &kp G     &ctrlW        &menuTD  &kp H  &R_HRM RSHFT J  &R_HRM RCTRL K  &R_HRM RIGHT_ALT L  &R_HRM RWIN MINUS
-&kp Z          &kp X              &kp C           &kp V           &kp B     &mkp MB5      &prscTD  &kp N  &kp M           &comSEMI        &periCOR            &kp SLASH
-&kp TAB        &mkp MB4           &MB24           &mo 5           &mkp MB1  &mkp MB5      &mo 6    &mo 2                                                      &SQDQ
+&kp Q          &kp W              &kp E           &kp R           &kp T                         &kp Y  &kp U           &kp I           &kp O               &kp P
+&L_HRM LWIN A  &L_HRM LEFT_ALT S  &L_HRM LCTRL D  &L_HRM LSHFT F  &kp G  &ctrlW        &menuTD  &kp H  &R_HRM RSHFT J  &R_HRM RCTRL K  &R_HRM RIGHT_ALT L  &R_HRM RWIN MINUS
+&kp Z          &kp X              &kp C           &kp V           &kp B  &mkp MB5      &prscTD  &kp N  &kp M           &comSEMI        &periCOR            &kp SLASH
+&kp TAB        &mkp MB4           &MB24           &mo 1           &mo 5  &mkp MB5      &mo 6    &mo 2                                                      &SQDQ
             >;
 
             sensor-bindings = <&mkp45>;
@@ -988,10 +988,10 @@
 
         MB {
             bindings = <
-&none  &none  &none  &none  &none                       &none     &kp HOME  &none  &kp END      &none
-&none  &none  &none  &none  &none  &none      &none     &none     &mkp MB1  &none  &SPL5 2 MB2  &none
-&none  &none  &none  &none  &none  &none      &none     &none     &none     &none  &none        &none
-&none  &none  &none  &none  &none  &none      &mkp MB5  &mkp MB4                                &none
+&none  &none     &none     &none     &none                          &none     &kp HOME  &none  &kp END      &none
+&none  &mkp MB4  &mkp MB2  &mkp MB1  &mkp MB5  &none      &none     &none     &mkp MB1  &none  &SPL5 2 MB2  &none
+&none  &none     &none     &none     &none     &none      &none     &none     &none     &none  &none        &none
+&none  &none     &none     &none     &none     &none      &mkp MB5  &mkp MB4                                &none
             >;
         };
 
@@ -1026,10 +1026,10 @@
 
         BASIC {
             bindings = <
-&kp ESCAPE            &altesc                &ctrlUP             &saltesc             &none                           &saltesc       &kp TAB         &kp UP_ARROW    &kp ENTER  &kp DELETE
-&SP_SHIFTHOME LWIN 0  &SP_CTleft LEFT_ALT 0  &SP_CTdown LCTRL 0  &SP_CTright LSHFT 0  &shiftEND  &none      &none     &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &USPL
-&none                 &ctHOME                &carte              &ctEND               &none      &none      &none     &APPPRSC       &ctpgup         &kp SPACE       &ctpgdn    &wintab
-&none                 &none                  &evalue             &none                &none      &none      &kp HOME  &kp END                                                   &none
+&kp ESCAPE            &altesc                &ctrlUP             &saltesc             &none                           &saltesc  &kp SPACE       &kp UP_ARROW    &kp BACKSPACE  &kp DELETE
+&SP_SHIFTHOME LWIN 0  &SP_CTleft LEFT_ALT 0  &SP_CTdown LCTRL 0  &SP_CTright LSHFT 0  &shiftEND  &none      &none     &kp TAB   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp ENTER
+&none                 &ctHOME                &carte              &ctEND               &none      &none      &none     &APPPRSC  &ctpgup         &kp SPACE       &ctpgdn        &wintab
+&none                 &none                  &evalue             &none                &none      &none      &kp HOME  &kp END                                                  &none
             >;
 
             sensor-bindings = <&ctpgupdn>;
