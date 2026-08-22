@@ -43,6 +43,26 @@
             bindings = <&kp ESCAPE>;
             key-positions = <1 2>;
         };
+
+        mb1 {
+            bindings = <&mkp MB1>;
+            key-positions = <3 13>;
+        };
+
+        mb2 {
+            bindings = <&mkp MB2>;
+            key-positions = <2 12>;
+        };
+
+        mb4 {
+            bindings = <&mkp MB4>;
+            key-positions = <1 11>;
+        };
+
+        mb5 {
+            bindings = <&mkp MB5>;
+            key-positions = <4 14>;
+        };
     };
 
     behaviors {
