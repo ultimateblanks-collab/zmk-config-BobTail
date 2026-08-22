@@ -30,7 +30,7 @@
         };
 
         space {
-            bindings = <&kp SPACE>;
+            bindings = <&CW>;
             key-positions = <6 7>;
         };
 
@@ -1017,10 +1017,10 @@
 
         default_layer {
             bindings = <
-&kp Q          &kp W              &kp E           &kp R           &kp T                         &kp Y  &kp U           &kp I           &kp O               &kp P
-&L_HRM LWIN A  &L_HRM LEFT_ALT S  &L_HRM LCTRL D  &L_HRM LSHFT F  &kp G  &ctrlW        &menuTD  &kp H  &R_HRM RSHFT J  &R_HRM RCTRL K  &R_HRM RIGHT_ALT L  &R_HRM RWIN MINUS
-&kp Z          &kp X              &kp C           &kp V           &kp B  &mkp MB5      &prscTD  &kp N  &kp M           &comSEMI        &periCOR            &kp SLASH
-&kp TAB        &mkp MB4           &MB24           &mo 5           &mo 1  &mkp MB5      &mo 6    &mo 2                                                      &SQDQ
+&kp Q          &kp W              &kp E           &kp R           &kp T                         &kp Y      &kp U           &kp I           &kp O               &kp P
+&L_HRM LWIN A  &L_HRM LEFT_ALT S  &L_HRM LCTRL D  &L_HRM LSHFT F  &kp G  &ctrlW        &menuTD  &kp H      &R_HRM RSHFT J  &R_HRM RCTRL K  &R_HRM RIGHT_ALT L  &R_HRM RWIN MINUS
+&kp Z          &kp X              &kp C           &kp V           &kp B  &mkp MB5      &prscTD  &kp N      &kp M           &comSEMI        &periCOR            &kp SLASH
+&kp TAB        &mkp MB4           &mkp MB4        &mo 5           &mo 6  &mkp MB5      &mo 2    &kp SPACE                                                      &SQDQ
             >;
 
             sensor-bindings = <&mkp45>;
@@ -1037,10 +1037,10 @@
 
         NUM_FUN_2 {
             bindings = <
-&kp F1   &kp F2   &kp F3  &kp F4  &kp F5                    &kp F6         &kp F7     &kp F8  &kp F9   &kp F10
-&kp N1   &kp N2   &kp N3  &kp N4  &kp N5  &none      &none  &kp N6         &kp N7     &kp N8  &kp N9   &kp N0
-&kp F11  &kp F12  &none   &none   &none   &none      &none  &plus          &kp MINUS  &aster  &kp DOT  &kp SLASH
-&kp F11  &none    &none   &mo 5   &none   &none      &none  &kp BACKSPACE                              &kp F12
+&kp F1   &kp F2   &kp F3  &kp F4         &kp F5                         &kp F6         &kp F7     &kp F8  &kp F9   &kp F10
+&kp N1   &kp N2   &kp N3  &kp N4         &kp N5     &none        &none  &kp N6         &kp N7     &kp N8  &kp N9   &kp N0
+&kp F11  &kp F12  &none   &none          &none      &none        &none  &plus          &kp MINUS  &aster  &kp DOT  &kp SLASH
+&kp F11  &none    &none   &kp BACKSPACE  &kp ENTER  &kp TAB      &none  &kp BACKSPACE                              &kp F12
             >;
         };
 
