@@ -440,6 +440,20 @@
             #binding-cells = <0>;
             bindings = <&kp K_CONTEXT_MENU>, <&kp PRINTSCREEN>;
         };
+
+        MBMO_THUMB: MBMO_THUMB {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MBMO_THUMB";
+            bindings = <&mo>, <&mkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <190>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <5 6 7 8 9 17 18 19 20 21 29 30 31 32 33 16 28 40 41 42>;
+            hold-trigger-on-release;
+        };
     };
 
     macros {
@@ -1017,10 +1031,10 @@
 
         default_layer {
             bindings = <
-&kp Q          &kp W              &kp E           &kp R           &kp T                         &kp Y      &kp U           &kp I           &kp O               &kp P
-&L_HRM LWIN A  &L_HRM LEFT_ALT S  &L_HRM LCTRL D  &L_HRM LSHFT F  &kp G  &ctrlW        &menuTD  &kp H      &R_HRM RSHFT J  &R_HRM RCTRL K  &R_HRM RIGHT_ALT L  &R_HRM RWIN MINUS
-&kp Z          &kp X              &kp C           &kp V           &kp B  &mkp MB5      &prscTD  &kp N      &kp M           &comSEMI        &periCOR            &kp SLASH
-&kp TAB        &mkp MB4           &mkp MB4        &mo 5           &mo 6  &mkp MB5      &mo 2    &kp SPACE                                                      &SQDQ
+&kp Q          &kp W              &kp E              &kp R           &kp T                                     &kp Y      &kp U           &kp I           &kp O               &kp P
+&L_HRM LWIN A  &L_HRM LEFT_ALT S  &L_HRM LCTRL D     &L_HRM LSHFT F  &kp G              &ctrlW        &menuTD  &kp H      &R_HRM RSHFT J  &R_HRM RCTRL K  &R_HRM RIGHT_ALT L  &R_HRM RWIN MINUS
+&kp Z          &kp X              &kp C              &kp V           &kp B              &mkp MB5      &prscTD  &kp N      &kp M           &comSEMI        &periCOR            &kp SLASH
+&kp TAB        &mkp MB4           &MBMO_THUMB 6 MB4  &mkp MB1        &MBMO_THUMB 5 MB2  &mkp MB5      &mo 2    &kp SPACE                                                      &SQDQ
             >;
 
             sensor-bindings = <&mkp45>;
