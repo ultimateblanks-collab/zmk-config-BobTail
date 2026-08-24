@@ -44,26 +44,6 @@
             key-positions = <1 2>;
         };
 
-        mb1 {
-            bindings = <&mkp MB1>;
-            key-positions = <3 13>;
-        };
-
-        mb2 {
-            bindings = <&mkp MB2>;
-            key-positions = <2 12>;
-        };
-
-        mb4 {
-            bindings = <&mkp MB4>;
-            key-positions = <1 11>;
-        };
-
-        mb5 {
-            bindings = <&mkp MB5>;
-            key-positions = <4 14>;
-        };
-
         tab {
             bindings = <&kp TAB>;
             key-positions = <7 8>;
@@ -81,7 +61,17 @@
 
         cw {
             bindings = <&CW>;
-            key-positions = <37 41>;
+            key-positions = <6 7>;
+        };
+
+        home {
+            bindings = <&kp HOME>;
+            key-positions = <6 18>;
+        };
+
+        end {
+            bindings = <&kp END>;
+            key-positions = <7 19>;
         };
     };
 
