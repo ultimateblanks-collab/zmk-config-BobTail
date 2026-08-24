@@ -410,11 +410,11 @@
             hold-trigger-key-positions = <18 19 20 7>;
         };
 
-        MB24: MB24 {
+        MB45: MB45 {
             compatible = "zmk,behavior-tap-dance";
-            label = "MB24";
+            label = "MB45";
             #binding-cells = <0>;
-            bindings = <&mkp MB2>, <&mkp MB4>;
+            bindings = <&mkp MB4>, <&mkp MB5>;
         };
 
         USPL: USPL {
@@ -1024,7 +1024,7 @@
 &kp Q          &kp W              &kp E              &kp R              &kp T                            &kp Y      &kp U           &kp I           &kp O               &kp P
 &L_HRM LWIN A  &L_HRM LEFT_ALT S  &L_HRM LCTRL D     &L_HRM LSHFT F     &kp G     &ctrlW        &menuTD  &kp H      &R_HRM RSHFT J  &R_HRM RCTRL K  &R_HRM RIGHT_ALT L  &R_HRM RWIN MINUS
 &kp Z          &kp X              &kp C              &kp V              &kp B     &mkp MB5      &prscTD  &kp N      &kp M           &comSEMI        &periCOR            &kp SLASH
-&kp TAB        &mkp MB4           &MBMO_THUMB 6 MB4  &MBMO_THUMB 5 MB2  &mkp MB1  &mkp MB5      &mo 2    &kp SPACE                                                      &SQDQ
+&kp TAB        &mkp MB4           &MBMO_THUMB 6 MB4  &MBMO_THUMB 5 MB2  &mkp MB1  &MB45         &mo 2    &kp SPACE                                                      &SQDQ
             >;
 
             sensor-bindings = <&mkp45>;
