@@ -1041,7 +1041,7 @@
 &evalue        &mkp MB4           &MBMO_THUMB 6 MB5  &MBMO_THUMB 5 MB4  &mkp MB1  &mkp MB2       &kp RSHFT  &THUMB_MO 2 SPACE                                                      &carte
             >;
 
-            sensor-bindings = <&mkp45>;
+            sensor-bindings = <&appch>;
         };
 
         MB {
