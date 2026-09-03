@@ -1035,10 +1035,10 @@
 
         default_layer {
             bindings = <
-&kp Q          &kp W              &kp E           &kp R           &kp T                            &kp Y              &kp U           &kp I           &kp O               &kp P
-&L_HRM LWIN A  &L_HRM LEFT_ALT S  &L_HRM LCTRL D  &L_HRM LSHFT F  &kp G  &mkp MCLK      &menuTD    &kp H              &R_HRM RSHFT J  &R_HRM RCTRL K  &R_HRM RIGHT_ALT L  &R_HRM RWIN MINUS
-&kp Z          &kp X              &kp C           &kp V           &kp B  &mkp MB1       &prscTD    &kp N              &kp M           &COMDQ          &PERISQ             &kp SLASH
-&evalue        &mkp MB4           &mo 6           &altesc         &mo 5  &mkp MB2       &kp RSHFT  &THUMB_MO 2 SPACE                                                      &carte
+&kp Q          &kp W              &kp E           &kp R           &kp T                              &kp Y              &kp U           &kp I           &kp O               &kp P
+&L_HRM LWIN A  &L_HRM LEFT_ALT S  &L_HRM LCTRL D  &L_HRM LSHFT F  &lt 5 G  &mkp MCLK      &menuTD    &kp H              &R_HRM RSHFT J  &R_HRM RCTRL K  &R_HRM RIGHT_ALT L  &R_HRM RWIN MINUS
+&kp Z          &kp X              &kp C           &kp V           &kp B    &mkp MB1       &prscTD    &kp N              &kp M           &COMDQ          &PERISQ             &kp SLASH
+&evalue        &mkp MB4           &mo 6           &altesc         &mo 5    &mkp MB2       &kp RSHFT  &THUMB_MO 2 SPACE                                                      &carte
             >;
 
             sensor-bindings = <&mkp45>;
