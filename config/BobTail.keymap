@@ -1085,10 +1085,10 @@
 
         BASIC {
             bindings = <
-&kp ESCAPE            &altesc                &ctrlUP             &saltesc             &none                           &saltesc  &altesc         &kp UP_ARROW    &saltesc   &kp DELETE
-&SP_SHIFTHOME LWIN 0  &SP_CTleft LEFT_ALT 0  &SP_CTdown LCTRL 0  &SP_CTright LSHFT 0  &shiftEND  &none      &none     &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp END
-&none                 &ctHOME                &carte              &ctEND               &none      &none      &none     &APPPRSC  &ctpgup         &kp SPACE       &ctpgdn    &wintab
-&none                 &none                  &evalue             &none                &none      &none      &kp HOME  &kp END                                              &none
+&kp ESCAPE            &altesc                &ctrlUP             &saltesc             &none                        &kp DELETE  &altesc         &kp UP_ARROW    &saltesc   &none
+&SP_SHIFTHOME LWIN 0  &SP_CTleft LEFT_ALT 0  &SP_CTdown LCTRL 0  &SP_CTright LSHFT 0  &shiftEND  &none      &none  &kp HOME    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp END
+&none                 &ctHOME                &carte              &ctEND               &none      &none      &none  &APPPRSC    &ctpgup         &wintab         &ctpgdn    &none
+&none                 &none                  &evalue             &none                &none      &none      &none  &none                                                  &none
             >;
 
             sensor-bindings = <&ctpgupdn>;
