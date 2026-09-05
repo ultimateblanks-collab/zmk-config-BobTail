@@ -49,11 +49,6 @@
             key-positions = <19 20>;
         };
 
-        del {
-            bindings = <&kp DELETE>;
-            key-positions = <8 9>;
-        };
-
         cw {
             bindings = <&CW>;
             key-positions = <6 7>;
@@ -71,7 +66,7 @@
 
         sk {
             bindings = <&sk LSHFT>;
-            key-positions = <41 38>;
+            key-positions = <12 19>;
         };
 
         mb4 {
