@@ -59,19 +59,49 @@
             key-positions = <6 7>;
         };
 
-        home {
-            bindings = <&kp HOME>;
+        mb1 {
+            bindings = <&mkp MB1>;
             key-positions = <6 18>;
         };
 
-        end {
-            bindings = <&kp END>;
+        mb2 {
+            bindings = <&mkp MB2>;
             key-positions = <7 19>;
         };
 
         sk {
             bindings = <&sk LSHFT>;
             key-positions = <41 38>;
+        };
+
+        mb4 {
+            bindings = <&mkp MB4>;
+            key-positions = <5 17>;
+        };
+
+        mb5 {
+            bindings = <&mkp MB5>;
+            key-positions = <8 20>;
+        };
+
+        home {
+            bindings = <&kp HOME>;
+            key-positions = <2 12>;
+        };
+
+        end {
+            bindings = <&kp END>;
+            key-positions = <3 13>;
+        };
+
+        scdn {
+            bindings = <&msc SCRL_DOWN>;
+            key-positions = <41 19>;
+        };
+
+        scup {
+            bindings = <&msc SCRL_UP>;
+            key-positions = <41 20>;
         };
     };
 
