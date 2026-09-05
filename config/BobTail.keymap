@@ -21,7 +21,7 @@
 
         endApp {
             bindings = <&altF4>;
-            key-positions = <18 41>;
+            key-positions = <41 17>;
         };
 
         bs {
@@ -96,12 +96,12 @@
 
         scdn {
             bindings = <&msc SCRL_DOWN>;
-            key-positions = <41 19>;
+            key-positions = <41 18>;
         };
 
         scup {
             bindings = <&msc SCRL_UP>;
-            key-positions = <41 20>;
+            key-positions = <41 19>;
         };
     };
 
