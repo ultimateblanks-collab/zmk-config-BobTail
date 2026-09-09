@@ -1120,9 +1120,9 @@
 
         SYMBOL {
             bindings = <
-&kp EQUAL  &kp NUHS  &kp RBKT  &kp LBKT  &kp INTERNATIONAL_3                      &kp INTERNATIONAL_3  &kp LBKT  &kp RBKT  &kp NUHS  &kp EQUAL
-&SQDQ      &l_kakko  &r_kakko  &anp      &dollar              &none      &none    &dollar              &anp      &l_kakko  &r_kakko  &USPL
-&exc       &Lmid     &Rmid     &hush     &percent             &none      &none    &percent             &hush     &Lmid     &Rmid     &CORSEMI
+&kp EQUAL  &kp NUHS  &kp RBKT  &kp LBKT  &kp INTERNATIONAL_3                      &kp INTERNATIONAL_3  &kp RBKT  &kp NUHS  &kp LBKT  &kp EQUAL
+&SQDQ      &l_kakko  &r_kakko  &anp      &dollar              &none      &none    &dollar              &l_kakko  &r_kakko  &anp      &USPL
+&exc       &Lmid     &Rmid     &hush     &percent             &none      &none    &percent             &Lmid     &Rmid     &hush     &CORSEMI
 &none      &none     &none     &none     &none                &none      &evalue  &kp BACKSPACE                                      &none
             >;
         };
