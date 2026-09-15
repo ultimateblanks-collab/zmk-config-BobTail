@@ -320,37 +320,37 @@
             flavor = "balanced";
         };
 
-        SP_CTleft: SP_CTleft {
+        SP_ANPLALT: SP_ANPLALT {
             compatible = "zmk,behavior-hold-tap";
-            label = "SP_CTLEFT";
-            bindings = <&kp>, <&ctrlLEFT>;
+            label = "SP_ANPLALT";
+            bindings = <&kp>, <&anp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "balanced";
-            hold-trigger-key-positions = <18 19 20 7>;
+            hold-trigger-key-positions = <18 19 20 7 5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42>;
         };
 
-        SP_CTdown: SP_CTdown {
+        SP_LKCTRL: SP_LKCTRL {
             compatible = "zmk,behavior-hold-tap";
-            label = "SP_CTDOWN";
-            bindings = <&kp>, <&ctrlDOWN>;
+            label = "SP_LKCTRL";
+            bindings = <&kp>, <&l_kakko>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "balanced";
-            hold-trigger-key-positions = <18 19 20 7>;
+            hold-trigger-key-positions = <18 19 20 7 5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42>;
         };
 
-        SP_CTright: SP_CTright {
+        SP_RKSHIFT: SP_RKSHIFT {
             compatible = "zmk,behavior-hold-tap";
-            label = "SP_CTRIGHT";
-            bindings = <&kp>, <&ctrlRIGHT>;
+            label = "SP_RKSHIFT";
+            bindings = <&kp>, <&r_kakko>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "balanced";
-            hold-trigger-key-positions = <18 19 20 7>;
+            hold-trigger-key-positions = <18 19 20 7 5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42>;
         };
 
         TD_MB4: TD_MB4 {
@@ -424,15 +424,15 @@
             bindings = <&kp PERIOD>, <&sq>;
         };
 
-        SP_SHIFTHOME: SP_SHIFTHOME {
+        SP_COLLWIN: SP_COLLWIN {
             compatible = "zmk,behavior-hold-tap";
-            label = "SP_SHIFTHOME";
-            bindings = <&kp>, <&shiftHOME>;
+            label = "SP_COLLWIN";
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "balanced";
-            hold-trigger-key-positions = <18 19 20 7>;
+            hold-trigger-key-positions = <18 19 20 7 5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42>;
         };
 
         MB45: MB45 {
@@ -482,6 +482,36 @@
             label = "CORSEMI";
             #binding-cells = <0>;
             bindings = <&kp APOSTROPHE>, <&kp SEMI>;
+        };
+
+        SPCOM: SPCOM {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SPCOM";
+            bindings = <&mo>, <&COMDQ>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+        };
+
+        RH_SP: RH_SP {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RH_SP";
+            bindings = <&kp>, <&hius>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39>;
+        };
+
+        SL_PL: SL_PL {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SL_PL";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&pl>;
         };
     };
 
@@ -1061,8 +1091,8 @@
         default_layer {
             bindings = <
 &kp Q          &kp W              &kp E           &kp R           &kp T                                                &kp Y              &kp U           &kp I           &kp O               &kp P
-&L_HRM LWIN A  &L_HRM LEFT_ALT S  &L_HRM LCTRL D  &L_HRM LSHFT F  &kp G              &mkp MCLK              &menuTD    &kp H              &R_HRM RSHFT J  &R_HRM RCTRL K  &R_HRM RIGHT_ALT L  &R_HRM RWIN MINUS
-&kp Z          &kp X              &kp C           &kp V           &kp B              &mkp MB1               &prscTD    &kp N              &kp M           &COMDQ          &PERISQ             &kp SLASH
+&L_HRM LWIN A  &L_HRM LEFT_ALT S  &L_HRM LCTRL D  &L_HRM LSHFT F  &kp G              &mkp MCLK              &menuTD    &kp H              &R_HRM RSHFT J  &R_HRM RCTRL K  &R_HRM RIGHT_ALT L  &RH_SP RWIN 0
+&kp Z          &kp X              &kp C           &kp V           &kp B              &mkp MB1               &prscTD    &kp N              &kp M           &SPCOM 5 0      &PERISQ             &SL_PL
 &evalue        &none              &mkp MB2        &mkp MB1        &MBMO_THUMB 5 MB4  &MBMO_THUMB 6 MB5      &kp LSHFT  &THUMB_MO 2 SPACE                                                      &carte
             >;
 
@@ -1080,10 +1110,10 @@
 
         BASIC {
             bindings = <
-&kp ESCAPE            &altesc                &ctrlUP             &saltesc             &none                        &kp DELETE  &altesc         &kp UP_ARROW    &saltesc   &none
-&SP_SHIFTHOME LWIN 0  &SP_CTleft LEFT_ALT 0  &SP_CTdown LCTRL 0  &SP_CTright LSHFT 0  &shiftEND  &none      &none  &kp HOME    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp END
-&none                 &ctHOME                &carte              &ctEND               &none      &none      &none  &APPPRSC    &ctpgup         &wintab         &ctpgdn    &none
-&none                 &none                  &evalue             &none                &none      &none      &none  &none                                                  &none
+&kp EQUAL                    &kp LBKT                &kp RBKT            &kp NUHS             &kp INTERNATIONAL_3                    &plus     &altesc         &kp UP_ARROW    &saltesc   &kp MINUS
+&SP_COLLWIN LWIN APOSTROPHE  &SP_ANPLALT LEFT_ALT 0  &SP_LKCTRL LCTRL 0  &SP_RKSHIFT LSHFT 0  &dollar              &none      &none  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp END
+&kp SEMI                     &hush                   &Lmid               &Rmid                &percent             &none      &none  &APPPRSC  &ctpgup         &wintab         &ctpgdn    &none
+&none                        &none                   &evalue             &none                &none                &none      &none  &none                                                &none
             >;
 
             sensor-bindings = <&ctpgupdn>;
