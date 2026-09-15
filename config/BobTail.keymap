@@ -51,7 +51,7 @@
 
         cw {
             bindings = <&CW>;
-            key-positions = <6 7>;
+            key-positions = <11 20>;
         };
 
         mb1 {
@@ -71,32 +71,22 @@
 
         mb4 {
             bindings = <&mkp MB4>;
-            key-positions = <5 17>;
+            key-positions = <41 18>;
         };
 
         mb5 {
             bindings = <&mkp MB5>;
-            key-positions = <8 20>;
-        };
-
-        home {
-            bindings = <&kp HOME>;
-            key-positions = <2 12>;
-        };
-
-        end {
-            bindings = <&kp END>;
-            key-positions = <3 13>;
+            key-positions = <41 19>;
         };
 
         scdn {
             bindings = <&msc SCRL_DOWN>;
-            key-positions = <41 18>;
+            key-positions = <6 7>;
         };
 
         scup {
             bindings = <&msc SCRL_UP>;
-            key-positions = <41 19>;
+            key-positions = <5 6>;
         };
     };
 
