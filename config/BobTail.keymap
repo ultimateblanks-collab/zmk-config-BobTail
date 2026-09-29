@@ -272,9 +272,9 @@
             bindings = <&kp PERIOD>, <&kp APOSTROPHE>;
         };
 
-        hius: hius {
+        TD_HIUS: TD_HIUS {
             compatible = "zmk,behavior-tap-dance";
-            label = "HIUS";
+            label = "TD_HIUS";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&us>;
         };
@@ -310,10 +310,10 @@
             flavor = "balanced";
         };
 
-        SP_ANPLALT: SP_ANPLALT {
+        SP_HUSHLALT: SP_HUSHLALT {
             compatible = "zmk,behavior-hold-tap";
-            label = "SP_ANPLALT";
-            bindings = <&kp>, <&anp>;
+            label = "SP_HUSHLALT";
+            bindings = <&kp>, <&hush>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
@@ -321,10 +321,10 @@
             hold-trigger-key-positions = <18 19 20 7 5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42>;
         };
 
-        SP_LKCTRL: SP_LKCTRL {
+        SP_LMIDCTRL: SP_LMIDCTRL {
             compatible = "zmk,behavior-hold-tap";
-            label = "SP_LKCTRL";
-            bindings = <&kp>, <&l_kakko>;
+            label = "SP_LMIDCTRL";
+            bindings = <&kp>, <&Lmid>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
@@ -332,10 +332,10 @@
             hold-trigger-key-positions = <18 19 20 7 5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42>;
         };
 
-        SP_RKSHIFT: SP_RKSHIFT {
+        SP_RMIDSHIFT: SP_RMIDSHIFT {
             compatible = "zmk,behavior-hold-tap";
-            label = "SP_RKSHIFT";
-            bindings = <&kp>, <&r_kakko>;
+            label = "SP_RMIDSHIFT";
+            bindings = <&kp>, <&Rmid>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
@@ -414,9 +414,9 @@
             bindings = <&kp PERIOD>, <&sq>;
         };
 
-        SP_COLLWIN: SP_COLLWIN {
+        SP_SEMICOL: SP_SEMICOL {
             compatible = "zmk,behavior-hold-tap";
-            label = "SP_COLLWIN";
+            label = "SP_SEMICOL";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -488,7 +488,7 @@
         RH_SP: RH_SP {
             compatible = "zmk,behavior-hold-tap";
             label = "RH_SP";
-            bindings = <&kp>, <&hius>;
+            bindings = <&kp>, <&TD_HIUS>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -545,43 +545,32 @@
             quick-tap-ms = <175>;
         };
 
-        SP_X: SP_X {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SP_X";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <190>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <5 6 7 8 9 17 18 19 20 21 29 30 31 32 33 41 42 16 17 28 29 40 41>;
-            hold-trigger-on-release;
-            quick-tap-ms = <175>;
+        TD_COM: TD_COM {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_COM";
+            #binding-cells = <0>;
+            bindings = <&SP_ZXCV LCTRL COMMA>, <&dq>;
         };
 
-        SP_C: SP_C {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SP_C";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <190>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <5 6 7 8 9 17 18 19 20 21 29 30 31 32 33 41 42 16 17 28 29 40 41>;
-            hold-trigger-on-release;
-            quick-tap-ms = <175>;
+        TD_PERIOD: TD_PERIOD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_PERIOD";
+            #binding-cells = <0>;
+            bindings = <&SP_ZXCV LEFT_ALT PERIOD>, <&sq>;
         };
 
-        SP_V: SP_V {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SP_V";
-            bindings = <&kp>, <&TD_V>;
+        TD_SLASH: TD_SLASH {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_SLASH";
+            #binding-cells = <0>;
+            bindings = <&SP_ZXCV LWIN SLASH>, <&pl>;
+        };
 
-            #binding-cells = <2>;
-            tapping-term-ms = <190>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <5 6 7 8 9 17 18 19 20 21 29 30 31 32 33 41 42 16 17 28 29 40 41>;
-            hold-trigger-on-release;
-            quick-tap-ms = <175>;
+        TD_M: TD_M {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_M";
+            #binding-cells = <0>;
+            bindings = <&SP_ZXCV LSHFT M>, <&kp K_CONTEXT_MENU>;
         };
     };
 
@@ -1216,10 +1205,10 @@
 
         default_layer {
             bindings = <
-&kp Q    &kp W  &kp E     &kp R     &kp T                          &kp Y              &kp U           &kp I       &kp O    &kp P
-&kp A    &kp S  &kp D     &kp F     &kp G  &mkp MCLK      &menuTD  &kp H              &kp J           &kp K       &kp L    &RH_SP RWIN 0
-&TD_Z    &TD_X  &TD_C     &TD_V     &kp B  &mkp MB5       &prscTD  &kp N              &R_HRM LSHFT M  &SPCOM 5 0  &PERISQ  &SL_PL
-&evalue  &none  &mkp MB2  &mkp MB1  &mo 5  &mkp MB4       &kp DEL  &THUMB_MO 2 SPACE                                       &carte
+&kp Q    &kp W  &kp E     &kp R     &kp T                          &kp Y              &kp U  &kp I    &kp O       &kp P
+&kp A    &kp S  &kp D     &kp F     &kp G  &mkp MCLK      &menuTD  &kp H              &kp J  &kp K    &kp L       &TD_HIUS
+&TD_Z    &TD_X  &TD_C     &TD_V     &kp B  &mkp MB5       &prscTD  &kp N              &TD_M  &TD_COM  &TD_PERIOD  &TD_SLASH
+&evalue  &none  &mkp MB2  &mkp MB1  &mo 5  &mkp MB4       &kp DEL  &THUMB_MO 2 SPACE                              &carte
             >;
 
             sensor-bindings = <&appch>;
@@ -1236,10 +1225,10 @@
 
         BASIC {
             bindings = <
-&kp EQUAL                    &kp LBKT                &kp RBKT            &kp NUHS             &kp INTERNATIONAL_3                    &plus     &altesc         &kp UP_ARROW    &saltesc   &kp MINUS
-&SP_COLLWIN LWIN APOSTROPHE  &SP_ANPLALT LEFT_ALT 0  &SP_LKCTRL LCTRL 0  &SP_RKSHIFT LSHFT 0  &dollar              &none      &none  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp END
-&kp SEMI                     &hush                   &Lmid               &Rmid                &percent             &none      &none  &APPPRSC  &ctpgup         &wintab         &ctpgdn    &none
-&none                        &none                   &evalue             &none                &none                &none      &none  &none                                                &none
+&kp EQUAL                   &kp LBKT                 &kp RBKT              &kp NUHS               &kp INTERNATIONAL_3                    &plus     &altesc         &kp UP_ARROW    &saltesc   &kp MINUS
+&kp APOSTROPHE              &anp                     &l_kakko              &r_kakko               &dollar              &none      &none  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp END
+&SP_SEMICOL LWIN SEMICOLON  &SP_HUSHLALT LEFT_ALT 0  &SP_LMIDCTRL LCTRL 0  &SP_RMIDSHIFT LSHFT 0  &percent             &none      &none  &APPPRSC  &ctpgup         &wintab         &ctpgdn    &none
+&none                       &none                    &evalue               &none                  &none                &none      &none  &none                                                &none
             >;
 
             sensor-bindings = <&ctpgupdn>;
