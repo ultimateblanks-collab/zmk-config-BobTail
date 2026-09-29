@@ -508,34 +508,34 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_Z";
             #binding-cells = <0>;
-            bindings = <&kp Z>, <&CTRL_Z>;
+            bindings = <&SP_ZXCV LWIN Z>, <&CTRL_Z>;
         };
 
         TD_X: TD_X {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_X";
             #binding-cells = <0>;
-            bindings = <&kp X>, <&CTRL_Z>;
+            bindings = <&SP_ZXCV LCTRL X>, <&CTRL_Z>;
         };
 
         TD_C: TD_C {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_C";
             #binding-cells = <0>;
-            bindings = <&kp C>, <&CTRL_C>;
+            bindings = <&SP_ZXCV LCTRL C>, <&CTRL_C>;
         };
 
         TD_V: TD_V {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_V";
             #binding-cells = <0>;
-            bindings = <&kp V>, <&CTRL_V>;
+            bindings = <&SP_ZXCV LSHFT V>, <&CTRL_V>;
         };
 
-        SP_Z: SP_Z {
+        SP_ZXCV: SP_ZXCV {
             compatible = "zmk,behavior-hold-tap";
-            label = "SP_Z";
-            bindings = <&kp>, <&TD_Z>;
+            label = "SP_ZXCV";
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <190>;
@@ -548,7 +548,7 @@
         SP_X: SP_X {
             compatible = "zmk,behavior-hold-tap";
             label = "SP_X";
-            bindings = <&kp>, <&TD_X>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <190>;
@@ -561,7 +561,7 @@
         SP_C: SP_C {
             compatible = "zmk,behavior-hold-tap";
             label = "SP_C";
-            bindings = <&kp>, <&TD_C>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <190>;
@@ -1216,10 +1216,10 @@
 
         default_layer {
             bindings = <
-&kp Q         &kp W             &kp E          &kp R          &kp T                          &kp Y              &kp U           &kp I       &kp O    &kp P
-&kp A         &kp S             &kp D          &kp F          &kp G  &mkp MCLK      &menuTD  &kp H              &kp J           &kp K       &kp L    &RH_SP RWIN 0
-&SP_Z LWIN 0  &SP_X LEFT_ALT 0  &SP_C LCTRL 0  &SP_V LSHFT 0  &kp B  &mkp MB5       &prscTD  &kp N              &R_HRM LSHFT M  &SPCOM 5 0  &PERISQ  &SL_PL
-&evalue       &none             &mkp MB2       &mkp MB1       &mo 5  &mkp MB4       &kp DEL  &THUMB_MO 2 SPACE                                       &carte
+&kp Q    &kp W  &kp E     &kp R     &kp T                          &kp Y              &kp U           &kp I       &kp O    &kp P
+&kp A    &kp S  &kp D     &kp F     &kp G  &mkp MCLK      &menuTD  &kp H              &kp J           &kp K       &kp L    &RH_SP RWIN 0
+&TD_Z    &TD_X  &TD_C     &TD_V     &kp B  &mkp MB5       &prscTD  &kp N              &R_HRM LSHFT M  &SPCOM 5 0  &PERISQ  &SL_PL
+&evalue  &none  &mkp MB2  &mkp MB1  &mo 5  &mkp MB4       &kp DEL  &THUMB_MO 2 SPACE                                       &carte
             >;
 
             sensor-bindings = <&appch>;
