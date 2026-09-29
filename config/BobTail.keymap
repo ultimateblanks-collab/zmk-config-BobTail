@@ -538,10 +538,11 @@
             bindings = <&kp>, <&TD_Z>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             flavor = "balanced";
             hold-trigger-key-positions = <5 6 7 8 9 17 18 19 20 21 29 30 31 32 33 41 42 16 17 28 29 40 41>;
             hold-trigger-on-release;
+            quick-tap-ms = <175>;
         };
 
         SP_X: SP_X {
@@ -550,10 +551,11 @@
             bindings = <&kp>, <&TD_X>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             flavor = "balanced";
             hold-trigger-key-positions = <5 6 7 8 9 17 18 19 20 21 29 30 31 32 33 41 42 16 17 28 29 40 41>;
             hold-trigger-on-release;
+            quick-tap-ms = <175>;
         };
 
         SP_C: SP_C {
@@ -562,10 +564,11 @@
             bindings = <&kp>, <&TD_C>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             flavor = "balanced";
             hold-trigger-key-positions = <5 6 7 8 9 17 18 19 20 21 29 30 31 32 33 41 42 16 17 28 29 40 41>;
             hold-trigger-on-release;
+            quick-tap-ms = <175>;
         };
 
         SP_V: SP_V {
@@ -574,10 +577,11 @@
             bindings = <&kp>, <&TD_V>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             flavor = "balanced";
             hold-trigger-key-positions = <5 6 7 8 9 17 18 19 20 21 29 30 31 32 33 41 42 16 17 28 29 40 41>;
             hold-trigger-on-release;
+            quick-tap-ms = <175>;
         };
     };
 
