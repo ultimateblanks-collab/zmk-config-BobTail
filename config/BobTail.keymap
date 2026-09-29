@@ -503,6 +503,82 @@
             #binding-cells = <0>;
             bindings = <&kp SLASH>, <&pl>;
         };
+
+        TD_Z: TD_Z {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_Z";
+            #binding-cells = <0>;
+            bindings = <&kp Z>, <&CTRL_Z>;
+        };
+
+        TD_X: TD_X {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_X";
+            #binding-cells = <0>;
+            bindings = <&kp X>, <&CTRL_Z>;
+        };
+
+        TD_C: TD_C {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_C";
+            #binding-cells = <0>;
+            bindings = <&kp C>, <&CTRL_C>;
+        };
+
+        TD_V: TD_V {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_V";
+            #binding-cells = <0>;
+            bindings = <&kp V>, <&CTRL_V>;
+        };
+
+        SP_Z: SP_Z {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SP_Z";
+            bindings = <&kp>, <&TD_Z>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <5 6 7 8 9 17 18 19 20 21 29 30 31 32 33 41 42 16 17 28 29 40 41>;
+            hold-trigger-on-release;
+        };
+
+        SP_X: SP_X {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SP_X";
+            bindings = <&kp>, <&TD_X>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <5 6 7 8 9 17 18 19 20 21 29 30 31 32 33 41 42 16 17 28 29 40 41>;
+            hold-trigger-on-release;
+        };
+
+        SP_C: SP_C {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SP_C";
+            bindings = <&kp>, <&TD_C>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <5 6 7 8 9 17 18 19 20 21 29 30 31 32 33 41 42 16 17 28 29 40 41>;
+            hold-trigger-on-release;
+        };
+
+        SP_V: SP_V {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SP_V";
+            bindings = <&kp>, <&TD_V>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <5 6 7 8 9 17 18 19 20 21 29 30 31 32 33 41 42 16 17 28 29 40 41>;
+            hold-trigger-on-release;
+        };
     };
 
     macros {
@@ -1073,6 +1149,62 @@
 
             label = "CTRLRIGHT";
         };
+
+        CTRL_C: CTRL_C {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_wait_time 15>,
+                <&kp C>,
+                <&macro_release>,
+                <&kp C &kp LCTRL>;
+
+            label = "CTRL_C";
+        };
+
+        CTRL_X: CTRL_X {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_wait_time 15>,
+                <&kp X>,
+                <&macro_release>,
+                <&kp X &kp LCTRL>;
+
+            label = "CTRL_X";
+        };
+
+        CTRL_V: CTRL_Y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_wait_time 15>,
+                <&kp V>,
+                <&macro_release>,
+                <&kp V &kp LCTRL>;
+
+            label = "CTRL_Y";
+        };
+
+        CTRL_Z: CTRL_Z {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_wait_time 15>,
+                <&kp Z>,
+                <&macro_release>,
+                <&kp Z &kp LCTRL>;
+
+            label = "CTRL_Z";
+        };
     };
 
     keymap {
@@ -1080,10 +1212,10 @@
 
         default_layer {
             bindings = <
-&kp Q          &kp W              &kp E           &kp R           &kp T                                                &kp Y              &kp U           &kp I           &kp O               &kp P
-&L_HRM LWIN A  &L_HRM LEFT_ALT S  &L_HRM LCTRL D  &L_HRM LSHFT F  &kp G              &mkp MCLK              &menuTD    &kp H              &R_HRM RSHFT J  &R_HRM RCTRL K  &R_HRM RIGHT_ALT L  &RH_SP RWIN 0
-&kp Z          &kp X              &kp C           &kp V           &kp B              &mkp MB1               &prscTD    &kp N              &kp M           &SPCOM 5 0      &PERISQ             &SL_PL
-&evalue        &none              &mkp MB2        &mkp MB1        &MBMO_THUMB 5 MB4  &MBMO_THUMB 6 MB5      &kp LSHFT  &THUMB_MO 2 SPACE                                                      &carte
+&kp Q         &kp W             &kp E          &kp R          &kp T                          &kp Y              &kp U           &kp I       &kp O    &kp P
+&kp A         &kp S             &kp D          &kp F          &kp G  &mkp MCLK      &menuTD  &kp H              &kp J           &kp K       &kp L    &RH_SP RWIN 0
+&SP_Z LWIN 0  &SP_X LEFT_ALT 0  &SP_C LCTRL 0  &SP_V LSHFT 0  &kp B  &mkp MB5       &prscTD  &kp N              &R_HRM LSHFT M  &SPCOM 5 0  &PERISQ  &SL_PL
+&evalue       &none             &mkp MB2       &mkp MB1       &mo 5  &mkp MB4       &kp DEL  &THUMB_MO 2 SPACE                                       &carte
             >;
 
             sensor-bindings = <&appch>;
