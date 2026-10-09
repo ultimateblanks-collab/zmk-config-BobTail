@@ -39,16 +39,6 @@
             key-positions = <12 19>;
         };
 
-        scdn {
-            bindings = <&msc SCRL_DOWN>;
-            key-positions = <30 31>;
-        };
-
-        scup {
-            bindings = <&msc SCRL_UP>;
-            key-positions = <31 32>;
-        };
-
         alt {
             bindings = <&kp LEFT_ALT>;
             key-positions = <11 12>;
@@ -1209,7 +1199,7 @@
         MB {
             bindings = <
 &trans  &trans    &trans    &trans    &trans                        &trans    &trans    &trans    &trans    &trans
-&trans  &mkp MB4  &mkp MB2  &mkp MB1  &mkp MB5  &trans      &trans  &mkp MB5  &mkp MB1  &mkp MB2  &mkp MB4  &trans
+&trans  &mkp MB4  &mkp MB2  &mkp MB1  &mkp MB5  &trans      &trans  &mkp MB5  &mkp MB1  &mkp MB2  &mkp MB4  &mo 5
 &trans  &trans    &trans    &trans    &trans    &trans      &trans  &trans    &trans    &trans    &trans    &trans
 &trans  &trans    &trans    &trans    &trans    &trans      &trans  &trans                                  &trans
             >;
