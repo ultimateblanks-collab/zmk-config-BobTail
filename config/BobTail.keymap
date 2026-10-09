@@ -1232,7 +1232,7 @@
             bindings = <
 &kp Q    &kp W  &kp E     &kp R              &kp T                              &kp Y                  &kp U  &kp I    &kp O       &kp P
 &kp A    &kp S  &kp D     &kp F              &kp G    &mkp MCLK      &menuTD    &kp H                  &kp J  &kp K    &kp L       &TD_HIUS
-&TD_Z    &TD_X  &TD_C     &TD_V              &kp B    &mkp MB5       &prscTD    &kp N                  &TD_M  &TD_COM  &TD_PERIOD  &TD_SLASH
+&TD_Z    &TD_X  &TD_C     &TD_V              &kp B    &none          &prscTD    &kp N                  &TD_M  &TD_COM  &TD_PERIOD  &TD_SLASH
 &evalue  &none  &mkp MB2  &THUMB_MO 5 ENTER  &kp TAB  &kp DEL        &kp SPACE  &THUMB_MO 2 BACKSPACE                              &carte
             >;
 
@@ -1253,7 +1253,7 @@
 &kp EQUAL                   &kp LBKT                 &kp RBKT              &kp NUHS               &kp INTERNATIONAL_3                    &plus     &altesc         &kp UP_ARROW    &saltesc   &kp MINUS
 &kp APOSTROPHE              &anp                     &l_kakko              &r_kakko               &dollar              &none      &none  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp END
 &SP_SEMICOL LWIN SEMICOLON  &SP_HUSHLALT LEFT_ALT 0  &SP_LMIDCTRL LCTRL 0  &SP_RMIDSHIFT LSHFT 0  &percent             &none      &none  &APPPRSC  &ctpgup         &wintab         &ctpgdn    &none
-&none                       &none                    &evalue               &none                  &none                &none      &none  &none                                                &none
+&none                       &none                    &evalue               &kp DELETE             &none                &none      &none  &none                                                &none
             >;
 
             sensor-bindings = <&ctpgupdn>;
