@@ -1199,7 +1199,7 @@
         MB {
             bindings = <
 &trans  &trans    &trans    &trans    &trans                        &trans    &trans    &trans    &trans    &trans
-&trans  &mkp MB4  &mkp MB2  &mkp MB1  &mkp MB5  &trans      &trans  &mkp MB5  &mkp MB1  &mkp MB2  &mkp MB4  &mo 5
+&trans  &mkp MB4  &mkp MB2  &mkp MB1  &mkp MB5  &trans      &trans  &mkp MB5  &mkp MB1  &mkp MB2  &mkp MB4  &trans
 &trans  &trans    &trans    &trans    &trans    &trans      &trans  &trans    &trans    &trans    &trans    &trans
 &trans  &trans    &trans    &trans    &trans    &trans      &trans  &trans                                  &trans
             >;
@@ -1207,10 +1207,10 @@
 
         BASIC {
             bindings = <
-&kp EQUAL                   &kp LBKT                 &kp RBKT              &kp NUHS               &kp INTERNATIONAL_3                    &altesc   &ctpgup         &kp UP_ARROW    &ctpgdn    &saltesc
-&kp APOSTROPHE              &anp                     &l_kakko              &r_kakko               &dollar              &none      &none  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp END
-&SP_SEMICOL LWIN SEMICOLON  &SP_HUSHLALT LEFT_ALT 0  &SP_LMIDCTRL LCTRL 0  &SP_RMIDSHIFT LSHFT 0  &percent             &none      &none  &APPPRSC  &plus           &wintab         &kp MINUS  &none
-&none                       &none                    &evalue               &none                  &kp DEL              &none      &none  &none                                                &none
+&kp EQUAL                   &kp LBKT                 &kp RBKT              &kp NUHS               &kp INTERNATIONAL_3                    &altesc   &ctpgup         &kp UP_ARROW    &ctpgdn       &saltesc
+&kp APOSTROPHE              &anp                     &l_kakko              &r_kakko               &dollar              &none      &none  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT     &kp END
+&SP_SEMICOL LWIN SEMICOLON  &SP_HUSHLALT LEFT_ALT 0  &SP_LMIDCTRL LCTRL 0  &SP_RMIDSHIFT LSHFT 0  &percent             &none      &none  &APPPRSC  &msc SCRL_DOWN  &wintab         &msc SCRL_UP  &none
+&none                       &none                    &evalue               &none                  &kp DEL              &none      &none  &none                                                   &none
             >;
 
             sensor-bindings = <&ctpgupdn>;
