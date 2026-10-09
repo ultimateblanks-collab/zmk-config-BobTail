@@ -24,29 +24,9 @@
             key-positions = <41 17>;
         };
 
-        bs {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <18 19>;
-        };
-
         inputMODE {
             bindings = <&kp GRAVE>;
             key-positions = <13 18>;
-        };
-
-        esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <1 2>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <7 8>;
-        };
-
-        enter {
-            bindings = <&kp ENTER>;
-            key-positions = <19 20>;
         };
 
         cw {
@@ -54,39 +34,19 @@
             key-positions = <11 20>;
         };
 
-        mb1 {
-            bindings = <&mkp MB1>;
-            key-positions = <6 18>;
-        };
-
-        mb2 {
-            bindings = <&mkp MB2>;
-            key-positions = <7 19>;
-        };
-
         sk {
             bindings = <&sk LSHFT>;
             key-positions = <12 19>;
         };
 
-        mb4 {
-            bindings = <&mkp MB4>;
-            key-positions = <41 18>;
-        };
-
-        mb5 {
-            bindings = <&mkp MB5>;
-            key-positions = <41 19>;
-        };
-
         scdn {
             bindings = <&msc SCRL_DOWN>;
-            key-positions = <6 7>;
+            key-positions = <18 19>;
         };
 
         scup {
             bindings = <&msc SCRL_UP>;
-            key-positions = <5 6>;
+            key-positions = <19 20>;
         };
 
         alt {
@@ -1250,9 +1210,9 @@
 
         BASIC {
             bindings = <
-&kp EQUAL                   &kp LBKT                 &kp RBKT              &kp NUHS               &kp INTERNATIONAL_3                    &plus     &altesc         &kp UP_ARROW    &saltesc   &kp MINUS
+&kp EQUAL                   &kp LBKT                 &kp RBKT              &kp NUHS               &kp INTERNATIONAL_3                    &altesc   &ctpgup         &kp UP_ARROW    &ctpgdn    &saltesc
 &kp APOSTROPHE              &anp                     &l_kakko              &r_kakko               &dollar              &none      &none  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp END
-&SP_SEMICOL LWIN SEMICOLON  &SP_HUSHLALT LEFT_ALT 0  &SP_LMIDCTRL LCTRL 0  &SP_RMIDSHIFT LSHFT 0  &percent             &none      &none  &APPPRSC  &ctpgup         &wintab         &ctpgdn    &none
+&SP_SEMICOL LWIN SEMICOLON  &SP_HUSHLALT LEFT_ALT 0  &SP_LMIDCTRL LCTRL 0  &SP_RMIDSHIFT LSHFT 0  &percent             &none      &none  &APPPRSC  &plus           &wintab         &kp MINUS  &none
 &none                       &none                    &evalue               &kp DELETE             &none                &none      &none  &none                                                &none
             >;
 
