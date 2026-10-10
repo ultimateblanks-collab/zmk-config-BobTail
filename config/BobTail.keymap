@@ -1193,7 +1193,7 @@
 &evalue          &none                &kp ESCAPE        &kp TAB           &THUMB_MO 5 SPACE  &kp DELETE      &kp ENTER  &THUMB_MO 2 BACKSPACE                                                                   &carte
             >;
 
-            sensor-bindings = <&appch>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         MB {
