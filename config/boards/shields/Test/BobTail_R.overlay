@@ -75,6 +75,12 @@
         device = <&trackball>;
         input-processors = <&zip_temp_layer 1 1500>;
 
+    snipe {
+        layers = <3>;
+        input-processors =
+            <&zip_xy_scaler 1 4>;
+    };
+
     scroller {
         layers = <5>;
         input-processors = 
