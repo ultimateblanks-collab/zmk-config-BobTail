@@ -528,11 +528,11 @@
             bindings = <&SP_RIGHT LWIN SLASH>, <&pl>;
         };
 
-        TD_M: TD_M {
+        TD_2_Z: TD_2_Z {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_M";
+            label = "TD_2_Z";
             #binding-cells = <0>;
-            bindings = <&SP_RIGHT LSHFT M>, <&kp K_CONTEXT_MENU>;
+            bindings = <&SP_SEMICOL LWIN SEMI>, <&kp APOSTROPHE>;
         };
 
         SP_RIGHT: SP_RIGHT {
@@ -1187,10 +1187,10 @@
 
         default_layer {
             bindings = <
-&kp Q            &kp W                &kp E             &kp R             &kp T                                         &kp Y                  &kp U              &kp I    &kp O       &kp P
-&kp A            &kp S                &kp D             &kp F             &kp G              &mkp MCLK       &menuTD    &kp H                  &kp J              &kp K    &kp L       &TD_HIUS
-&SP_ZXCV LWIN Z  &SP_ZXCV LEFT_ALT X  &SP_ZXCV LCTRL C  &SP_ZXCV LSHFT V  &kp B              &none           &prscTD    &kp N                  &SP_RIGHT LSHFT M  &TD_COM  &TD_PERIOD  &TD_SLASH
-&evalue          &none                &kp ESCAPE        &kp TAB           &THUMB_MO 5 SPACE  &kp DELETE      &kp ENTER  &THUMB_MO 2 BACKSPACE                                          &carte
+&kp Q            &kp W                &kp E             &kp R             &kp T                                         &kp Y                  &kp U              &kp I                  &kp O                  &kp P
+&kp A            &kp S                &kp D             &kp F             &kp G              &mkp MCLK       &menuTD    &kp H                  &kp J              &kp K                  &kp L                  &TD_HIUS
+&SP_ZXCV LWIN Z  &SP_ZXCV LEFT_ALT X  &SP_ZXCV LCTRL C  &SP_ZXCV LSHFT V  &kp B              &none           &prscTD    &kp N                  &SP_RIGHT LSHFT M  &SP_RIGHT LCTRL COMMA  &SP_RIGHT LALT PERIOD  &TD_SLASH
+&evalue          &none                &kp ESCAPE        &kp TAB           &THUMB_MO 5 SPACE  &kp DELETE      &kp ENTER  &THUMB_MO 2 BACKSPACE                                                                   &carte
             >;
 
             sensor-bindings = <&appch>;
@@ -1207,10 +1207,10 @@
 
         BASIC {
             bindings = <
-&kp EQUAL                   &kp LBKT                 &kp RBKT              &kp NUHS               &kp INTERNATIONAL_3                    &altesc   &ctpgup         &kp UP_ARROW    &ctpgdn       &saltesc
-&kp APOSTROPHE              &anp                     &l_kakko              &r_kakko               &dollar              &none      &none  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT     &kp END
-&SP_SEMICOL LWIN SEMICOLON  &SP_HUSHLALT LEFT_ALT 0  &SP_LMIDCTRL LCTRL 0  &SP_RMIDSHIFT LSHFT 0  &percent             &none      &none  &APPPRSC  &msc SCRL_DOWN  &wintab         &msc SCRL_UP  &none
-&none                       &none                    &evalue               &none                  &kp DEL              &none      &none  &none                                                   &none
+&kp EQUAL  &kp LBKT                 &kp RBKT              &kp NUHS               &kp INTERNATIONAL_3                    &altesc   &ctpgup         &kp UP_ARROW    &ctpgdn       &saltesc
+&SQDQ      &anp                     &l_kakko              &r_kakko               &dollar              &none      &none  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT     &kp END
+&TD_2_Z    &SP_HUSHLALT LEFT_ALT 0  &SP_LMIDCTRL LCTRL 0  &SP_RMIDSHIFT LSHFT 0  &percent             &none      &none  &APPPRSC  &msc SCRL_DOWN  &wintab         &msc SCRL_UP  &none
+&none      &none                    &evalue               &none                  &kp DEL              &none      &none  &none                                                   &none
             >;
 
             sensor-bindings = <&ctpgupdn>;
