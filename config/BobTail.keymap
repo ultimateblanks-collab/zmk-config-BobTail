@@ -1050,7 +1050,7 @@
                 <&macro_wait_time 15>,
                 <&kp SEMI>,
                 <&macro_release>,
-                <&kp SEMI>;
+                <&kp SEMI &kp LCTRL>;
 
             label = "CTRLPLUS";
         };
