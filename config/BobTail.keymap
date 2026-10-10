@@ -87,11 +87,11 @@
             tap-ms = <20>;
         };
 
-        ctpgupdn: ctpgupdn {
+        pgupdn: pgupdn {
             compatible = "zmk,behavior-sensor-rotate";
-            label = "CTPGUPDN";
+            label = "PGUPDN";
             #sensor-binding-cells = <0>;
-            bindings = <&ctpgup>, <&ctpgdn>;
+            bindings = <&kp PG_UP>, <&kp PG_DN>;
 
             tap-ms = <20>;
         };
