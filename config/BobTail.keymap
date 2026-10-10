@@ -1187,10 +1187,10 @@
 
         default_layer {
             bindings = <
-&kp Q    &kp W  &kp E       &kp R    &kp T                                         &kp Y                  &kp U  &kp I    &kp O       &kp P
-&kp A    &kp S  &kp D       &kp F    &kp G              &mkp MCLK       &menuTD    &kp H                  &kp J  &kp K    &kp L       &TD_HIUS
-&TD_Z    &TD_X  &TD_C       &TD_V    &kp B              &none           &prscTD    &kp N                  &TD_M  &TD_COM  &TD_PERIOD  &TD_SLASH
-&evalue  &none  &kp ESCAPE  &kp TAB  &THUMB_MO 5 SPACE  &kp DELETE      &kp ENTER  &THUMB_MO 2 BACKSPACE                              &carte
+&kp Q            &kp W                &kp E             &kp R             &kp T                                         &kp Y                  &kp U              &kp I    &kp O       &kp P
+&kp A            &kp S                &kp D             &kp F             &kp G              &mkp MCLK       &menuTD    &kp H                  &kp J              &kp K    &kp L       &TD_HIUS
+&SP_ZXCV LWIN Z  &SP_ZXCV LEFT_ALT X  &SP_ZXCV LCTRL C  &SP_ZXCV LSHFT V  &kp B              &none           &prscTD    &kp N                  &SP_RIGHT LSHFT M  &TD_COM  &TD_PERIOD  &TD_SLASH
+&evalue          &none                &kp ESCAPE        &kp TAB           &THUMB_MO 5 SPACE  &kp DELETE      &kp ENTER  &THUMB_MO 2 BACKSPACE                                          &carte
             >;
 
             sensor-bindings = <&appch>;
