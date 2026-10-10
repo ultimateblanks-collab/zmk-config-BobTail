@@ -1213,7 +1213,7 @@
 &none      &none                    &evalue               &none                  &kp DEL              &none      &none  &none                                                    &none
             >;
 
-            sensor-bindings = <&ctpgupdn>;
+            sensor-bindings = <&pgupdn>;
         };
 
         NUMFUN {
