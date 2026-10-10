@@ -1190,7 +1190,7 @@
 &kp Q            &kp W                &kp E             &kp R             &kp T                                         &kp Y                  &kp U              &kp I                  &kp O                  &kp P
 &kp A            &kp S                &kp D             &kp F             &kp G              &kp HOME        &menuTD    &kp H                  &kp J              &kp K                  &kp L                  &TD_HIUS
 &SP_ZXCV LWIN Z  &SP_ZXCV LEFT_ALT X  &SP_ZXCV LCTRL C  &SP_ZXCV LSHFT V  &kp B              &none           &prscTD    &kp N                  &SP_RIGHT LSHFT M  &SP_RIGHT LCTRL COMMA  &SP_RIGHT LALT PERIOD  &TD_SLASH
-&evalue          &none                &kp ESCAPE        &kp TAB           &THUMB_MO 5 SPACE  &kp DELETE      &kp ENTER  &THUMB_MO 2 BACKSPACE                                                                   &carte
+&evalue          &none                &kp ESCAPE        &THUMB_MO 0 TAB   &THUMB_MO 5 SPACE  &kp DELETE      &kp ENTER  &THUMB_MO 2 BACKSPACE                                                                   &carte
             >;
 
             sensor-bindings = <&pgupdn>;
@@ -1216,15 +1216,13 @@
             sensor-bindings = <&pgupdn>;
         };
 
-        NUMFUN {
+        SNIPE {
             bindings = <
-&kp F1        &kp F2        &altF3        &kp F4        &kp F5                        &kp F6         &kp F7  &kp F8     &kp F9  &kp F10
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &none        &none    &kp NUMBER_6   &kp N7  &kp N8     &kp N9  &kp N0
-&kp PERIOD    &none         &none         &none         &none   &altf11      &kp F12  &eql           &plus   &kp MINUS  &aster  &kp SLASH
-&altf11       &none         &none         &none         &none   &none        &kp TAB  &kp BACKSPACE                             &kp F12
+&none  &none     &none     &none     &none                       &none     &none     &none     &none     &none
+&none  &mkp MB4  &mkp MB2  &mkp MB1  &mkp MB5  &none      &none  &mkp MB5  &mkp MB1  &mkp MB2  &mkp MB4  &none
+&none  &none     &none     &none     &none     &none      &none  &none     &none     &none     &none     &none
+&none  &none     &none     &none     &none     &none      &none  &none                                   &none
             >;
-
-            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         SCROLL {
