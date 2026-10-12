@@ -48,6 +48,16 @@
             bindings = <&kp LCTRL>;
             key-positions = <12 13>;
         };
+
+        menu {
+            bindings = <&kp K_APPLICATION>;
+            key-positions = <30 31>;
+        };
+
+        printscreen {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <31 32>;
+        };
     };
 
     behaviors {
