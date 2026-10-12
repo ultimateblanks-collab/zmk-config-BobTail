@@ -554,6 +554,19 @@
             #binding-cells = <0>;
             bindings = <&kp F10>, <&kp F12>;
         };
+
+        SP_RIGHT_M: SP_RIGHT_M {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SP_RIGHT_M";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <400>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            quick-tap-ms = <165>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39>;
+        };
     };
 
     macros {
@@ -1187,10 +1200,10 @@
 
         default_layer {
             bindings = <
-&kp Q            &kp W                &kp E             &kp R             &kp T                                         &kp Y                  &kp U              &kp I                  &kp O                  &kp P
-&kp A            &kp S                &kp D             &kp F             &kp G              &kp HOME        &menuTD    &kp H                  &kp J              &kp K                  &kp L                  &TD_HIUS
-&SP_ZXCV LWIN Z  &SP_ZXCV LEFT_ALT X  &SP_ZXCV LCTRL C  &SP_ZXCV LSHFT V  &kp B              &none           &prscTD    &kp N                  &SP_RIGHT LSHFT M  &SP_RIGHT LCTRL COMMA  &SP_RIGHT LALT PERIOD  &TD_SLASH
-&evalue          &none                &kp ESCAPE        &THUMB_MO 3 TAB   &THUMB_MO 5 ENTER  &kp DELETE      &kp SPACE  &THUMB_MO 2 BACKSPACE                                                                   &carte
+&kp Q            &kp W                &kp E             &kp R             &kp T                                         &kp Y                  &kp U                &kp I                  &kp O                  &kp P
+&kp A            &kp S                &kp D             &kp F             &kp G              &kp HOME        &menuTD    &kp H                  &kp J                &kp K                  &kp L                  &TD_HIUS
+&SP_ZXCV LWIN Z  &SP_ZXCV LEFT_ALT X  &SP_ZXCV LCTRL C  &SP_ZXCV LSHFT V  &kp B              &none           &prscTD    &kp N                  &SP_RIGHT_M LSHFT M  &SP_RIGHT LCTRL COMMA  &SP_RIGHT LALT PERIOD  &TD_SLASH
+&evalue          &none                &kp ESCAPE        &THUMB_MO 3 TAB   &THUMB_MO 5 ENTER  &kp DELETE      &kp SPACE  &THUMB_MO 2 BACKSPACE                                                                     &carte
             >;
 
             sensor-bindings = <&pgupdn>;
