@@ -1259,10 +1259,10 @@
 
         Function {
             bindings = <
-&none    &none   &none   &none   &none                         &none          &none   &none   &none   &none
-&kp F11  &kp F2  &F3ALT  &kp F4  &kp F5  &none      &none      &kp F6         &kp F7  &kp F8  &kp F9  &kp F10
-&kp F12  &none   &none   &none   &none   &none      &none      &none          &none   &none   &none   &none
-&none    &none   &none   &none   &none   &none      &kp ENTER  &kp BACKSPACE                          &none
+&none    &none   &none   &none   &none                     &none   &none   &none   &none   &none
+&kp F11  &kp F2  &F3ALT  &kp F4  &kp F5  &none      &none  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&kp F12  &none   &none   &none   &none   &none      &none  &none   &none   &none   &none   &none
+&none    &none   &none   &none   &none   &none      &none  &none                           &none
             >;
         };
 
