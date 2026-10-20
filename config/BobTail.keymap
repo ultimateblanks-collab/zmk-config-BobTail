@@ -248,7 +248,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_HIUS";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&us>;
+            bindings = <&SP_R_win LWIN MINUS>, <&us>;
         };
 
         slpl: slpl {
@@ -282,10 +282,10 @@
             flavor = "balanced";
         };
 
-        SP_HUSHLALT: SP_HUSHLALT {
+        SP_ANPLALT: SP_ANPLALT {
             compatible = "zmk,behavior-hold-tap";
-            label = "SP_HUSHLALT";
-            bindings = <&kp>, <&hush>;
+            label = "SP_ANPLALT";
+            bindings = <&kp>, <&anp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
@@ -293,10 +293,10 @@
             hold-trigger-key-positions = <18 19 20 7 5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42>;
         };
 
-        SP_LMIDCTRL: SP_LMIDCTRL {
+        SP_LKCTRL: SP_LKCTRL {
             compatible = "zmk,behavior-hold-tap";
-            label = "SP_LMIDCTRL";
-            bindings = <&kp>, <&Lmid>;
+            label = "SP_LKCTRL";
+            bindings = <&kp>, <&l_kakko>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
@@ -304,10 +304,10 @@
             hold-trigger-key-positions = <18 19 20 7 5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42>;
         };
 
-        SP_RMIDSHIFT: SP_RMIDSHIFT {
+        SP_RKSHIFT: SP_RKSHIFT {
             compatible = "zmk,behavior-hold-tap";
-            label = "SP_RMIDSHIFT";
-            bindings = <&kp>, <&Rmid>;
+            label = "SP_RKSHIFT";
+            bindings = <&kp>, <&r_kakko>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
@@ -558,16 +558,16 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39>;
         };
 
-        F1012: F1012 {
+        F3ALT: F3ALT {
             compatible = "zmk,behavior-tap-dance";
-            label = "F1012";
+            label = "F3ALT";
             #binding-cells = <0>;
-            bindings = <&kp F10>, <&kp F12>;
+            bindings = <&kp F3>, <&altF3>;
         };
 
-        SP_RIGHT_M: SP_RIGHT_M {
+        SP_R_win: SP_R_win {
             compatible = "zmk,behavior-hold-tap";
-            label = "SP_RIGHT_M";
+            label = "SP_R_WIN";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -1210,10 +1210,10 @@
 
         default_layer {
             bindings = <
-&kp Q            &kp W                &kp E             &kp R             &kp T                                         &kp Y                  &kp U                &kp I                    &kp O                    &kp P
-&kp A            &kp S                &kp D             &kp F             &kp G              &kp HOME        &menuTD    &kp H                  &kp J                &kp K                    &kp L                    &TD_HIUS
-&SP_ZXCV LWIN Z  &SP_ZXCV LEFT_ALT X  &SP_ZXCV LCTRL C  &SP_ZXCV LSHFT V  &kp B              &none           &prscTD    &kp N                  &SP_RIGHT_M LSHFT M  &SP_RIGHT_M LCTRL COMMA  &SP_RIGHT_M LALT PERIOD  &TD_SLASH
-&evalue          &none                &kp ESCAPE        &THUMB_MO 3 TAB   &THUMB_MO 5 ENTER  &kp DELETE      &kp SPACE  &THUMB_MO 2 BACKSPACE                                                                         &carte
+&kp Q              &kp W           &kp E           &kp R            &kp T                                                 &kp Y                  &kp U          &kp I           &kp O           &kp P
+&L_HRM LEFT_ALT A  &L_HRM LCTRL S  &L_HRM LSHFT D  &L_HRM LWIN F    &kp G              &kp HOME        &menuTD            &kp H                  &R_HRM LWIN J  &R_HRM LSHFT K  &R_HRM LCTRL L  &TD_HIUS
+&kp Z              &kp X           &kp C           &kp V            &kp B              &none           &prscTD            &kp N                  &kp M          &COMDQ          &PERISQ         &TD_SLASH
+&evalue            &none           &kp ESCAPE      &THUMB_MO 3 TAB  &THUMB_MO 5 ENTER  &kp DELETE      &THUMB_MO 4 SPACE  &THUMB_MO 2 BACKSPACE                                                 &carte
             >;
 
             sensor-bindings = <&pgupdn>;
@@ -1230,10 +1230,10 @@
 
         BASIC {
             bindings = <
-&kp EQUAL  &kp LBKT                 &kp RBKT              &kp NUHS               &kp INTERNATIONAL_3                    &altesc    &ctpgup         &kp UP_ARROW    &ctpgdn       &saltesc
-&SQDQ      &anp                     &l_kakko              &r_kakko               &dollar              &none      &none  &kp HOME   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT     &kp END
-&TD_2_Z    &SP_HUSHLALT LEFT_ALT 0  &SP_LMIDCTRL LCTRL 0  &SP_RMIDSHIFT LSHFT 0  &percent             &none      &none  &ctrlPLUS  &msc SCRL_DOWN  &wintab         &msc SCRL_UP  &ctrlMINUS
-&none      &none                    &evalue               &none                  &kp DEL              &none      &none  &none                                                    &none
+&kp EQUAL                   &kp LBKT             &kp RBKT            &kp NUHS                  &kp INTERNATIONAL_3                    &altesc    &ctpgup         &kp UP_ARROW    &ctpgdn       &saltesc
+&L_HRM LEFT_ALT APOSTROPHE  &SP_ANPLALT LCTRL 0  &SP_LKCTRL LCTRL 0  &SP_RKSHIFT LEFT_SHIFT 0  &dollar              &none      &none  &kp HOME   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT     &kp END
+&kp SEMI                    &hush                &Lmid               &Rmid                     &percent             &none      &none  &ctrlPLUS  &msc SCRL_DOWN  &wintab         &msc SCRL_UP  &ctrlMINUS
+&none                       &none                &none               &altesc                   &saltesc             &none      &none  &none                                                    &none
             >;
 
             sensor-bindings = <&pgupdn>;
@@ -1248,21 +1248,21 @@
             >;
         };
 
-        SCROLL {
+        Num {
             bindings = <
-&none  &none  &none  &none  &none                       &none    &none     &none     &none  &none
-&none  &none  &none  &none  &none  &none      &none     &none    &mkp MB4  &mkp MB5  &none  &none
-&none  &none  &none  &none  &none  &none      &none     &none    &none     &none     &none  &none
-&none  &none  &none  &none  &none  &none      &kp HOME  &kp END                             &none
+&plus   &kp MINUS  &aster  &kp SLASH  &eql                      &kp EQUAL  &percent  &none   &none   &none
+&kp N1  &kp N2     &kp N3  &kp N4     &kp N5  &none      &none  &kp N6     &kp N7    &kp N8  &kp N9  &kp N0
+&none   &none      &none   &none      &none   &none      &none  &none      &none     &none   &none   &none
+&none   &none      &none   &none      &none   &none      &none  &none                                &none
             >;
         };
 
-        NUM_FUN_2 {
+        Function {
             bindings = <
-&kp F11  &kp F2  &kp F3  &kp F4  &kp F5                        &kp F6         &kp F7     &kp F8  &kp F9   &F1012
-&kp N1   &kp N2  &kp N3  &kp N4  &kp N5  &none      &none      &kp N6         &kp N7     &kp N8  &kp N9   &kp N0
-&none    &none   &none   &none   &none   &none      &none      &plus          &kp MINUS  &aster  &kp DOT  &kp SLASH
-&none    &none   &none   &none   &none   &none      &kp ENTER  &kp BACKSPACE                              &none
+&none    &none   &none   &none   &none                         &none          &none   &none   &none   &none
+&kp F11  &kp F2  &F3ALT  &kp F4  &kp F5  &none      &none      &kp F6         &kp F7  &kp F8  &kp F9  &kp F10
+&kp F12  &none   &none   &none   &none   &none      &none      &none          &none   &none   &none   &none
+&none    &none   &none   &none   &none   &none      &kp ENTER  &kp BACKSPACE                          &none
             >;
         };
 
