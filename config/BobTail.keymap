@@ -1120,7 +1120,7 @@
 
         MB {
             bindings = <
-&altf11  &none     &altF3  &altF4     &none                             &none     &none           &kp UP_ARROW    &none      &none
+&altf11  &none     &altF3  &none      &altF4                            &none     &none           &kp UP_ARROW    &none      &none
 &none    &mkp MB2  &none   &mkp MB1   &altesc  &none          &none     &kp F12   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none
 &kp F11  &kp F2    &kp F3  &kp F4     &kp F5   &none          &none     &kp F6    &kp F7          &kp F8          &kp F9     &kp F10
 &none    &none     &mo 3   &kp LCTRL  &mo 5    &kp LSHFT      &mkp MB4  &mkp MB5                                             &none
