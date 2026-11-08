@@ -151,15 +151,15 @@
             flavor = "balanced";
         };
 
-        THUMB_MO: THUMB_MO {
+        THUMB_MO_R: THUMB_MO_R {
             compatible = "zmk,behavior-hold-tap";
-            label = "THUMB_MO";
+            label = "THUMB_MO_R";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             flavor = "balanced";
-            hold-trigger-key-positions = <5 6 7 8 9 17 18 19 20 21 29 30 31 32 33 41 42 16 28 40>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39>;
             hold-trigger-on-release;
             hold-while-undecided;
             hold-while-undecided-linger;
@@ -569,6 +569,20 @@
             hold-trigger-on-release;
             quick-tap-ms = <165>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39>;
+        };
+
+        THUMB_MO_L: THUMB_MO_L {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THUMB_MO_L";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-while-undecided;
+            hold-while-undecided-linger;
+            hold-trigger-key-positions = <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42>;
         };
     };
 
@@ -1141,60 +1155,60 @@
             label = "CTRLRIGHT";
         };
 
-        CTRL_C: CTRL_C {
+        ctrlHOME: ctrlHOME {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
                 <&kp LCTRL>,
                 <&macro_wait_time 15>,
-                <&kp C>,
+                <&kp HOME>,
                 <&macro_release>,
-                <&kp C &kp LCTRL>;
+                <&kp HOME &kp LCTRL>;
 
-            label = "CTRL_C";
+            label = "CTRLHOME";
         };
 
-        CTRL_X: CTRL_X {
+        ctrlEND: ctrlEND {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
                 <&kp LCTRL>,
                 <&macro_wait_time 15>,
-                <&kp X>,
+                <&kp END>,
                 <&macro_release>,
-                <&kp X &kp LCTRL>;
+                <&kp END &kp LCTRL>;
 
-            label = "CTRL_X";
+            label = "CTRLEND";
         };
 
-        CTRL_V: CTRL_Y {
+        ctrlTAB: ctrlTAB {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
                 <&kp LCTRL>,
                 <&macro_wait_time 15>,
-                <&kp V>,
+                <&kp TAB>,
                 <&macro_release>,
-                <&kp V &kp LCTRL>;
+                <&kp TAB &kp LCTRL>;
 
-            label = "CTRL_Y";
+            label = "CTRLTAB";
         };
 
-        CTRL_Z: CTRL_Z {
+        SHIFTctrlTAB: SHIFTctrlTAB {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL>,
+                <&kp LCTRL &kp LSHFT>,
                 <&macro_wait_time 15>,
-                <&kp Z>,
+                <&kp TAB>,
                 <&macro_release>,
-                <&kp Z &kp LCTRL>;
+                <&kp TAB &kp LCTRL &kp LSHFT>;
 
-            label = "CTRL_Z";
+            label = "SHIFTCTRLTAB";
         };
     };
 
@@ -1203,30 +1217,30 @@
 
         default_layer {
             bindings = <
-&kp Q          &kp W              &kp E           &kp R            &kp T                                                     &kp Y              &kp U           &kp I           &kp O          &kp P
-&L_HRM LWIN A  &L_HRM LEFT_ALT S  &L_HRM LCTRL D  &L_HRM LSHFT F   &kp G              &kp HOME        &kp K_CONTEXT_MENU     &kp H              &R_HRM LSHFT J  &R_HRM LCTRL K  &R_HRM LALT L  &R_HRM LWIN MINUS
-&kp Z          &kp X              &THUMB_MO 1 C   &kp V            &kp B              &none           &kp PRINTSCREEN        &kp N              &kp M           &kp COMMA       &kp PERIOD     &kp SLASH
-&evalue        &none              &kp ESCAPE      &THUMB_MO 3 TAB  &THUMB_MO 5 ENTER  &kp DELETE      &THUMB_MO 4 BACKSPACE  &THUMB_MO 2 SPACE                                                 &carte
+&kp Q          &kp W              &kp E                 &kp R              &kp T                                                         &kp Y                &kp U           &kp I           &kp O          &kp P
+&L_HRM LWIN A  &L_HRM LEFT_ALT S  &L_HRM LCTRL D        &L_HRM LSHFT F     &kp G                &altF4          &kp K_CONTEXT_MENU       &kp H                &R_HRM LSHFT J  &R_HRM LCTRL K  &R_HRM LALT L  &R_HRM LWIN MINUS
+&kp Z          &kp X              &THUMB_MO_R 1 C       &kp V              &kp B                &none           &kp PRINTSCREEN          &kp N                &kp M           &kp COMMA       &kp PERIOD     &kp SLASH
+&evalue        &none              &THUMB_MO_R 3 ESCAPE  &THUMB_MO_L 2 TAB  &THUMB_MO_L 6 ENTER  &kp DELETE      &THUMB_MO_R 1 BACKSPACE  &THUMB_MO_R 4 SPACE                                                 &carte
             >;
 
-            sensor-bindings = <&pgupdn>;
+            sensor-bindings = <&mkp45>;
         };
 
         MB {
             bindings = <
-&none    &none     &none   &none      &none                          &none    &none           &kp UP_ARROW    &none      &none
-&none    &mkp MB2  &none   &mkp MB1   &altesc  &none          &none  &kp F12  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none
-&kp F11  &kp F2    &kp F3  &kp F4     &kp F5   &none          &none  &kp F6   &kp F7          &kp F8          &kp F9     &kp F10
-&none    &none     &none   &kp LCTRL  &mo 5    &kp LSHFT      &none  &none                                               &none
+&altf11  &none     &altF3  &altF4     &none                             &none     &none           &kp UP_ARROW    &none      &none
+&none    &mkp MB2  &none   &mkp MB1   &altesc  &none          &none     &kp F12   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none
+&kp F11  &kp F2    &kp F3  &kp F4     &kp F5   &none          &none     &kp F6    &kp F7          &kp F8          &kp F9     &kp F10
+&none    &none     &none   &kp LCTRL  &mo 5    &kp LSHFT      &mkp MB4  &mkp MB5                                             &none
             >;
         };
 
         BASIC {
             bindings = <
-&kp EQUAL                   &kp LBKT             &kp RBKT            &kp NUHS                  &kp INTERNATIONAL_3                    &altesc    &ctpgup         &kp UP_ARROW    &ctpgdn       &saltesc
-&L_HRM LEFT_ALT APOSTROPHE  &SP_ANPLALT LCTRL 0  &SP_LKCTRL LCTRL 0  &SP_RKSHIFT LEFT_SHIFT 0  &dollar              &none      &none  &kp HOME   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT     &kp END
-&kp SEMI                    &hush                &Lmid               &Rmid                     &percent             &none      &none  &ctrlPLUS  &msc SCRL_DOWN  &wintab         &msc SCRL_UP  &ctrlMINUS
-&none                       &none                &none               &altesc                   &saltesc             &none      &none  &none                                                    &none
+&none     &none         &ctrlHOME  &shiftHOME      &none                          &SHIFTctrlTAB       &ctpgup         &kp UP_ARROW    &ctpgdn     &ctrlTAB
+&kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &altesc  &none      &none      &kp HOME            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &kp END
+&none     &none         &ctrlEND   &shiftEND       &none    &none      &none      &kp K_CONTEXT_MENU  &ctrlPLUS       &wintab         &ctrlMINUS  &kp PRINTSCREEN
+&none     &none         &none      &none           &none    &none      &kp LCTRL  &kp LEFT_ALT                                                    &none
             >;
 
             sensor-bindings = <&pgupdn>;
@@ -1234,10 +1248,10 @@
 
         SNIPE {
             bindings = <
-&none  &none     &none     &none     &none                       &none     &none     &none     &none     &none
-&none  &mkp MB4  &mkp MB2  &mkp MB1  &mkp MB5  &none      &none  &mkp MB5  &mkp MB1  &mkp MB2  &mkp MB4  &none
-&none  &none     &none     &none     &none     &none      &none  &none     &none     &none     &none     &none
-&none  &none     &none     &none     &none     &none      &none  &none                                   &none
+&none  &none     &none  &none     &none                    &none  &none      &none      &none         &none
+&none  &mkp MB2  &none  &mkp MB1  &none  &none      &none  &none  &kp LSHFT  &kp LCTRL  &kp LEFT_ALT  &kp LWIN
+&none  &none     &none  &none     &none  &none      &none  &none  &none      &none      &none         &none
+&none  &none     &none  &none     &none  &none      &none  &none                                      &none
             >;
         };
 
@@ -1261,10 +1275,10 @@
 
         SYMBOL {
             bindings = <
-&none  &none     &kp RBKT  &kp LBKT  &kp INTERNATIONAL_3                      &kp INTERNATIONAL_3  &kp RBKT  &kp NUHS  &kp LBKT  &kp EQUAL
-&SQDQ  &l_kakko  &r_kakko  &anp      &dollar              &none      &none    &dollar              &l_kakko  &r_kakko  &anp      &USPL
-&exc   &Lmid     &Rmid     &hush     &percent             &none      &none    &percent             &Lmid     &Rmid     &hush     &CORSEMI
-&none  &none     &none     &none     &none                &none      &evalue  &kp BACKSPACE                                      &none
+&none  &none     &kp RBKT  &kp LBKT  &kp INTERNATIONAL_3                    &kp INTERNATIONAL_3  &kp RBKT  &kp NUHS  &kp LBKT  &kp EQUAL
+&SQDQ  &l_kakko  &r_kakko  &anp      &dollar              &none      &none  &dollar              &l_kakko  &r_kakko  &anp      &kp APOSTROPHE
+&exc   &Lmid     &Rmid     &hush     &percent             &none      &none  &us                  &Lmid     &Rmid     &hush     &kp SEMI
+&none  &none     &none     &none     &none                &none      &dq    &sq                                                &pl
             >;
         };
     };
