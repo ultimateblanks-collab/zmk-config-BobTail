@@ -1109,10 +1109,10 @@
 
         default_layer {
             bindings = <
-&kp Q          &kp W              &kp E                 &kp R              &kp T                                                         &kp Y                &kp U           &kp I           &kp O          &kp P
-&L_HRM LWIN A  &L_HRM LEFT_ALT S  &L_HRM LCTRL D        &L_HRM LSHFT F     &kp G                &altF4          &kp K_CONTEXT_MENU       &kp H                &R_HRM LSHFT J  &R_HRM LCTRL K  &R_HRM LALT L  &R_HRM LWIN MINUS
-&kp Z          &kp X              &THUMB_MO_R 1 C       &kp V              &kp B                &none           &kp PRINTSCREEN          &kp N                &kp M           &kp COMMA       &kp PERIOD     &kp SLASH
-&evalue        &none              &THUMB_MO_R 3 ESCAPE  &THUMB_MO_L 2 TAB  &THUMB_MO_L 6 ENTER  &kp DELETE      &THUMB_MO_R 1 BACKSPACE  &THUMB_MO_R 4 SPACE                                                 &carte
+&kp Q    &kp W              &kp E                 &kp R              &kp T                                                         &kp Y                &kp U           &kp I           &kp O          &kp P
+&kp A    &L_HRM LEFT_ALT S  &L_HRM LCTRL D        &L_HRM LSHFT F     &kp G                &altF4          &kp K_CONTEXT_MENU       &kp H                &R_HRM LSHFT J  &R_HRM LCTRL K  &R_HRM LALT L  &R_HRM LWIN MINUS
+&kp Z    &kp X              &THUMB_MO_R 6 C       &kp V              &kp B                &none           &kp PRINTSCREEN          &kp N                &kp M           &kp COMMA       &kp PERIOD     &kp SLASH
+&evalue  &none              &THUMB_MO_R 3 ESCAPE  &THUMB_MO_L 2 TAB  &THUMB_MO_L 6 ENTER  &kp DELETE      &THUMB_MO_R 1 BACKSPACE  &THUMB_MO_R 4 SPACE                                                 &carte
             >;
 
             sensor-bindings = <&mkp45>;
@@ -1120,10 +1120,10 @@
 
         MB {
             bindings = <
-&altf11  &none     &altF3  &none      &altF4                            &none     &none           &kp UP_ARROW    &none      &none
-&none    &mkp MB2  &none   &mkp MB1   &altesc  &none          &none     &kp F12   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none
-&kp F11  &kp F2    &kp F3  &kp F4     &kp F5   &none          &none     &kp F6    &kp F7          &kp F8          &kp F9     &kp F10
-&none    &none     &mo 3   &kp LCTRL  &mo 5    &kp LSHFT      &mkp MB4  &mkp MB5                                             &none
+&altf11  &none   &altF3  &altF4  &none                     &none   &none   &none   &none   &none
+&kp F11  &kp F2  &kp F3  &kp F4  &kp F5  &none      &none  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&kp F12  &none   &none   &none   &none   &none      &none  &none   &none   &none   &none   &none
+&none    &none   &none   &none   &none   &none      &none  &none                           &none
             >;
         };
 
@@ -1167,10 +1167,10 @@
 
         SYMBOL {
             bindings = <
-&none  &none     &kp RBKT  &kp LBKT  &kp INTERNATIONAL_3                    &kp INTERNATIONAL_3  &kp RBKT  &kp NUHS  &kp LBKT  &kp EQUAL
-&SQDQ  &l_kakko  &r_kakko  &anp      &dollar              &none      &none  &dollar              &l_kakko  &r_kakko  &anp      &kp APOSTROPHE
-&exc   &Lmid     &Rmid     &hush     &percent             &none      &none  &us                  &Lmid     &Rmid     &hush     &kp SEMI
-&none  &none     &none     &none     &none                &none      &dq    &sq                                                &pl
+&none     &none     &none  &none     &none                      &kp INTERNATIONAL_3  &kp RBKT  &kp NUHS  &kp LBKT  &kp EQUAL
+&saltesc  &mkp MB2  &none  &mkp MB1  &altesc  &none      &none  &dollar              &l_kakko  &r_kakko  &anp      &kp APOSTROPHE
+&exc      &kp HOME  &none  &kp END   &none    &none      &none  &us                  &Lmid     &Rmid     &hush     &kp SEMI
+&none     &none     &none  &none     &none    &none      &dq    &sq                                                &pl
             >;
         };
     };
