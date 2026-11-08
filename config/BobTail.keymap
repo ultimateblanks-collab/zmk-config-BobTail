@@ -230,39 +230,11 @@
             bindings = <&kp COMMA>, <&kp SEMI>;
         };
 
-        periCOR: periCOR {
-            compatible = "zmk,behavior-tap-dance";
-            label = "PERICOR";
-            #binding-cells = <0>;
-            bindings = <&kp PERIOD>, <&kp APOSTROPHE>;
-        };
-
-        TD_HIUS: TD_HIUS {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_HIUS";
-            #binding-cells = <0>;
-            bindings = <&SP_R_win LWIN MINUS>, <&us>;
-        };
-
         slpl: slpl {
             compatible = "zmk,behavior-tap-dance";
             label = "SLPL";
             #binding-cells = <0>;
             bindings = <&kp SLASH>, <&pl>;
-        };
-
-        menuTD: menuTD {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MENUTD";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU>, <&shiftapp>;
-        };
-
-        prscTD: prscTD {
-            compatible = "zmk,behavior-tap-dance";
-            label = "PRSCTD";
-            #binding-cells = <0>;
-            bindings = <&kp PRINTSCREEN>, <&altprsc>;
         };
 
         SL_SP: SL_SP {
@@ -331,18 +303,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RT_COM";
             bindings = <&mo>, <&comSEMI>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            flavor = "hold-preferred";
-            hold-trigger-key-positions = <5 6 7 8 9 17 18 19 20 21 29 30 31 32 33 41 42 16 28 40>;
-            hold-trigger-on-release;
-        };
-
-        RT_PERI: RT_PERI {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RT_PERI";
-            bindings = <&mo>, <&periCOR>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
@@ -450,51 +410,11 @@
             flavor = "balanced";
         };
 
-        RH_SP: RH_SP {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RH_SP";
-            bindings = <&kp>, <&TD_HIUS>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39>;
-        };
-
         SL_PL: SL_PL {
             compatible = "zmk,behavior-tap-dance";
             label = "SL_PL";
             #binding-cells = <0>;
             bindings = <&kp SLASH>, <&pl>;
-        };
-
-        TD_Z: TD_Z {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_Z";
-            #binding-cells = <0>;
-            bindings = <&SP_ZXCV LWIN Z>, <&CTRL_Z>;
-        };
-
-        TD_X: TD_X {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_X";
-            #binding-cells = <0>;
-            bindings = <&SP_ZXCV LCTRL X>, <&CTRL_Z>;
-        };
-
-        TD_C: TD_C {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_C";
-            #binding-cells = <0>;
-            bindings = <&SP_ZXCV LCTRL C>, <&CTRL_C>;
-        };
-
-        TD_V: TD_V {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_V";
-            #binding-cells = <0>;
-            bindings = <&SP_ZXCV LSHFT V>, <&CTRL_V>;
         };
 
         SP_ZXCV: SP_ZXCV {
@@ -508,34 +428,6 @@
             hold-trigger-key-positions = <5 6 7 8 9 17 18 19 20 21 29 30 31 32 33 41 42 16 17 28 29 40 41>;
             hold-trigger-on-release;
             quick-tap-ms = <176>;
-        };
-
-        TD_COM: TD_COM {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_COM";
-            #binding-cells = <0>;
-            bindings = <&SP_RIGHT LCTRL COMMA>, <&dq>;
-        };
-
-        TD_PERIOD: TD_PERIOD {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_PERIOD";
-            #binding-cells = <0>;
-            bindings = <&SP_RIGHT LEFT_ALT PERIOD>, <&sq>;
-        };
-
-        TD_SLASH: TD_SLASH {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_SLASH";
-            #binding-cells = <0>;
-            bindings = <&SP_RIGHT LWIN SLASH>, <&pl>;
-        };
-
-        TD_2_Z: TD_2_Z {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_2_Z";
-            #binding-cells = <0>;
-            bindings = <&SP_SEMICOL LWIN SEMI>, <&kp APOSTROPHE>;
         };
 
         SP_RIGHT: SP_RIGHT {
