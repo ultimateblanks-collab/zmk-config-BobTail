@@ -1176,10 +1176,10 @@
 
         SYMBOL {
             bindings = <
-&none     &none     &none  &none      &none                          &kp INTERNATIONAL_3  &kp RBKT  &kp NUHS  &kp LBKT  &kp EQUAL
-&saltesc  &mkp MB2  &none  &mkp MB1   &altesc  &none          &none  &dollar              &l_kakko  &r_kakko  &anp      &kp APOSTROPHE
-&exc      &kp HOME  &none  &kp END    &none    &none          &none  &us                  &Lmid     &Rmid     &hush     &kp SEMI
-&none     &none     &none  &kp LCTRL  &mo 5    &kp LSHFT      &dq    &sq                                                &pl
+&ctpgup   &ctrlW    &mkp MB4  &ctrlT     &ctpgdn                        &kp INTERNATIONAL_3  &kp RBKT  &kp NUHS  &kp LBKT  &kp EQUAL
+&saltesc  &mkp MB2  &none     &mkp MB1   &altesc  &none          &none  &dollar              &l_kakko  &r_kakko  &anp      &kp APOSTROPHE
+&none     &kp HOME  &mkp MB5  &kp END    &none    &none          &none  &us                  &Lmid     &Rmid     &hush     &kp SEMI
+&none     &none     &none     &kp LCTRL  &mo 5    &kp LSHFT      &dq    &sq                                                &pl
             >;
         };
     };
