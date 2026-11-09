@@ -17,39 +17,34 @@
     combos {
         compatible = "zmk,combos";
 
-        endApp {
-            bindings = <&altF4>;
-            key-positions = <41 17>;
+        L_MKK {
+            bindings = <&Lmid>;
+            key-positions = <6 18>;
         };
 
-        inputMODE {
-            bindings = <&kp GRAVE>;
-            key-positions = <13 18>;
+        R_MKK {
+            bindings = <&Rmid>;
+            key-positions = <8 20 8 20>;
         };
 
-        cw {
-            bindings = <&CW>;
-            key-positions = <11 20>;
+        DQC {
+            bindings = <&dq>;
+            key-positions = <7 19>;
         };
 
-        sk {
-            bindings = <&sk LSHFT>;
-            key-positions = <12 19>;
+        SQC {
+            bindings = <&sq>;
+            key-positions = <19 31>;
         };
 
-        alt {
-            bindings = <&kp LEFT_ALT>;
-            key-positions = <11 12>;
+        L_KK {
+            bindings = <&l_kakko>;
+            key-positions = <18 30>;
         };
 
-        CTRL {
-            bindings = <&kp LCTRL>;
-            key-positions = <12 13>;
-        };
-
-        AMLescape {
-            bindings = <&mo 5>;
-            key-positions = <7 8>;
+        R_KK {
+            bindings = <&r_kakko>;
+            key-positions = <20 32>;
         };
     };
 
