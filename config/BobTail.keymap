@@ -1102,6 +1102,20 @@
 
             label = "SHIFTCTRLTAB";
         };
+
+        caps: caps {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_wait_time 15>,
+                <&kp CAPSLOCK>,
+                <&macro_release>,
+                <&kp CAPSLOCK &kp LSHFT>;
+
+            label = "CAPS";
+        };
     };
 
     keymap {
