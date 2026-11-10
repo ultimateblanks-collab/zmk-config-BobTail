@@ -24,7 +24,7 @@
 
         R_MKK {
             bindings = <&Rmid>;
-            key-positions = <8 20 8 20>;
+            key-positions = <8 20>;
         };
 
         DQC {
