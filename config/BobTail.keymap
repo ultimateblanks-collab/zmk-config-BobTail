@@ -18,12 +18,12 @@
         compatible = "zmk,combos";
 
         L_MKK {
-            bindings = <&Lmid>;
+            bindings = <&kp LBKT>;
             key-positions = <2 12>;
         };
 
         R_MKK {
-            bindings = <&Rmid>;
+            bindings = <&kp NUHS>;
             key-positions = <7 19>;
         };
 
@@ -49,12 +49,27 @@
 
         underS {
             bindings = <&us>;
+            key-positions = <17 29>;
+        };
+
+        anp {
+            bindings = <&anp>;
             key-positions = <20 32>;
         };
 
-        eql {
-            bindings = <&eql>;
-            key-positions = <17 29>;
+        Rmid {
+            bindings = <&Rmid>;
+            key-positions = <8 20>;
+        };
+
+        Lmid {
+            bindings = <&Lmid>;
+            key-positions = <1 11>;
+        };
+
+        pl {
+            bindings = <&pl>;
+            key-positions = <14 26>;
         };
     };
 
