@@ -18,7 +18,7 @@
         compatible = "zmk,combos";
 
         L_MKK {
-            bindings = <&kp LBKT>;
+            bindings = <&kp RBKT>;
             key-positions = <2 12>;
         };
 
@@ -39,12 +39,12 @@
 
         L_KK {
             bindings = <&l_kakko>;
-            key-positions = <18 6>;
+            key-positions = <3 13>;
         };
 
         R_KK {
             bindings = <&r_kakko>;
-            key-positions = <3 13>;
+            key-positions = <6 18>;
         };
 
         underS {
