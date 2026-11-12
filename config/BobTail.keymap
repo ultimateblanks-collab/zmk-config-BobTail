@@ -1246,7 +1246,7 @@
 &none     &ctrlW    &none     &none     &ctrlT                        &none     &none     &none  &none     &none
 &mkp MB4  &mkp MB2  &mkp MB3  &mkp MB1  &mkp MB5  &none      &none    &kp HOME  &mkp MB4  &none  &mkp MB5  &kp END
 &none     &ctrlX    &ctrlC    &ctrlV    &none     &none      &none    &none     &mkp MB1  &none  &mkp MB2  &mo 5
-&none     &none     &saltesc  &altesc   &none     &none      &ctpgup  &ctpgdn                              &none
+&none     &none     &saltesc  &altesc   &mo 5     &none      &ctpgup  &ctpgdn                              &none
             >;
         };
     };
