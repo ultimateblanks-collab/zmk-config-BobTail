@@ -304,7 +304,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_MB4";
             #binding-cells = <0>;
-            bindings = <&SL_SP 6 MB2>, <&mkp MB2>, <&mkp MB4>, <&mkp MB5>;
+            bindings = <&SL_SP 5 MB2>, <&mkp MB2>, <&mkp MB4>, <&mkp MB5>;
         };
 
         RT_SP: RT_SP {
@@ -1143,10 +1143,10 @@
 
         default_layer {
             bindings = <
-&kp Q    &kp W              &kp E                 &kp R              &kp T                                                         &kp Y                &kp U           &kp I           &kp O                 &kp P
-&kp A    &L_HRM LEFT_ALT S  &L_HRM LCTRL D        &L_HRM LSHFT F     &kp G                &none           &none                    &kp H                &R_HRM LSHFT J  &R_HRM LCTRL K  &R_HRM LALT L         &R_HRM LWIN MINUS
-&kp Z    &kp X              &THUMB_MO_R 6 C       &kp V              &kp B                &none           &kp PRINTSCREEN          &kp N                &kp M           &kp COMMA       &THUMB_MO_R 6 PERIOD  &kp SLASH
-&evalue  &none              &THUMB_MO_R 3 ESCAPE  &THUMB_MO_L 2 TAB  &THUMB_MO_L 6 ENTER  &kp DELETE      &THUMB_MO_R 1 BACKSPACE  &THUMB_MO_R 4 SPACE                                                        &carte
+&kp Q    &kp W              &kp E                 &kp R              &kp T                                                         &kp Y                &kp U           &kp I                &kp O          &kp P
+&kp A    &L_HRM LEFT_ALT S  &L_HRM LCTRL D        &L_HRM LSHFT F     &kp G                &none           &none                    &kp H                &R_HRM LSHFT J  &R_HRM LCTRL K       &R_HRM LALT L  &R_HRM LWIN MINUS
+&kp Z    &kp X              &THUMB_MO_R 6 C       &kp V              &kp B                &none           &kp PRINTSCREEN          &kp N                &kp M           &THUMB_MO_R 6 COMMA  &kp PERIOD     &kp SLASH
+&evalue  &none              &THUMB_MO_R 3 ESCAPE  &THUMB_MO_L 2 TAB  &THUMB_MO_L 5 ENTER  &kp DELETE      &THUMB_MO_R 1 BACKSPACE  &THUMB_MO_R 4 SPACE                                                      &carte
             >;
 
             sensor-bindings = <&mkp45>;
@@ -1190,21 +1190,21 @@
             >;
         };
 
-        Function {
-            bindings = <
-&none    &none   &none   &none   &none                     &none   &none   &none   &none   &none
-&kp F11  &kp F2  &F3ALT  &kp F4  &kp F5  &none      &none  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&kp F12  &none   &none   &none   &none   &none      &none  &none   &none   &none   &none   &none
-&none    &none   &none   &none   &none   &none      &none  &none                           &none
-            >;
-        };
-
         SYMBOL {
             bindings = <
 &ctpgup   &ctrlW    &mkp MB4  &ctrlT     &ctpgdn                        &kp INTERNATIONAL_3  &kp RBKT  &kp NUHS  &kp LBKT  &kp EQUAL
 &saltesc  &mkp MB2  &none     &mkp MB1   &altesc  &none          &none  &dollar              &l_kakko  &r_kakko  &anp      &kp APOSTROPHE
 &none     &kp HOME  &mkp MB5  &kp END    &none    &none          &none  &us                  &Lmid     &Rmid     &hush     &kp SEMI
-&none     &none     &none     &kp LCTRL  &mo 5    &kp LSHFT      &dq    &sq                                                &pl
+&none     &none     &none     &kp LCTRL  &mo 6    &kp LSHFT      &dq    &sq                                                &pl
+            >;
+        };
+
+        Function {
+            bindings = <
+&none     &ctrlW    &none  &none     &ctrlT                      &none     &none     &none  &none     &none
+&mkp MB4  &mkp MB2  &none  &mkp MB1  &mkp MB5  &none      &none  &kp HOME  &mkp MB4  &none  &mkp MB5  &kp END
+&none     &none     &none  &none     &none     &none      &none  &none     &mkp MB1  &none  &mkp MB2  &mo 5
+&none     &none     &none  &none     &none     &none      &none  &none                                &none
             >;
         };
     };
