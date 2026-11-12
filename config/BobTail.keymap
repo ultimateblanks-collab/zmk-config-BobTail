@@ -1136,6 +1136,34 @@
 
             label = "CAPS";
         };
+
+        ctrlC: ctrlC {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_wait_time 15>,
+                <&kp C>,
+                <&macro_release>,
+                <&kp C &kp LCTRL>;
+
+            label = "CTRLC";
+        };
+
+        ctrlV: ctrlV {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_wait_time 15>,
+                <&kp V>,
+                <&macro_release>,
+                <&kp V &kp LCTRL>;
+
+            label = "CTRLV";
+        };
     };
 
     keymap {
@@ -1201,10 +1229,10 @@
 
         Function {
             bindings = <
-&none     &ctrlW    &none  &none     &ctrlT                      &none     &none     &none  &none     &none
-&mkp MB4  &mkp MB2  &none  &mkp MB1  &mkp MB5  &none      &none  &kp HOME  &mkp MB4  &none  &mkp MB5  &kp END
-&none     &none     &none  &none     &none     &none      &none  &none     &mkp MB1  &none  &mkp MB2  &mo 5
-&none     &none     &none  &none     &none     &none      &none  &none                                &none
+&none     &ctrlW    &none   &none     &ctrlT                      &none     &none     &none  &none     &none
+&mkp MB4  &mkp MB2  &none   &mkp MB1  &mkp MB5  &none      &none  &kp HOME  &mkp MB4  &none  &mkp MB5  &kp END
+&none     &none     &ctrlC  &ctrlV    &none     &none      &none  &none     &mkp MB1  &none  &mkp MB2  &mo 5
+&none     &none     &none   &none     &none     &none      &none  &none                                &none
             >;
         };
     };
