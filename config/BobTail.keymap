@@ -196,6 +196,20 @@
             flavor = "balanced";
             hold-trigger-on-release;
         };
+
+        comUS: comUS {
+            compatible = "zmk,behavior-tap-dance";
+            label = "COMUS";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&us>;
+        };
+
+        periPL: periPL {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PERIPL";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD>, <&pl>;
+        };
     };
 
     macros {
@@ -901,7 +915,7 @@
             bindings = <
 &kp Q    &kp W              &kp E                 &kp R              &kp T                                                         &kp Y                &kp U           &kp I           &MOL 6 O       &kp P
 &kp A    &L_HRM LEFT_ALT S  &L_HRM LCTRL D        &L_HRM LSHFT F     &kp G                &none           &none                    &kp H                &R_HRM LSHFT J  &R_HRM LCTRL K  &R_HRM LALT L  &R_HRM LWIN MINUS
-&kp Z    &kp X              &kp C                 &kp V              &kp B                &none           &kp PRINTSCREEN          &kp N                &kp M           &kp COMMA       &kp PERIOD     &kp SLASH
+&kp Z    &kp X              &kp C                 &kp V              &kp B                &none           &none                    &kp N                &kp M           &comUS          &periPL        &kp SLASH
 &evalue  &none              &THUMB_MO_R 3 ESCAPE  &THUMB_MO_L 2 TAB  &THUMB_MO_L 5 ENTER  &kp DELETE      &THUMB_MO_R 1 BACKSPACE  &THUMB_MO_R 4 SPACE                                                 &carte
             >;
 
