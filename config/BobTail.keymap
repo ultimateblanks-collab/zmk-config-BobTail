@@ -27,16 +27,6 @@
             key-positions = <7 19>;
         };
 
-        DQC {
-            bindings = <&dq>;
-            key-positions = <18 30>;
-        };
-
-        SQC {
-            bindings = <&sq>;
-            key-positions = <19 31>;
-        };
-
         L_KK {
             bindings = <&l_kakko>;
             key-positions = <3 13>;
@@ -45,16 +35,6 @@
         R_KK {
             bindings = <&r_kakko>;
             key-positions = <6 18>;
-        };
-
-        underS {
-            bindings = <&us>;
-            key-positions = <17 29>;
-        };
-
-        anp {
-            bindings = <&anp>;
-            key-positions = <20 32>;
         };
 
         Rmid {
@@ -209,6 +189,13 @@
             label = "PERIPL";
             #binding-cells = <0>;
             bindings = <&kp PERIOD>, <&pl>;
+        };
+
+        slANP: slANP {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SLANP";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&anp>;
         };
     };
 
