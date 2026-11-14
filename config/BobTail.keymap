@@ -191,11 +191,18 @@
             bindings = <&kp PERIOD>, <&sq>;
         };
 
-        slUSPL: slUSPL {
+        slPL: slPL {
             compatible = "zmk,behavior-tap-dance";
-            label = "SLUSPL";
+            label = "SLPL";
             #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&us>, <&pl>;
+            bindings = <&kp SLASH>, <&pl>;
+        };
+
+        hiUS: hiUS {
+            compatible = "zmk,behavior-tap-dance";
+            label = "HIUS";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&us>;
         };
     };
 
@@ -901,8 +908,8 @@
         default_layer {
             bindings = <
 &kp Q    &kp W              &kp E                 &kp R              &kp T                                                         &kp Y                &kp U           &kp I           &MOL 6 O       &kp P
-&kp A    &L_HRM LEFT_ALT S  &L_HRM LCTRL D        &L_HRM LSHFT F     &kp G                &none           &none                    &kp H                &R_HRM LSHFT J  &R_HRM LCTRL K  &R_HRM LALT L  &R_HRM LWIN MINUS
-&kp Z    &kp X              &kp C                 &kp V              &kp B                &none           &none                    &kp N                &kp M           &comDQANP       &periSQ        &slUSPL
+&kp A    &L_HRM LEFT_ALT S  &L_HRM LCTRL D        &L_HRM LSHFT F     &L_HRM LWIN G        &none           &none                    &R_HRM LWIN H        &R_HRM LSHFT J  &R_HRM LCTRL K  &R_HRM LALT L  &hiUS
+&kp Z    &kp X              &kp C                 &kp V              &kp B                &none           &none                    &kp N                &kp M           &comDQANP       &periSQ        &slPL
 &evalue  &none              &THUMB_MO_R 3 ESCAPE  &THUMB_MO_L 2 TAB  &THUMB_MO_L 5 ENTER  &kp DELETE      &THUMB_MO_R 1 BACKSPACE  &THUMB_MO_R 4 SPACE                                                 &carte
             >;
 
@@ -920,10 +927,10 @@
 
         BASIC {
             bindings = <
-&none     &none         &ctrlHOME  &shiftHOME      &none                          &SHIFTctrlTAB       &ctpgup         &kp UP_ARROW    &ctpgdn     &ctrlTAB
-&kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &altesc  &none      &none      &kp HOME            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &kp END
-&none     &none         &ctrlEND   &shiftEND       &none    &none      &none      &kp K_CONTEXT_MENU  &ctrlPLUS       &wintab         &ctrlMINUS  &kp PRINTSCREEN
-&none     &none         &none      &none           &none    &none      &kp LCTRL  &kp LEFT_ALT                                                    &none
+&none  &none         &ctrlHOME  &shiftHOME      &none                           &SHIFTctrlTAB       &ctpgup         &kp UP_ARROW    &ctpgdn     &ctrlTAB
+&none  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp LWIN  &none      &none      &kp HOME            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &kp END
+&none  &none         &ctrlEND   &shiftEND       &none     &none      &none      &kp K_CONTEXT_MENU  &ctrlPLUS       &wintab         &ctrlMINUS  &kp PRINTSCREEN
+&none  &none         &none      &none           &none     &none      &kp LCTRL  &kp LEFT_ALT                                                    &none
             >;
 
             sensor-bindings = <&pgupdn>;
