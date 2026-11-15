@@ -907,13 +907,13 @@
 
         default_layer {
             bindings = <
-&kp Q    &kp W              &kp E                 &kp R              &kp T                                                         &kp Y                &kp U           &kp I           &MOL 6 O       &kp P
-&kp A    &L_HRM LEFT_ALT S  &L_HRM LCTRL D        &L_HRM LSHFT F     &L_HRM LWIN G        &none           &none                    &R_HRM LWIN H        &R_HRM LSHFT J  &R_HRM LCTRL K  &R_HRM LALT L  &hiUS
+&kp Q    &kp W              &kp E                 &kp R              &kp T                                                         &kp Y                &kp U           &kp I           &MOL 6 O       &hiUS
+&kp A    &L_HRM LEFT_ALT S  &L_HRM LCTRL D        &L_HRM LSHFT F     &L_HRM LWIN G        &none           &none                    &R_HRM LWIN H        &R_HRM LSHFT J  &R_HRM LCTRL K  &R_HRM LALT L  &kp P
 &kp Z    &kp X              &kp C                 &kp V              &kp B                &none           &none                    &kp N                &kp M           &comDQANP       &periSQ        &slPL
 &evalue  &none              &THUMB_MO_R 3 ESCAPE  &THUMB_MO_L 2 TAB  &THUMB_MO_L 5 ENTER  &kp DELETE      &THUMB_MO_R 1 BACKSPACE  &THUMB_MO_R 4 SPACE                                                 &carte
             >;
 
-            sensor-bindings = <&mkp45>;
+            sensor-bindings = <&pgupdn>;
         };
 
         MB {
@@ -952,6 +952,8 @@
 &none   &none      &none   &none      &none      &none      &none  &none      &none     &none   &none   &none
 &none   &none      &none   &kp GRAVE  &sk LSHFT  &caps      &none  &none                                &none
             >;
+
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         SYMBOL {
@@ -965,11 +967,13 @@
 
         Function {
             bindings = <
-&none      &ctrlW    &kp HOME  &kp END   &ctrlT                        &mkp MB4  &mkp MB1  &mkp MB2  &none  &mkp MB5
-&mkp MCLK  &mkp MB4  &mkp MB2  &mkp MB1  &mkp MB5  &none      &none    &none     &kp HOME  &kp END   &mo 5  &none
-&ctrlZ     &ctrlX    &ctrlC    &ctrlV    &none     &none      &none    &none     &none     &none     &none  &none
-&none      &none     &saltesc  &altesc   &mo 5     &none      &ctpgup  &ctpgdn                              &none
+&none      &ctrlW    &kp HOME   &kp END    &ctrlT                        &mkp MB4  &mkp MB1  &mkp MB2  &none  &mkp MB5
+&mkp MCLK  &mkp MB4  &mkp MB2   &mkp MB1   &mkp MB5  &none      &none    &none     &kp HOME  &kp END   &mo 5  &none
+&ctrlZ     &ctrlX    &ctrlC     &ctrlV     &none     &none      &none    &none     &none     &none     &none  &none
+&altesc    &saltesc  &kp LCTRL  &kp LSHFT  &mo 5     &none      &ctpgup  &ctpgdn                              &none
             >;
+
+            sensor-bindings = <&encoder_msc_down_up>;
         };
     };
 };
