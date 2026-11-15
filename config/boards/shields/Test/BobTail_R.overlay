@@ -57,6 +57,15 @@
 };
 
 / {
+    scroll_inertia_free: scroll_inertia_free {
+        compatible = "zmk,input-processor-scroll-inertia";
+        #input-processor-cells = <0>;
+        axis      = <0>;      /* 両軸 */
+        layer     = <5>;      /* スクロールレイヤー */
+        scale     = <1>;      /* 後段 zip_scroll_scaler の引数と一致させる */
+        scale-div = <16>;
+    };
+
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
@@ -73,6 +82,7 @@
             <&zip_xy_to_scroll_mapper>,
             <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_scroll_snap>,
+            <&scroll_inertia_free>,
             <&zip_scroll_scaler 1 16>;
     };
 };
