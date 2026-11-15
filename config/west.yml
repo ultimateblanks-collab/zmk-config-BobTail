@@ -19,7 +19,7 @@ manifest:
       remote: ultimateblanks-collab
       revision: v1
     - name: zmk-input-processor-scroll-inertia
-      remote: mjmjm0101
+      remote: ultimateblanks-collab
       revision: main
    
   self:  
